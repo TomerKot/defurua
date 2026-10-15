@@ -34,6 +34,7 @@ jobs:
       - name: Клонування репозиторію
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Налаштування Python
@@ -64,12 +65,13 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git checkout main || git checkout -b main
           git add history.json
           if ! git diff --staged --quiet; then
             git commit -m "Автоматичне оновлення history.json [skip ci]"
             # Захист від конфліктів: підтягування нових комітів перед push із 3 спробами
             for i in 1 2 3; do
-              git pull --rebase origin main && git push origin main && break || sleep 2
+              git pull --rebase origin main && git push origin HEAD:main && break || sleep 2
             done
           else
             echo "Змін у history.json не виявлено."

@@ -19,6 +19,9 @@ ENV/
 *.jpeg
 *.mp3
 *.wav
+!assets/
+!assets/*
+
 
 # IDE та редактори
 .vscode/

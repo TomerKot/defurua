@@ -1,18 +1,33 @@
-name: Щоденна публікація уроку німецької мови
+name: Автоматична публікація уроків німецької мови (3 рази на день)
 
 on:
   schedule:
-    # Запуск щодня о 07:00 UTC (це 09:00 за Київським часом взимку / 10:00 влітку)
+    # 1. Ранок: 07:00 UTC (09:00 за Києвом взимку) — «Слово дня» + Картка + Аудіо
     - cron: '0 7 * * *'
-  # Можливість ручного запуску в один клік у вкладці Actions для перевірки
-  workflow_dispatch:
+    # 2. День: 12:00 UTC (14:00 за Києвом взимку) — «Розмовна фраза дня» + Картка + Аудіо
+    - cron: '0 12 * * *'
+    # 3. Вечір: 17:00 UTC (19:00 за Києвом взимку) — «Інтерактивне Quiz-опитування» (Poll)
+    - cron: '0 17 * * *'
 
-# Дозволи для збереження оновленого файлу history.json у гілку
+  # Можливість запустити будь-який формат вручну в один клік у GitHub Actions
+  workflow_dispatch:
+    inputs:
+      post_type:
+        description: 'Оберіть тип публікації'
+        required: true
+        default: 'auto'
+        type: choice
+        options:
+          - 'auto'
+          - 'morning'
+          - 'afternoon'
+          - 'evening'
+
 permissions:
   contents: write
 
 jobs:
-  publish_daily_lesson:
+  publish_lesson:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,22 +52,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Генерація та публікація уроку в Telegram
+      - name: Генерація та публікація контенту в Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python main.py
+          python main.py --type "${{ inputs.post_type || 'auto' }}"
 
-      - name: Збереження оновленої історії history.json у репозиторій
+      - name: Збереження оновленої історії в репозиторій
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git pull --rebase origin main || true
           git add history.json
           if ! git diff --staged --quiet; then
             git commit -m "Автоматичне оновлення history.json [skip ci]"
-            git push
+            git push origin main
           else
-            echo "Змін у файлі history.json не виявлено."
+            echo "Змін у history.json не виявлено."
           fi

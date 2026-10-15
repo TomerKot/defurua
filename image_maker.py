@@ -193,18 +193,22 @@ def generate_card_image(data: dict, output_path: str = "card.png") -> str:
     # Визначення кольору артикля
     article_color = ARTICLE_COLORS.get(article, DEFAULT_ARTICLE_COLOR)
 
-    # Адаптація розміру шрифту для дуже довгих слів
+    # Адаптація розміру шрифту для довгих слів та розмовних фраз
     current_word_font = font_word
-    bbox_word = draw.textbbox((0, 0), word, font=current_word_font)
-    if (bbox_word[2] - bbox_word[0]) > (CARD_WIDTH - 2 * margin - 100):
-        current_word_font = load_font(is_bold=True, size=48)
+    word_lines = wrap_text(word, current_word_font, CARD_WIDTH - 2 * margin - 100, draw)
+    if len(word_lines) > 2 or any((draw.textbbox((0, 0), l, font=current_word_font)[2] - draw.textbbox((0, 0), l, font=current_word_font)[0]) > (CARD_WIDTH - 2 * margin - 100) for l in word_lines):
+        current_word_font = load_font(is_bold=True, size=46)
+        word_lines = wrap_text(word, current_word_font, CARD_WIDTH - 2 * margin - 100, draw)
 
-    # Відмальовуємо артикль та слово
-    word_y = 210
-    draw.text((margin + 40, word_y), word, font=current_word_font, fill=(255, 255, 255))
+    # Відмальовуємо слово або фразу
+    word_y = 205
+    for wl in word_lines:
+        draw.text((margin + 40, word_y), wl, font=current_word_font, fill=(255, 255, 255))
+        bbox_l = draw.textbbox((0, 0), wl, font=current_word_font)
+        word_y += (bbox_l[3] - bbox_l[1]) + 12
 
     # Транскрипція українськими літерами
-    transcription_y = word_y + (draw.textbbox((0, 0), word, font=current_word_font)[3] - draw.textbbox((0, 0), word, font=current_word_font)[1]) + 16
+    transcription_y = word_y + 8
     draw.text((margin + 40, transcription_y), transcription, font=font_transcription, fill=(148, 163, 184))
 
     # Переклад українською мовою

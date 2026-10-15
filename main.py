@@ -1,31 +1,34 @@
 """
 main.py
 Головний виконуваний скрипт для автоматизованого Telegram-каналу вивчення німецької мови.
-Об'єднує:
-1. Генерацію контенту через Gemini 1.5 Flash (generator.py)
-2. Створення брендованої графічної картки (image_maker.py)
-3. Озвучення німецького слова та прикладу через gTTS
-4. Публікацію картки, тексту та аудіо у Telegram-канал
-5. Оновлення історії слів у history.json
+
+Підтримує 3 публікації на день:
+1. morning (09:00 за Києвом / 07:00 UTC) — Слово дня + Картка + Аудіо
+2. afternoon (14:00 за Києвом / 12:00 UTC) — Жива розмовна фраза + Картка + Аудіо
+3. evening (19:00 за Києвом / 17:00 UTC) — Інтерактивне Quiz-опитування Telegram
 """
 
 import os
 import sys
 import json
 import logging
+import argparse
 from datetime import datetime
 import requests
 from gtts import gTTS
 from dotenv import load_dotenv
 
-# Імпортуємо власні модулі проєкту
-from generator import generate_daily_content, load_history
+# Імпортуємо генератори та створення графічних карток
+from generator import (
+    generate_morning_content,
+    generate_afternoon_content,
+    generate_evening_quiz,
+    load_history
+)
 from image_maker import generate_card_image
 
-# Завантажуємо локальний файл .env (якщо він існує для тестування)
 load_dotenv()
 
-# Налаштування логування
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -33,7 +36,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Константи файлів
 HISTORY_FILE = "history.json"
 CARD_IMAGE_FILE = "card.png"
 AUDIO_FILE = "pronunciation.mp3"
@@ -41,10 +43,7 @@ TELEGRAM_CAPTION_LIMIT = 1024
 
 
 def validate_environment() -> tuple[str, str, str]:
-    """
-    Перевіряє наявність необхідних змінних середовища.
-    У разі відсутності виводить зрозумілі інструкції українською мовою.
-    """
+    """Перевіряє наявність секретів у змінних середовища."""
     bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     gemini_key = os.environ.get("GEMINI_API_KEY")
@@ -58,43 +57,53 @@ def validate_environment() -> tuple[str, str, str]:
         missing.append("GEMINI_API_KEY")
 
     if missing:
-        error_msg = (
-            f"❌ ПОМИЛКА: Не знайдено обов'язкові змінні середовища: {', '.join(missing)}.\n"
-            "Будь ласка, додайте їх у GitHub Secrets репозиторію або у локальний файл .env!"
-        )
+        error_msg = f"❌ Не знайдено обов'язкові змінні середовища: {', '.join(missing)}."
         logger.error(error_msg)
         raise EnvironmentError(error_msg)
 
     return bot_token, chat_id, gemini_key
 
 
+def determine_post_type(arg_type: str = "auto") -> str:
+    """
+    Визначає тип публікації:
+    Якщо передано явне значення (morning / afternoon / evening) — використовує його.
+    Якщо 'auto' — обирає за поточним часом UTC:
+    - 05:00 - 09:59 UTC (07:00 - 11:59 Київ) -> morning (Слово дня)
+    - 10:00 - 14:59 UTC (12:00 - 16:59 Київ) -> afternoon (Розмовна фраза)
+    - 15:00 - 04:59 UTC (17:00 - 06:59 Київ) -> evening (Quiz-опитування)
+    """
+    if arg_type in ["morning", "afternoon", "evening"]:
+        return arg_type
+
+    utc_hour = datetime.utcnow().hour
+    logger.info(f"Режим 'auto': поточна година UTC = {utc_hour}")
+    if 5 <= utc_hour < 10:
+        return "morning"
+    elif 10 <= utc_hour < 15:
+        return "afternoon"
+    else:
+        return "evening"
+
+
 def create_audio_pronunciation(text: str, output_path: str = AUDIO_FILE) -> str | None:
-    """
-    Створює аудіофайл із правильною німецькою вимовою за допомогою gTTS.
-    """
+    """Створює аудіо вимови через gTTS."""
     try:
-        logger.info(f"Створення аудіо вимови для тексту: '{text}' (мова: de)...")
+        logger.info(f"Створення аудіо вимови для: '{text}'...")
         tts = gTTS(text=text, lang="de", slow=False)
         tts.save(output_path)
         logger.info(f"Аудіофайл успішно збережено у {output_path}")
         return output_path
     except Exception as e:
-        logger.warning(f"Не вдалося згенерувати аудіо через gTTS: {e}. Продовжуємо без аудіо.")
+        logger.warning(f"Не вдалося згенерувати аудіо: {e}")
         return None
 
 
-def send_telegram_post(bot_token: str, chat_id: str, image_path: str, caption_text: str, audio_path: str | None, word_title: str):
-    """
-    Надсилає навчальний пост у Telegram-канал:
-    - Зображення-картку разом із форматованим описом
-    - Голосове повідомлення / аудіо з правильною вимовою
-    """
+def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, caption_text: str, audio_path: str | None, title: str):
+    """Надсилає фотопост із підписом та аудіо вимови."""
     api_url = f"https://api.telegram.org/bot{bot_token}"
 
-    # 1. Надсилання фотокартки
-    logger.info("Публікація графічної картки з описом у Telegram...")
     with open(image_path, "rb") as photo_file:
-        # Перевірка ліміту довжини підпису фотографії в Telegram (1024 символи)
         if len(caption_text) <= TELEGRAM_CAPTION_LIMIT:
             response = requests.post(
                 f"{api_url}/sendPhoto",
@@ -107,8 +116,7 @@ def send_telegram_post(bot_token: str, chat_id: str, image_path: str, caption_te
                 timeout=30
             )
         else:
-            # Якщо опис довший за 1024 символи: надсилаємо фото з коротким підписом + окреме повне повідомлення
-            short_caption = f"🇩🇪 <b>Слово дня: {word_title}</b>\n<i>Детальний розбір та приклад читайте в повідомленні нижче 👇</i>"
+            short_caption = f"🇩🇪 <b>{title}</b>\n<i>Повний розбір читайте в повідомленні нижче 👇</i>"
             response = requests.post(
                 f"{api_url}/sendPhoto",
                 data={
@@ -119,7 +127,6 @@ def send_telegram_post(bot_token: str, chat_id: str, image_path: str, caption_te
                 files={"photo": photo_file},
                 timeout=30
             )
-            # Надсилаємо повний текст
             requests.post(
                 f"{api_url}/sendMessage",
                 data={
@@ -132,18 +139,15 @@ def send_telegram_post(bot_token: str, chat_id: str, image_path: str, caption_te
             )
 
     if not response.ok:
-        logger.error(f"Помилка надсилання фото в Telegram: {response.status_code} — {response.text}")
+        logger.error(f"Помилка надсилання фото: {response.status_code} — {response.text}")
         response.raise_for_status()
-    else:
-        logger.info("Фотопост успішно опубліковано у каналі!")
 
-    # 2. Надсилання аудіо вимови
+    # Надсилання аудіо
     if audio_path and os.path.exists(audio_path):
-        logger.info("Надсилання аудіофайлу вимови у канал...")
         try:
             with open(audio_path, "rb") as voice_file:
-                voice_caption = f"🗣 <b>Вимова:</b> <i>{word_title}</i>"
-                voice_resp = requests.post(
+                voice_caption = f"🗣 <b>Вимова:</b> <i>{title}</i>"
+                v_resp = requests.post(
                     f"{api_url}/sendVoice",
                     data={
                         "chat_id": chat_id,
@@ -153,14 +157,13 @@ def send_telegram_post(bot_token: str, chat_id: str, image_path: str, caption_te
                     files={"voice": voice_file},
                     timeout=30
                 )
-                if not voice_resp.ok:
-                    logger.warning(f"sendVoice повернув помилку ({voice_resp.status_code}), спроба через sendAudio...")
+                if not v_resp.ok:
                     voice_file.seek(0)
                     requests.post(
                         f"{api_url}/sendAudio",
                         data={
                             "chat_id": chat_id,
-                            "title": word_title,
+                            "title": title,
                             "performer": "Deutsch für Ukrainer",
                             "caption": voice_caption,
                             "parse_mode": "HTML"
@@ -170,101 +173,163 @@ def send_telegram_post(bot_token: str, chat_id: str, image_path: str, caption_te
                     )
             logger.info("Аудіо вимови успішно опубліковано!")
         except Exception as e:
-            logger.warning(f"Не вдалося надіслати аудіо у Telegram: {e}")
+            logger.warning(f"Не вдалося надіслати аудіо: {e}")
+
+
+def send_telegram_poll(bot_token: str, chat_id: str, quiz_data: dict):
+    """
+    Надсилає нативне інтерактивне Quiz-опитування в Telegram.
+    При натисканні правильної відповіді показується анімація конфеті та пояснення.
+    """
+    api_url = f"https://api.telegram.org/bot{bot_token}/sendPoll"
+    logger.info(f"Публікація Quiz-опитування: {quiz_data['question']}")
+
+    payload = {
+        "chat_id": chat_id,
+        "question": quiz_data["question"],
+        "options": quiz_data["options"],
+        "is_anonymous": True,
+        "type": "quiz",
+        "correct_option_id": quiz_data["correct_option_id"],
+        "explanation": quiz_data["explanation"],
+        "explanation_parse_mode": "HTML"
+    }
+
+    resp = requests.post(api_url, json=payload, timeout=30)
+    if not resp.ok:
+        logger.error(f"Помилка публікації опитування: {resp.status_code} — {resp.text}")
+        resp.raise_for_status()
+    else:
+        logger.info("Quiz-опитування успішно опубліковано в каналі!")
 
 
 def update_history_file(data: dict, history_file_path: str = HISTORY_FILE):
-    """
-    Зберігає нове слово у файл history.json для запобігання дублюванню.
-    """
+    """Оновлює history.json новими записами слів, фраз або вікторин."""
     history = load_history(history_file_path)
-    used_words = history.get("used_words", [])
-    posts_history = history.get("history", [])
+    post_type = data.get("post_type", "morning")
 
-    new_word = data.get("clean_word") or data.get("word")
-    if new_word and new_word not in used_words:
-        used_words.append(new_word)
+    if post_type == "morning":
+        new_word = data.get("clean_word") or data.get("word")
+        if new_word and new_word not in history.get("used_words", []):
+            history["used_words"].append(new_word)
+        history["history"].append({
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "type": "morning_word",
+            "word": data.get("word"),
+            "translation": data.get("translation"),
+            "rubric": data.get("rubric_name")
+        })
+    elif post_type == "afternoon":
+        new_phrase = data.get("phrase") or data.get("word")
+        if new_phrase and new_phrase not in history.get("used_phrases", []):
+            history.setdefault("used_phrases", []).append(new_phrase)
+        history["history"].append({
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "type": "afternoon_phrase",
+            "phrase": new_phrase,
+            "translation": data.get("translation")
+        })
+    elif post_type == "evening":
+        topic = data.get("topic", "Quiz")
+        if topic and topic not in history.get("used_quizzes", []):
+            history.setdefault("used_quizzes", []).append(topic)
+        history["history"].append({
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "type": "evening_quiz",
+            "question": data.get("question"),
+            "topic": topic
+        })
 
-    # Запис нового поста
-    posts_history.append({
-        "date": datetime.now().strftime("%Y-%m-%d"),
-        "word": data.get("word"),
-        "translation": data.get("translation"),
-        "rubric": data.get("rubric_name"),
-        "level": data.get("level")
-    })
-
-    history["used_words"] = used_words
-    history["history"] = posts_history
     history["last_updated"] = datetime.now().isoformat()
-
     try:
         with open(history_file_path, "w", encoding="utf-8") as f:
             json.dump(history, f, ensure_ascii=False, indent=2)
-        logger.info(f"Історію успішно оновлено! Додано слово: '{new_word}'. Усього слів: {len(used_words)}")
+        logger.info("Файл history.json успішно збережено!")
     except Exception as e:
         logger.error(f"Помилка запису в {history_file_path}: {e}")
 
 
 def cleanup_temp_files(*file_paths):
-    """Видаляє тимчасові файли після завершення роботи."""
+    """Видаляє тимчасові файли."""
     for path in file_paths:
         if path and os.path.exists(path):
             try:
                 os.remove(path)
-                logger.info(f"Тимчасовий файл {path} видалено.")
-            except Exception as e:
-                logger.debug(f"Не вдалося видалити {path}: {e}")
+            except Exception:
+                pass
 
 
-def run_pipeline():
-    """
-    Головна функція повного циклу щоденної публікації.
-    """
-    logger.info("=== Запуск щоденного пайплайну публікації уроку німецької ===")
-    
-    # 1. Перевірка змінних середовища
+def run_pipeline(post_type: str = "auto"):
+    """Головний цикл запуску публікації."""
     bot_token, chat_id, gemini_key = validate_environment()
+    actual_type = determine_post_type(post_type)
+    logger.info(f"=== Запуск публікації: тип [{actual_type.upper()}] ===")
 
-    # 2. Генерація контенту через Gemini
-    logger.info("Крок 1/5: Генерація навчального контенту...")
-    content_data = generate_daily_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
-    word_title = content_data.get("clean_word") or content_data.get("word")
+    if actual_type == "morning":
+        # 1. Ранковий пост (Слово дня)
+        logger.info("Генерація ранкового слова дня...")
+        content_data = generate_morning_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
+        title = content_data.get("clean_word") or content_data.get("word")
+        card_path = generate_card_image(content_data, output_path=CARD_IMAGE_FILE)
+        audio_path = create_audio_pronunciation(content_data.get("audio_text", title), output_path=AUDIO_FILE)
+        
+        send_telegram_media_post(
+            bot_token=bot_token,
+            chat_id=chat_id,
+            image_path=card_path,
+            caption_text=content_data.get("telegram_post", ""),
+            audio_path=audio_path,
+            title=title
+        )
+        update_history_file(content_data, history_file_path=HISTORY_FILE)
+        cleanup_temp_files(card_path, audio_path)
 
-    # 3. Створення графічної картки
-    logger.info("Крок 2/5: Створення брендованої картки з Pillow...")
-    card_path = generate_card_image(content_data, output_path=CARD_IMAGE_FILE)
+    elif actual_type == "afternoon":
+        # 2. Денний пост (Розмовна фраза)
+        logger.info("Генерація денної розмовної фрази...")
+        content_data = generate_afternoon_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
+        title = content_data.get("phrase", "Розмовна фраза")
+        card_path = generate_card_image(content_data, output_path=CARD_IMAGE_FILE)
+        audio_path = create_audio_pronunciation(content_data.get("audio_text", title), output_path=AUDIO_FILE)
 
-    # 4. Створення аудіофайлу вимови через gTTS
-    logger.info("Крок 3/5: Генерація аудіо вимови через gTTS...")
-    audio_text = content_data.get("audio_text", word_title)
-    audio_path = create_audio_pronunciation(audio_text, output_path=AUDIO_FILE)
+        send_telegram_media_post(
+            bot_token=bot_token,
+            chat_id=chat_id,
+            image_path=card_path,
+            caption_text=content_data.get("telegram_post", ""),
+            audio_path=audio_path,
+            title=title
+        )
+        update_history_file(content_data, history_file_path=HISTORY_FILE)
+        cleanup_temp_files(card_path, audio_path)
 
-    # 5. Публікація в Telegram
-    logger.info("Крок 4/5: Публікація в Telegram-канал...")
-    telegram_caption = content_data.get("telegram_post", "")
-    send_telegram_post(
-        bot_token=bot_token,
-        chat_id=chat_id,
-        image_path=card_path,
-        caption_text=telegram_caption,
-        audio_path=audio_path,
-        word_title=word_title
-    )
+    elif actual_type == "evening":
+        # 3. Вечірній пост (Інтерактивне Quiz-опитування)
+        logger.info("Генерація вечірньої інтерактивної вікторини...")
+        quiz_data = generate_evening_quiz(history_file_path=HISTORY_FILE, api_key=gemini_key)
+        send_telegram_poll(
+            bot_token=bot_token,
+            chat_id=chat_id,
+            quiz_data=quiz_data
+        )
+        update_history_file(quiz_data, history_file_path=HISTORY_FILE)
 
-    # 6. Оновлення history.json
-    logger.info("Крок 5/5: Оновлення історії використаних слів...")
-    update_history_file(content_data, history_file_path=HISTORY_FILE)
-
-    # 7. Очищення тимчасових файлів (щоб git залишався чистим)
-    cleanup_temp_files(card_path, audio_path)
-
-    logger.info("=== Щоденну публікацію успішно завершено! ===")
+    logger.info(f"=== Публікацію [{actual_type.upper()}] успішно завершено! ===")
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Автоматична публікація постів у Telegram-канал.")
+    parser.add_argument(
+        "--type",
+        dest="post_type",
+        choices=["auto", "morning", "afternoon", "evening"],
+        default="auto",
+        help="Тип публікації: morning (ранок), afternoon (день), evening (вечірній квіз) або auto"
+    )
+    args = parser.parse_args()
+
     try:
-        run_pipeline()
+        run_pipeline(post_type=args.post_type)
     except Exception as e:
-        logger.critical(f"Критична помилка виконання пайплайну: {e}", exc_info=True)
+        logger.critical(f"Критична помилка виконання: {e}", exc_info=True)
         sys.exit(1)

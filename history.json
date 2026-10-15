@@ -2,9 +2,10 @@
   "used_words": [
     "die Anmeldung",
     "der Feierabend",
-    "die Gemütlichkeit"
+    "die Gemütlichkeit",
+    "die Mülltrennung"
   ],
-  "last_updated": "2026-10-15T09:00:00",
+  "last_updated": "2026-10-15T13:25:10.037846",
   "history": [
     {
       "date": "2026-10-13",
@@ -23,6 +24,13 @@
       "word": "die Gemütlichkeit",
       "translation": "затишок, комфорт, душевний спокій",
       "rubric": "Ідіоми та культурні особливості (Redewendungen)"
+    },
+    {
+      "date": "2026-10-15",
+      "word": "die Mülltrennung",
+      "translation": "сортування сміття",
+      "rubric": "Побут та щоденне життя (Alltag)",
+      "level": "A1-A2"
     }
   ]
 }

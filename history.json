@@ -5,7 +5,7 @@
     "die Gemütlichkeit",
     "die Mülltrennung"
   ],
-  "last_updated": "2026-10-15T15:39:35.042125",
+  "last_updated": "2026-10-15T15:25:56.186528",
   "history": [
     {
       "date": "2026-10-13",
@@ -43,12 +43,19 @@
       "type": "afternoon_phrase",
       "phrase": "Passt schon!",
       "translation": "Все гаразд! / Здачі не треба!"
+    },
+    {
+      "date": "2026-10-15 15:25",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний прийменник:\n\n«Ich freue mich schon sehr ___ deinen Besuch morgen!»",
+      "topic": "Керування дієслів у німецькій"
     }
   ],
   "used_phrases": [
     "Passt schon!"
   ],
   "used_quizzes": [
-    "Quiz"
+    "Quiz",
+    "Керування дієслів у німецькій"
   ]
 }

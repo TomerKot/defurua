@@ -7,10 +7,27 @@ image_maker.py
 
 import os
 import sys
+import re
 import logging
 from PIL import Image, ImageDraw, ImageFont
 
 logger = logging.getLogger(__name__)
+
+def strip_emojis(text: str) -> str:
+    """Видаляє емодзі та специфічні піктограми, для яких у TrueType шрифтах немає гліфів."""
+    if not text:
+        return ""
+    emoji_pattern = re.compile(
+        r"[\U00010000-\U0010ffff"
+        r"\u2600-\u27bf"
+        r"\u2300-\u23ff"
+        r"\u2190-\u21ff"
+        r"]+",
+        flags=re.UNICODE
+    )
+    cleaned = emoji_pattern.sub("", text)
+    return re.sub(r"\s+", " ", cleaned).strip()
+
 
 # Розміри картки
 CARD_WIDTH = 1080
@@ -164,17 +181,27 @@ def generate_card_image(data: dict, output_path: str = "card.png") -> str:
     font_brand = load_font(is_bold=True, size=24)
 
     # 5. Хедер картки: бейдж рубрики та рівень
-    rubric_title = data.get("rubric_name", "Німецька щодня").upper()
-    level_text = f"РІВЕНЬ: {data.get('level', 'A2')}"
+    raw_rubric = data.get("rubric_name", "Німецька щодня")
+    rubric_title = strip_emojis(raw_rubric).upper()
+    level_text = f"РІВЕНЬ: {strip_emojis(data.get('level', 'A2'))}"
 
-    # Бейдж рубрики (ліворуч)
+    # Бейдж рубрики (ліворуч) із векторним німецьким міні-прапорцем замість емодзі
     badge_x = margin + 40
     badge_y = 90
-    rubric_display = f"🇩🇪  {rubric_title}"
-    badge_bbox = draw.textbbox((badge_x + 16, badge_y + 8), rubric_display, font=font_badge)
-    badge_rect = (badge_x, badge_y, badge_bbox[2] + 20, badge_bbox[3] + 10)
+    flag_w, flag_h = 24, 18
+    text_offset_x = badge_x + 16 + flag_w + 12
+    badge_text_bbox = draw.textbbox((text_offset_x, badge_y + 8), rubric_title, font=font_badge)
+    badge_rect = (badge_x, badge_y, badge_text_bbox[2] + 20, badge_text_bbox[3] + 10)
     draw.rounded_rectangle(badge_rect, radius=12, fill=(28, 45, 75), outline=(59, 130, 246), width=1)
-    draw.text((badge_x + 16, badge_y + 8), rubric_display, font=font_badge, fill=(226, 232, 240))
+
+    # Малюємо міні-прапорець Німеччини геометрично (без емодзі шрифту!)
+    flag_x = badge_x + 16
+    flag_y = badge_y + 13
+    h_stripe = flag_h // 3
+    draw.rectangle([(flag_x, flag_y), (flag_x + flag_w, flag_y + h_stripe)], fill=(20, 20, 20))
+    draw.rectangle([(flag_x, flag_y + h_stripe), (flag_x + flag_w, flag_y + 2 * h_stripe)], fill=(220, 38, 38))
+    draw.rectangle([(flag_x, flag_y + 2 * h_stripe), (flag_x + flag_w, flag_y + flag_h)], fill=(245, 158, 11))
+    draw.text((text_offset_x, badge_y + 8), rubric_title, font=font_badge, fill=(226, 232, 240))
 
     # Бейдж рівня (праворуч)
     level_bbox = draw.textbbox((0, 0), level_text, font=font_level)
@@ -184,14 +211,11 @@ def generate_card_image(data: dict, output_path: str = "card.png") -> str:
     draw.rounded_rectangle(level_rect, radius=12, fill=(30, 58, 138), outline=(96, 165, 250), width=1)
     draw.text((level_x + 16, badge_y + 9), level_text, font=font_level, fill=(191, 219, 254))
 
-    # 6. Головне слово дня
-    word = data.get("word", "").strip()
+    # 6. Головне слово або фраза дня
+    word = strip_emojis(data.get("word", "")).strip()
     article = data.get("article", "").lower().strip()
-    transcription = data.get("transcription", "").strip()
-    translation = data.get("translation", "").strip()
-
-    # Визначення кольору артикля
-    article_color = ARTICLE_COLORS.get(article, DEFAULT_ARTICLE_COLOR)
+    transcription = strip_emojis(data.get("transcription", "")).strip()
+    translation = strip_emojis(data.get("translation", "")).strip()
 
     # Адаптація розміру шрифту для довгих слів та розмовних фраз
     current_word_font = font_word
@@ -213,7 +237,6 @@ def generate_card_image(data: dict, output_path: str = "card.png") -> str:
 
     # Переклад українською мовою
     translation_y = transcription_y + 55
-    # Загортаємо переклад, якщо він довгий
     trans_lines = wrap_text(translation, font_translation, CARD_WIDTH - 2 * margin - 80, draw)
     for line in trans_lines:
         draw.text((margin + 40, translation_y), line, font=font_translation, fill=(250, 204, 21)) # Теплий золотий
@@ -225,12 +248,13 @@ def generate_card_image(data: dict, output_path: str = "card.png") -> str:
     example_rect = (margin + 30, example_box_top, CARD_WIDTH - margin - 30, example_box_bottom)
     draw.rounded_rectangle(example_rect, radius=20, fill=(13, 21, 37), outline=(37, 52, 80), width=2)
 
-    # Заголовок блоку прикладу
-    draw.text((margin + 55, example_box_top + 25), "💬  ПРИКЛАД У ЖИТТІ:", font=font_example_label, fill=(96, 165, 250))
+    # Заголовок блоку прикладу з вертикальною акцентною лінією замість емодзі 💬
+    draw.rectangle([(margin + 55, example_box_top + 26), (margin + 60, example_box_top + 50)], fill=(96, 165, 250))
+    draw.text((margin + 72, example_box_top + 25), "ПРИКЛАД У РЕАЛЬНОМУ ЖИТТІ:", font=font_example_label, fill=(96, 165, 250))
 
     # Німецьке речення (виділене)
-    card_example_de = data.get("card_example_de", "")
-    card_example_ua = data.get("card_example_ua", "")
+    card_example_de = strip_emojis(data.get("card_example_de", ""))
+    card_example_ua = strip_emojis(data.get("card_example_ua", ""))
 
     de_lines = wrap_text(f"»{card_example_de}«", font_example_de, CARD_WIDTH - 2 * margin - 120, draw)
     curr_y = example_box_top + 75
@@ -238,21 +262,20 @@ def generate_card_image(data: dict, output_path: str = "card.png") -> str:
         draw.text((margin + 55, curr_y), line, font=font_example_de, fill=(241, 245, 249))
         curr_y += 40
 
-    # Український переклад прикладу
+    # Український переклад прикладу (тире замість спецсимволів стрілок ↳)
     curr_y += 12
-    ua_lines = wrap_text(f"↳ {card_example_ua}", font_example_ua, CARD_WIDTH - 2 * margin - 120, draw)
+    ua_lines = wrap_text(f"— {card_example_ua}", font_example_ua, CARD_WIDTH - 2 * margin - 120, draw)
     for line in ua_lines:
         draw.text((margin + 55, curr_y), line, font=font_example_ua, fill=(148, 163, 184))
         curr_y += 34
 
     # 8. Футер картки
     footer_y = CARD_HEIGHT - 125
-    # Розділювальна лінія
     draw.line([(margin + 40, footer_y), (CARD_WIDTH - margin - 40, footer_y)], fill=(37, 52, 80), width=1)
 
-    # Текст футера
-    draw.text((margin + 40, footer_y + 20), "🎧  Правильна вимова — у доданому аудіо", font=font_footer, fill=(100, 116, 139))
-    brand_text = "Deutsch für Ukrainer 🇺🇦🇩🇪"
+    # Текст футера без емодзі
+    draw.text((margin + 40, footer_y + 20), "Правильна вимова — у прикріпленому аудіо", font=font_footer, fill=(100, 116, 139))
+    brand_text = "Deutsch für Ukrainer"
     brand_bbox = draw.textbbox((0, 0), brand_text, font=font_brand)
     brand_w = brand_bbox[2] - brand_bbox[0]
     draw.text((CARD_WIDTH - margin - 40 - brand_w, footer_y + 18), brand_text, font=font_brand, fill=(203, 213, 225))

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Локальні секрети
+.env
+*.local
+
+# Тимчасові медіафайли
+*.png
+*.jpg
+*.jpeg
+*.mp3
+*.wav
+
+# IDE та редактори
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Логи
+*.log

@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-16T09:03:10.524656",
+  "last_updated": "2026-10-16T09:06:11.323581",
   "history": [
     {
       "date": "2026-10-13",
@@ -53,6 +53,13 @@
     },
     {
       "date": "2026-10-16 09:03",
+      "type": "morning_word",
+      "word": "das Pfand, -er",
+      "translation": "застава за тару / пляшки",
+      "rubric": "Побут та щоденне життя (Alltag)"
+    },
+    {
+      "date": "2026-10-16 09:06",
       "type": "morning_word",
       "word": "das Pfand, -er",
       "translation": "застава за тару / пляшки",

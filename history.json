@@ -3,9 +3,10 @@
     "die Anmeldung",
     "der Feierabend",
     "die Gemütlichkeit",
-    "die Mülltrennung"
+    "die Mülltrennung",
+    "das Pfand"
   ],
-  "last_updated": "2026-10-15T15:25:56.186528",
+  "last_updated": "2026-10-16T09:03:10.524656",
   "history": [
     {
       "date": "2026-10-13",
@@ -49,6 +50,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний прийменник:\n\n«Ich freue mich schon sehr ___ deinen Besuch morgen!»",
       "topic": "Керування дієслів у німецькій"
+    },
+    {
+      "date": "2026-10-16 09:03",
+      "type": "morning_word",
+      "word": "das Pfand, -er",
+      "translation": "застава за тару / пляшки",
+      "rubric": "Побут та щоденне життя (Alltag)"
     }
   ],
   "used_phrases": [

@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-16T12:10:34.337606",
+  "last_updated": "2026-10-16T16:33:02.283866",
   "history": [
     {
       "date": "2026-10-13",
@@ -70,6 +70,12 @@
       "type": "afternoon_phrase",
       "phrase": "Stimmt so!",
       "translation": "Решти не треба!"
+    },
+    {
+      "date": "2026-10-16 16:33",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
+      "topic": "Quiz"
     }
   ],
   "used_phrases": [

@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-16T09:06:11.323581",
+  "last_updated": "2026-10-16T12:10:34.337606",
   "history": [
     {
       "date": "2026-10-13",
@@ -64,10 +64,17 @@
       "word": "das Pfand, -er",
       "translation": "застава за тару / пляшки",
       "rubric": "Побут та щоденне життя (Alltag)"
+    },
+    {
+      "date": "2026-10-16 12:10",
+      "type": "afternoon_phrase",
+      "phrase": "Stimmt so!",
+      "translation": "Решти не треба!"
     }
   ],
   "used_phrases": [
-    "Passt schon!"
+    "Passt schon!",
+    "Stimmt so!"
   ],
   "used_quizzes": [
     "Quiz",

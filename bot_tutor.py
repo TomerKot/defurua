@@ -33,7 +33,7 @@ from generator import (
     generate_morning_content,
     generate_musterbrief_content,
     FALLBACK_QUIZ,
-    FALLBACK_WORD,
+    FALLBACK_WORDS,
     FALLBACK_MUSTERBRIEF
 )
 
@@ -288,7 +288,7 @@ def handle_word_command(chat_id: int):
             word_data = generate_morning_content(history_file_path=HISTORY_FILE, api_key=GEMINI_KEY)
         except Exception as e:
             logger.error(f"Помилка генерації слова: {e}")
-            word_data = FALLBACK_WORD
+            word_data = FALLBACK_WORDS.get(0, {})
 
     word = word_data.get("word", "")
     transcription = f" <i>{word_data.get('transcription')}</i>" if word_data.get("transcription") else ""

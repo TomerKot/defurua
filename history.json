@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-16T19:50:44.021538",
+  "last_updated": "2026-10-17T11:29:20.546104",
   "history": [
     {
       "date": "2026-10-13",
@@ -82,11 +82,18 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
       "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-17 11:29",
+      "type": "afternoon_phrase",
+      "phrase": "Das wär's, danke!",
+      "translation": "Це все, дякую! / Більше нічого не потрібно!"
     }
   ],
   "used_phrases": [
     "Passt schon!",
-    "Stimmt so!"
+    "Stimmt so!",
+    "Das wär's, danke!"
   ],
   "used_quizzes": [
     "Quiz",

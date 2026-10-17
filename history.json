@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-17T11:29:20.546104",
+  "last_updated": "2026-10-17T15:27:37.500731",
   "history": [
     {
       "date": "2026-10-13",
@@ -88,6 +88,12 @@
       "type": "afternoon_phrase",
       "phrase": "Das wär's, danke!",
       "translation": "Це все, дякую! / Більше нічого не потрібно!"
+    },
+    {
+      "date": "2026-10-17 15:27",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний артикль для пропуску:\n«Ich hänge das neue Bild an ... Wand.»",
+      "topic": "Змінні прийменники: Akkusativ чи Dativ"
     }
   ],
   "used_phrases": [
@@ -97,6 +103,7 @@
   ],
   "used_quizzes": [
     "Quiz",
-    "Керування дієслів у німецькій"
+    "Керування дієслів у німецькій",
+    "Змінні прийменники: Akkusativ чи Dativ"
   ]
 }

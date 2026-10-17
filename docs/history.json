@@ -1,0 +1,61 @@
+{
+  "used_words": [
+    "die Anmeldung",
+    "der Feierabend",
+    "die Gemütlichkeit",
+    "die Mülltrennung"
+  ],
+  "last_updated": "2026-10-15T15:25:56.186528",
+  "history": [
+    {
+      "date": "2026-10-13",
+      "word": "die Anmeldung",
+      "translation": "реєстрація місця проживання",
+      "rubric": "Робота та бюрократія (Bürokratie & Beruf)"
+    },
+    {
+      "date": "2026-10-14",
+      "word": "der Feierabend",
+      "translation": "завершення робочого дня / вечірній відпочинок",
+      "rubric": "Розмовна мова та сленг (Umgangssprache)"
+    },
+    {
+      "date": "2026-10-15",
+      "word": "die Gemütlichkeit",
+      "translation": "затишок, комфорт, душевний спокій",
+      "rubric": "Ідіоми та культурні особливості (Redewendungen)"
+    },
+    {
+      "date": "2026-10-15",
+      "word": "die Mülltrennung",
+      "translation": "сортування сміття",
+      "rubric": "Побут та щоденне життя (Alltag)",
+      "level": "A1-A2"
+    },
+    {
+      "date": "2026-10-15 15:36",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
+      "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-15 15:39",
+      "type": "afternoon_phrase",
+      "phrase": "Passt schon!",
+      "translation": "Все гаразд! / Решти не треба!"
+    },
+    {
+      "date": "2026-10-15 15:25",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний прийменник:\n\n«Ich freue mich schon sehr ___ deinen Besuch morgen!»",
+      "topic": "Керування дієслів у німецькій"
+    }
+  ],
+  "used_phrases": [
+    "Passt schon!"
+  ],
+  "used_quizzes": [
+    "Quiz",
+    "Керування дієслів у німецькій"
+  ]
+}

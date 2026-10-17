@@ -23,6 +23,7 @@ from generator import (
     generate_morning_content,
     generate_afternoon_content,
     generate_evening_quiz,
+    generate_musterbrief_content,
     load_history
 )
 from image_maker import generate_card_image
@@ -67,18 +68,24 @@ def validate_environment() -> tuple[str, str, str]:
 def determine_post_type(arg_type: str = "auto") -> str:
     """
     Визначає тип публікації:
-    Якщо передано явне значення (morning / afternoon / evening) — використовує його.
-    Якщо 'auto' — обирає за поточним часом UTC:
-    - 05:00 - 09:59 UTC (07:00 - 11:59 Київ) -> morning (Слово дня)
-    - 10:00 - 14:59 UTC (12:00 - 16:59 Київ) -> afternoon (Розмовна фраза)
-    - 15:00 - 04:59 UTC (17:00 - 06:59 Київ) -> evening (Quiz-опитування)
+    Якщо передано явне значення — використовує його.
+    Якщо 'auto' — обирає за часом UTC та днем тижня:
+    - 05:00 - 09:59 UTC -> morning (Слово дня)
+    - 10:00 - 14:59 UTC:
+        • У суботу (день 5) -> letter (Офіційний лист Musterbrief)
+        • В інші дні -> afternoon (Розмовна фраза)
+    - 15:00 - 04:59 UTC -> evening (Quiz-опитування)
     """
-    if arg_type in ["morning", "afternoon", "evening"]:
+    if arg_type in ["morning", "afternoon", "evening", "letter", "musterbrief"]:
         return arg_type
 
     utc_hour = datetime.utcnow().hour
-    logger.info(f"Режим 'auto': поточна година UTC = {utc_hour}")
-    if 5 <= utc_hour < 10:
+    weekday = datetime.utcnow().weekday()
+    logger.info(f"Режим 'auto': поточна година UTC = {utc_hour}, день тижня = {weekday}")
+
+    if weekday == 5 and 10 <= utc_hour < 15:
+        return "letter"
+    elif 5 <= utc_hour < 10:
         return "morning"
     elif 10 <= utc_hour < 15:
         return "afternoon"
@@ -235,15 +242,28 @@ def update_history_file(data: dict, history_file_path: str = HISTORY_FILE):
             history.setdefault("used_quizzes", []).append(topic)
         history["history"].append({
             "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
-            "type": "evening_quiz",
-            "question": data.get("question"),
-            "topic": topic
+    elif post_type in ["musterbrief", "letter"]:
+        topic = data.get("topic", "Musterbrief")
+        if topic and topic not in history.get("used_letters", []):
+            history.setdefault("used_letters", []).append(topic)
+        history["history"].append({
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "type": "musterbrief",
+            "topic": topic,
+            "situation": data.get("situation")
         })
 
     history["last_updated"] = datetime.now().isoformat()
     try:
         with open(history_file_path, "w", encoding="utf-8") as f:
             json.dump(history, f, ensure_ascii=False, indent=2)
+        
+        # Автоматична синхронізація з docs/history.json для Telegram WebApp
+        if os.path.exists("docs"):
+            with open("docs/history.json", "w", encoding="utf-8") as f_docs:
+                json.dump(history, f_docs, ensure_ascii=False, indent=2)
+            logger.info("Файл docs/history.json для WebApp успішно синхронізовано!")
+
         logger.info("Файл history.json успішно збережено!")
     except Exception as e:
         logger.error(f"Помилка запису в {history_file_path}: {e}")
@@ -312,7 +332,24 @@ def run_pipeline(post_type: str = "auto"):
             chat_id=chat_id,
             quiz_data=quiz_data
         )
-        update_history_file(quiz_data, history_file_path=HISTORY_FILE)
+    elif actual_type in ["letter", "musterbrief"]:
+        # 4. Спеціальний пост: Офіційний лист (Musterbrief)
+        logger.info("Генерація офіційного листа (Musterbrief)...")
+        content_data = generate_musterbrief_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
+        title = content_data.get("topic", "Musterbrief")
+        card_path = generate_card_image(content_data, output_path=CARD_IMAGE_FILE)
+        audio_path = create_audio_pronunciation(content_data.get("audio_text", title), output_path=AUDIO_FILE)
+
+        send_telegram_media_post(
+            bot_token=bot_token,
+            chat_id=chat_id,
+            image_path=card_path,
+            caption_text=content_data.get("telegram_post", ""),
+            audio_path=audio_path,
+            title=title
+        )
+        update_history_file(content_data, history_file_path=HISTORY_FILE)
+        cleanup_temp_files(card_path, audio_path)
 
     logger.info(f"=== Публікацію [{actual_type.upper()}] успішно завершено! ===")
 
@@ -322,9 +359,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--type",
         dest="post_type",
-        choices=["auto", "morning", "afternoon", "evening"],
+        choices=["auto", "morning", "afternoon", "evening", "letter", "musterbrief"],
         default="auto",
-        help="Тип публікації: morning (ранок), afternoon (день), evening (вечірній квіз) або auto"
+        help="Тип публікації: morning, afternoon, evening, letter (або musterbrief), auto"
     )
     args = parser.parse_args()
 

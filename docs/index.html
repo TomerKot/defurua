@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Німецька для українців | Інтерактивний словничок</title>
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="flag-icon">🇩🇪🇺🇦</span>
+        <div>
+          <h1>Німецька для українців</h1>
+          <p class="subtitle">Інтерактивний тренажер & словничок</p>
+        </div>
+      </div>
+      <div class="stats-badge" id="statsBadge">
+        <span id="wordsCount">0</span> слів
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="flashcards">
+        <span class="icon">🗂️</span> Картки
+      </button>
+      <button class="tab-btn" data-tab="dictionary">
+        <span class="icon">📖</span> Словник
+      </button>
+      <button class="tab-btn" data-tab="trainer">
+        <span class="icon">🎯</span> Тренажер
+      </button>
+    </nav>
+
+    <!-- TAB 1: Flashcards -->
+    <section id="flashcards" class="tab-content active">
+      <div class="flashcard-container">
+        <div class="flashcard" id="flashcard">
+          <!-- FRONT -->
+          <div class="card-face card-front">
+            <div class="card-top">
+              <span class="badge rubric-badge" id="cardRubric">Рубрика</span>
+              <span class="badge level-badge" id="cardLevel">A2</span>
+            </div>
+            <div class="card-center">
+              <h2 class="german-word" id="cardWord">Laden...</h2>
+              <div class="transcription" id="cardTranscription">[транскрипція]</div>
+            </div>
+            <div class="card-bottom">
+              <button class="audio-btn" id="playAudioBtn" title="Прослухати вимову">
+                🔊 Слухати вимову
+              </button>
+              <div class="hint">Натисніть на картку, щоб перевернути 👆</div>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="card-face card-back">
+            <div class="card-top">
+              <span class="badge translate-badge">Переклад</span>
+              <span class="date-badge" id="cardDate">сьогодні</span>
+            </div>
+            <div class="card-center">
+              <h3 class="translation" id="cardTranslation">Переклад</h3>
+              <div class="example-box" id="cardExampleBox">
+                <div class="example-de" id="cardExampleDe">Beispielsatz</div>
+                <div class="example-ua" id="cardExampleUa">Приклад перекладу</div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <div class="hint">Натисніть, щоб повернутися назад 🔄</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="card-controls">
+          <button class="ctrl-btn prev-btn" id="prevCardBtn">⬅️ Назад</button>
+          <button class="ctrl-btn flip-btn" id="flipCardBtn">🔄 Перевернути</button>
+          <button class="ctrl-btn next-btn" id="nextCardBtn">Вперед ➡️</button>
+        </div>
+        <div class="card-counter" id="cardCounter">Картка 1 з 10</div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Dictionary & Search -->
+    <section id="dictionary" class="tab-content">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="🔍 Пошук німецькою або українською..." autocomplete="off">
+        <button id="clearSearchBtn" class="clear-btn" style="display: none;">✕</button>
+      </div>
+
+      <div class="filter-pills" id="filterPills">
+        <button class="filter-pill active" data-filter="all">Всі</button>
+        <button class="filter-pill" data-filter="der">der (чол.)</button>
+        <button class="filter-pill" data-filter="die">die (жін.)</button>
+        <button class="filter-pill" data-filter="das">das (сер.)</button>
+        <button class="filter-pill" data-filter="phrase">Розмовні фрази</button>
+      </div>
+
+      <div class="dictionary-list" id="dictionaryList">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- TAB 3: Quiz Trainer -->
+    <section id="trainer" class="tab-content">
+      <div class="quiz-card" id="quizContainer">
+        <div class="quiz-header">
+          <span class="badge quiz-badge">🧠 Перевірка знань</span>
+          <span class="quiz-score" id="quizScore">Рахунок: 0</span>
+        </div>
+        <div class="quiz-question-box">
+          <div class="quiz-prompt">Як перекладається слово:</div>
+          <h2 class="quiz-target-word" id="quizWord">das Wort</h2>
+        </div>
+        <div class="quiz-options" id="quizOptions">
+          <!-- Options rendered by JS -->
+        </div>
+        <div class="quiz-feedback" id="quizFeedback" style="display: none;"></div>
+        <button class="next-quiz-btn" id="nextQuizBtn" style="display: none;">Наступне слово ➡️</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <a href="https://t.me/defurualernen" target="_blank" class="channel-link">
+        📢 Наш Telegram-канал: @defurualernen
+      </a>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

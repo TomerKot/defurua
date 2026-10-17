@@ -179,25 +179,56 @@ FALLBACK_QUIZ = {
     "explanation": "Вираз 'Stimmt so!' — найпоширеніший спосіб залишити чайові офіціанту чи водієві в Німеччині."
 }
 
+# Резервні дані для шаблонів офіційних листів (Musterbrief)
+FALLBACK_MUSTERBRIEF = {
+    "topic": "Розірвання договору (Kündigung des Vertrags)",
+    "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет",
+    "card_example_de": "Hiermit kündige ich meinen Vertrag fristgerecht zum nächstmöglichen Zeitpunkt.",
+    "card_example_ua": "Цим листом я розриваю мій договір у встановлений термін до найближчої можливої дати.",
+    "letter_text": """Sehr geehrte Damen und Herren,
+
+hiermit kündige ich meinen oben genannten Vertrag (Vertragsnummer: [Номер договору]) fristgerecht zum nächstmöglichen Zeitpunkt.
+
+Bitte senden Sie mir eine schriftliche Bestätigung der Kündigung unter Angabe des Beendigungszeitpunkts zu.
+
+Mit freundlichen Grüßen,
+[Ваше Ім'я та Прізвище]""",
+    "translation": """Шановні пані та панове!
+
+Цим листом я розриваю мій вищезазначений договір (номер договору: [Номер договору]) у встановлений термін до найближчої можливої дати.
+
+Будь ласка, надішліть мені письмове підтвердження розірвання із зазначенням дати закінчення договору.
+
+З повагою,
+[Ваше Ім'я та Прізвище]""",
+    "vocabulary": [
+        {"de": "fristgerecht kündigen", "ua": "розірвати договір у встановлений термін"},
+        {"de": "zum nächstmöglichen Zeitpunkt", "ua": "до найближчої можливої дати"},
+        {"de": "die Kündigungsbestätigung", "ua": "письмове підтвердження розірвання"}
+    ],
+    "pro_tip": "💡 <b>Порада:</b> Завжди вимагайте письмове підтвердження (Kündigungsbestätigung). Важливі листи краще надсилати як рекомендований лист (Einschreiben Einwurf) через пошту Deutsche Post або факсом із протоколом відправлення (Sendeprotokoll)."
+}
+
 
 def load_history(history_file_path: str = "history.json") -> dict:
-    """Завантажує історію використаних слів, фраз та квізів."""
+    """Завантажує історію використаних слів, фраз, квізів та листів."""
     if not os.path.exists(history_file_path):
-        return {"used_words": [], "used_phrases": [], "used_quizzes": [], "history": []}
+        return {"used_words": [], "used_phrases": [], "used_quizzes": [], "used_letters": [], "history": []}
     
     try:
         with open(history_file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             if not isinstance(data, dict):
-                return {"used_words": [], "used_phrases": [], "used_quizzes": [], "history": []}
+                return {"used_words": [], "used_phrases": [], "used_quizzes": [], "used_letters": [], "history": []}
             data.setdefault("used_words", [])
             data.setdefault("used_phrases", [])
             data.setdefault("used_quizzes", [])
+            data.setdefault("used_letters", [])
             data.setdefault("history", [])
             return data
     except Exception as e:
         logger.warning(f"Не вдалося прочитати {history_file_path}: {e}")
-        return {"used_words": [], "used_phrases": [], "used_quizzes": [], "history": []}
+        return {"used_words": [], "used_phrases": [], "used_quizzes": [], "used_letters": [], "history": []}
 
 
 def get_gemini_model(api_key: str = None):
@@ -504,6 +535,109 @@ def generate_evening_quiz(history_file_path: str = "history.json", api_key: str 
         logger.error(f"Помилка генерації вечірнього тесту: {e}")
         fallback = FALLBACK_QUIZ.copy()
         fallback["post_type"] = "evening"
+        return fallback
+
+
+# ==========================================================
+# 4. ШАБЛОНИ ОФІЦІЙНИХ ЛИСТІВ (MUSTERBRIEFE)
+# ==========================================================
+def format_musterbrief_post(data: dict) -> str:
+    """Форматує пост із готовим німецьким шаблоном офіційного листа для Telegram."""
+    lines = [
+        "✉️ <b>Німецька для українців | Офіційний шаблон (Musterbrief)</b>",
+        f"📌 <b>Тема:</b> <i>{data.get('topic', 'Шаблон листа')}</i>",
+        f"📍 <i>Призначення: {data.get('situation', 'Офіційні установи / сервіси')}</i>",
+        "",
+        "📋 <b>Текст листа німецькою (натисніть, щоб скопіювати):</b>",
+        f"<pre>{data.get('letter_text', '').strip()}</pre>",
+        "",
+        "📖 <b>Переклад українською:</b>",
+        f"<i>{data.get('translation', '').strip()}</i>",
+        "",
+        "🔑 <b>Ключова лексика:</b>"
+    ]
+    for v in data.get("vocabulary", []):
+        lines.append(f"🔹 <b>{v.get('de', '')}</b> — {v.get('ua', '')}")
+    if data.get("pro_tip"):
+        lines.append("")
+        lines.append(data.get("pro_tip"))
+    lines.append("")
+    lines.append("#Musterbrief #НімецькіЛисти #Бюрократія #Німеччина")
+    return "\n".join(lines)
+
+
+def generate_musterbrief_content(history_file_path: str = "history.json", api_key: str = None) -> dict:
+    """
+    Генерує готовий шаблон німецького листа (Musterbrief) для життя в Німеччині:
+    - Kündigung (спортзал, мобільний зв'язок, підписка)
+    - Terminanfrage (Bürgeramt, Ausländerbehörde, лікар)
+    - Krankmeldung (робота, школа, дитячий садок)
+    - Adressänderung / Bankverbindung (Jobcenter, Krankenkasse)
+    - Ratenzahlung / Fristverlängerung (розстрочка, перенесення дедлайну)
+    """
+    history = load_history(history_file_path)
+    used_letters = history.get("used_letters", [])
+
+    model = get_gemini_model(api_key)
+    if not model:
+        fallback = FALLBACK_MUSTERBRIEF.copy()
+        fallback["telegram_post"] = format_musterbrief_post(fallback)
+        fallback["word"] = fallback.get("topic")
+        fallback["audio_text"] = fallback.get("card_example_de", "")
+        fallback["post_type"] = "musterbrief"
+        return fallback
+
+    recent_letters_str = ", ".join(used_letters[-50:]) if used_letters else "немає"
+    prompt = f"""
+Ти — експерт з німецької офіційної кореспонденції та права для українців у Німеччині.
+Створи надзвичайно практичний, грамотний, сучасний зразок офіційного німецького листа (Musterbrief).
+Теми можуть стосуватися:
+1. Розірвання договору (Kündigung: спортзал, інтернет, зв'язок, страховка).
+2. Запит на зустріч/запис (Terminanfrage im Bürgeramt / Ausländerbehörde / Facharzt).
+3. Повідомлення про хворобу (Krankmeldung для роботодавця або виправдання відсутності дитини в школі).
+4. Зміна банківських реквізитів або адреси проживання (Mitteilung über Umzug / Bankverbindung).
+5. Прохання про сплату частинами або відстрочку дедлайну (Ratenzahlung / Fristverlängerung).
+
+СУВОРО УНИКАЙ ВЖЕ ВИКОРИСТАНИХ ТЕМ: {recent_letters_str}
+
+СУВОРІ ВИМОГИ ДО ЛІТЕРАТУРНОЇ ЧИСТОТИ УКРАЇНСЬКОЇ МОВИ:
+- Жодного суржику та кальок з російської!
+
+Поверни валідний JSON:
+{{
+  "topic": "Коротка та чітка тема листа (наприклад: Розірвання контракту на інтернет / Kündigung)",
+  "situation": "Коли та для чого використовується цей лист (1 речення)",
+  "card_example_de": "Ключова німецька фраза листа (до 10 слів) для графічної картки",
+  "card_example_ua": "Літературний український переклад цієї фрази",
+  "letter_text": "Повний офіційний текст листа німецькою мовою з чіткими полями у квадратних дужках, наприклад [Ihr Name], [Vertragsnummer], [Datum]. Звернення (Sehr geehrte...), суть, ввічливе закінчення (Mit freundlichen Grüßen).",
+  "translation": "Повний український переклад листа абзац за абзацом.",
+  "vocabulary": [
+    {{"de": "німецький офіційний вираз 1", "ua": "український переклад 1"}},
+    {{"de": "німецький офіційний вираз 2", "ua": "український переклад 2"}},
+    {{"de": "німецький офіційний вираз 3", "ua": "український переклад 3"}}
+  ],
+  "pro_tip": "💡 <b>Юридична порада:</b> як правильно надіслати (Einschreiben, дедлайн попередження, отримання Bestätigung)."
+}}
+"""
+    try:
+        resp = model.generate_content(prompt)
+        data = clean_json_response(resp.text)
+        data["rubric_name"] = "Офіційний лист (Musterbrief)"
+        data["rubric_emoji"] = "✉️"
+        data["word"] = data.get("topic", "Musterbrief")
+        data["clean_word"] = data.get("topic", "Musterbrief")
+        data["level"] = "Офіційна"
+        data["telegram_post"] = format_musterbrief_post(data)
+        data["audio_text"] = data.get("card_example_de", "Hiermit kündige ich meinen Vertrag.")
+        data["post_type"] = "musterbrief"
+        return data
+    except Exception as e:
+        logger.error(f"Помилка генерації Musterbrief: {e}")
+        fallback = FALLBACK_MUSTERBRIEF.copy()
+        fallback["telegram_post"] = format_musterbrief_post(fallback)
+        fallback["word"] = fallback.get("topic")
+        fallback["audio_text"] = fallback.get("card_example_de", "")
+        fallback["post_type"] = "musterbrief"
         return fallback
 
 

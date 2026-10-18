@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-17T15:27:37.500731",
+  "last_updated": "2026-10-18T18:35:11.222843",
   "history": [
     {
       "date": "2026-10-13",
@@ -94,6 +94,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний артикль для пропуску:\n«Ich hänge das neue Bild an ... Wand.»",
       "topic": "Змінні прийменники: Akkusativ чи Dativ"
+    },
+    {
+      "date": "2026-10-18 18:35",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Яке слово потрібно вставити на місце пропуску?\n\n«Er ist zwei Jahre älter ___ ich.»",
+      "topic": "Порівняння: als чи wie"
     }
   ],
   "used_phrases": [
@@ -104,6 +110,10 @@
   "used_quizzes": [
     "Quiz",
     "Керування дієслів у німецькій",
-    "Змінні прийменники: Akkusativ чи Dativ"
-  ]
+    "Змінні прийменники: Akkusativ чи Dativ",
+    "Порівняння: als чи wie"
+  ],
+  "used_letters": [],
+  "used_mistakes": [],
+  "used_dialogues": []
 }

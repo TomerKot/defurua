@@ -3,9 +3,10 @@
     "die Anmeldung",
     "der Feierabend",
     "die Gemütlichkeit",
-    "die Mülltrennung"
+    "die Mülltrennung",
+    "das Pfand"
   ],
-  "last_updated": "2026-10-15T15:25:56.186528",
+  "last_updated": "2026-10-18T18:35:11.222843",
   "history": [
     {
       "date": "2026-10-13",
@@ -49,13 +50,70 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний прийменник:\n\n«Ich freue mich schon sehr ___ deinen Besuch morgen!»",
       "topic": "Керування дієслів у німецькій"
+    },
+    {
+      "date": "2026-10-16 09:03",
+      "type": "morning_word",
+      "word": "das Pfand, -er",
+      "translation": "застава за тару / пляшки",
+      "rubric": "Побут та щоденне життя (Alltag)"
+    },
+    {
+      "date": "2026-10-16 09:06",
+      "type": "morning_word",
+      "word": "das Pfand, -er",
+      "translation": "застава за тару / пляшки",
+      "rubric": "Побут та щоденне життя (Alltag)"
+    },
+    {
+      "date": "2026-10-16 12:10",
+      "type": "afternoon_phrase",
+      "phrase": "Stimmt so!",
+      "translation": "Решти не треба!"
+    },
+    {
+      "date": "2026-10-16 16:33",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
+      "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-16 19:50",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
+      "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-17 11:29",
+      "type": "afternoon_phrase",
+      "phrase": "Das wär's, danke!",
+      "translation": "Це все, дякую! / Більше нічого не потрібно!"
+    },
+    {
+      "date": "2026-10-17 15:27",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний артикль для пропуску:\n«Ich hänge das neue Bild an ... Wand.»",
+      "topic": "Змінні прийменники: Akkusativ чи Dativ"
+    },
+    {
+      "date": "2026-10-18 18:35",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Яке слово потрібно вставити на місце пропуску?\n\n«Er ist zwei Jahre älter ___ ich.»",
+      "topic": "Порівняння: als чи wie"
     }
   ],
   "used_phrases": [
-    "Passt schon!"
+    "Passt schon!",
+    "Stimmt so!",
+    "Das wär's, danke!"
   ],
   "used_quizzes": [
     "Quiz",
-    "Керування дієслів у німецькій"
-  ]
+    "Керування дієслів у німецькій",
+    "Змінні прийменники: Akkusativ чи Dativ",
+    "Порівняння: als чи wie"
+  ],
+  "used_letters": [],
+  "used_mistakes": [],
+  "used_dialogues": []
 }

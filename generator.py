@@ -209,26 +209,69 @@ Mit freundlichen Grüßen,
     "pro_tip": "💡 <b>Порада:</b> Завжди вимагайте письмове підтвердження (Kündigungsbestätigung). Важливі листи краще надсилати як рекомендований лист (Einschreiben Einwurf) через пошту Deutsche Post або факсом із протоколом відправлення (Sendeprotokoll)."
 }
 
+# Резервні дані для типових помилок українців
+FALLBACK_MISTAKE = {
+    "mistake_title": "«Мені холодно» німецькою мовою",
+    "wrong_phrase": "❌ Ich bin kalt / Ich habe kalt",
+    "correct_phrase": "✅ Mir ist kalt!",
+    "level": "A1-A2",
+    "card_example_de": "Mir ist so kalt! Mach bitte das Fenster zu.",
+    "card_example_ua": "Мені так холодно! Зачини, будь ласка, вікно.",
+    "explanation": "В українській мові ми кажемо «мені холодно». Початківці часто буквально перекладають це як «Ich bin kalt» (що для німців звучить як «я бездушна/холодна людина») або «Ich habe kalt». У німецькій мові для фізичних відчуттів завжди використовується давальний відмінок Dativ (кому? — mir).",
+    "examples": [
+        {"de": "Mir ist kalt. Können wir reingehen?", "ua": "Мені холодно. Можемо зайти всередину?"},
+        {"de": "Ist dir auch so warm?", "ua": "Тобі теж так тепло/жарко?"}
+    ],
+    "pro_tip": "💡 <b>Правило трьох відчуттів:</b> Mir ist kalt (холодно), Mir ist warm (тепло), Mir ist schlecht (погано/нудить). Завжди кажіть 'Mir ist...', а не 'Ich bin...'!"
+}
+
+# Резервні дані для ситуативних міні-діалогів
+FALLBACK_DIALOGUE = {
+    "location": "У пекарні (In der Bäckerei)",
+    "topic": "Купівля свіжих булочок та кави",
+    "card_example_de": "Zwei Brötchen und einen Kaffee zum Mitnehmen, bitte!",
+    "card_example_ua": "Дві булочки та одну каву з собою, будь ласка!",
+    "level": "A1-A2",
+    "dialogue": [
+        {"speaker": "Продавець", "de": "Guten Morgen! Was darf es sein?", "ua": "Доброго ранку! Що для вас?"},
+        {"speaker": "Ви", "de": "Guten Morgen! Ich hätte gerne zwei Brötchen und einen Kaffee zum Mitnehmen, bitte.", "ua": "Доброго ранку! Я хотів би дві булочки та одну каву з собою, будь ласка."},
+        {"speaker": "Продавець", "de": "Gerne. Das macht vier Euro zwanzig zusammen.", "ua": "Із задоволенням. Разом чотири євро двадцять центів."},
+        {"speaker": "Ви", "de": "Hier sind fünf Euro. Stimmt so, danke schön!", "ua": "Ось п'ять євро. Решти не треба, дуже дякую!"}
+    ],
+    "vocabulary": [
+        {"de": "Ich hätte gerne...", "ua": "Я хотів би / хотіла б... (найввічливіша форма замовлення)"},
+        {"de": "zum Mitnehmen", "ua": "з собою (на виніс)"},
+        {"de": "Stimmt so!", "ua": "Решти не треба! / Залишіть собі!"}
+    ],
+    "pro_tip": "💡 <b>Культурний лайфхак:</b> У багатьох традиційних німецьких пекарнях часто діє оплата лише готівкою (nur Barzahlung) або карткою від певної суми (ab 5 Euro). Звертайте увагу на таблички на касі!"
+}
+
 
 def load_history(history_file_path: str = "history.json") -> dict:
-    """Завантажує історію використаних слів, фраз, квізів та листів."""
+    """Завантажує історію використаних слів, фраз, квізів, листів, помилок та діалогів."""
+    empty_history = {
+        "used_words": [],
+        "used_phrases": [],
+        "used_quizzes": [],
+        "used_letters": [],
+        "used_mistakes": [],
+        "used_dialogues": [],
+        "history": []
+    }
     if not os.path.exists(history_file_path):
-        return {"used_words": [], "used_phrases": [], "used_quizzes": [], "used_letters": [], "history": []}
+        return empty_history
     
     try:
         with open(history_file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             if not isinstance(data, dict):
-                return {"used_words": [], "used_phrases": [], "used_quizzes": [], "used_letters": [], "history": []}
-            data.setdefault("used_words", [])
-            data.setdefault("used_phrases", [])
-            data.setdefault("used_quizzes", [])
-            data.setdefault("used_letters", [])
-            data.setdefault("history", [])
+                return empty_history
+            for key in ["used_words", "used_phrases", "used_quizzes", "used_letters", "used_mistakes", "used_dialogues", "history"]:
+                data.setdefault(key, [])
             return data
     except Exception as e:
         logger.warning(f"Не вдалося прочитати {history_file_path}: {e}")
-        return {"used_words": [], "used_phrases": [], "used_quizzes": [], "used_letters": [], "history": []}
+        return empty_history
 
 
 def get_gemini_model(api_key: str = None):
@@ -638,6 +681,224 @@ def generate_musterbrief_content(history_file_path: str = "history.json", api_ke
         fallback["word"] = fallback.get("topic")
         fallback["audio_text"] = fallback.get("card_example_de", "")
         fallback["post_type"] = "musterbrief"
+        return fallback
+
+
+
+# ==========================================================
+# 5. ТИПОВІ ПОМИЛКИ УКРАЇНЦІВ (TYPISCHE FEHLER & FALSCHE FREUNDE)
+# ==========================================================
+def format_mistake_post(data: dict) -> str:
+    """Форматує пост із розбором типової помилки для Telegram."""
+    lines = [
+        "⚠️ <b>Німецька для українців | Типова помилка</b>",
+        f"📌 <b>Тема:</b> <i>{data.get('mistake_title', 'Помилка початківців')}</i>",
+        "",
+        f"❌ <b>Як часто кажуть помилково:</b>",
+        f"<s>{data.get('wrong_phrase', '')}</s>",
+        "",
+        f"✅ <b>Як правильно сказати:</b>",
+        f"<b>{data.get('correct_phrase', '')}</b>",
+        "",
+        f"💡 <b>Чому виникає помилка:</b>",
+        f"{data.get('explanation', '')}",
+        "",
+        "💬 <b>Приклади правильного вживання:</b>"
+    ]
+    for ex in data.get("examples", []):
+        lines.append(f"• <b>{ex.get('de', '')}</b>\n  ↳ <i>{ex.get('ua', '')}</i>")
+    
+    if data.get("pro_tip"):
+        lines.append("")
+        lines.append(data.get("pro_tip"))
+    
+    lines.append("")
+    lines.append("🎧 <i>Слухайте правильну німецьку вимову в аудіо вище!</i>")
+    lines.append("")
+    lines.append("#ТиповіПомилки #Граматика #НімецькаМова #Німеччина")
+    return "\n".join(lines)
+
+
+def generate_mistake_content(history_file_path: str = "history.json", api_key: str = None) -> dict:
+    """Генерує розбір типової помилки або «хибних друзів перекладача» (Falsche Freunde)."""
+    history = load_history(history_file_path)
+    used_mistakes = history.get("used_mistakes", [])
+
+    model = get_gemini_model(api_key)
+    if not model:
+        fallback = FALLBACK_MISTAKE.copy()
+        fallback["telegram_post"] = format_mistake_post(fallback)
+        fallback["word"] = fallback.get("correct_phrase", "Mir ist kalt!")
+        fallback["audio_text"] = fallback.get("card_example_de", "")
+        fallback["post_type"] = "mistake"
+        return fallback
+
+    recent_mistakes_str = ", ".join(used_mistakes[-50:]) if used_mistakes else "немає"
+    prompt = f"""
+Ти — професійний викладач німецької для україномовних студентів. Обери ОДНУ дуже поширену типову помилку, яку українці роблять у німецькій через кальку з рідної мови, інтерференцію або «хибних друзів перекладача» (Falsche Freunde).
+
+Приклади тем (рівні A1-B2):
+- Mir ist kalt (а не Ich bin kalt / Ich habe kalt)
+- bekommen (отримувати) vs werden (ставати)
+- kennen (людей/міста) vs wissen (факти/інформацію)
+- kein (для іменників) vs nicht (для дієслів/прикметників)
+- Ich studiere an der Uni (а не Ich lerne an der Uni)
+- Das Gerät funktioniert (а не arbeitet)
+- Ich fahre mit dem Bus (а не йду транспортом)
+- Ich bin verheiratet mit... (Dativ, а не an)
+- Ich freue mich auf vs über
+
+СУВОРО УНИКАЙ ВЖЕ ВИКОРИСТАНИХ ТЕМ: {recent_mistakes_str}
+
+СУВОРІ ВИМОГИ ДО ЛІТЕРАТУРНОЇ ЧИСТОТИ УКРАЇНСЬКОЇ МОВИ:
+- Жодного суржику та кальок з російської (лише "решта", "квиток", "лікарняний", "готівка", "наступний").
+
+Поверни валідний JSON:
+{{
+  "mistake_title": "Коротка назва помилки (наприклад: 'Отримувати' чи 'ставати': bekommen vs werden)",
+  "wrong_phrase": "❌ Неправильна фраза з типовою помилкою",
+  "correct_phrase": "✅ Правильний німецький вираз",
+  "level": "A1-A2",
+  "card_example_de": "Короткий правильний приклад для графічної картки (до 10 слів)",
+  "card_example_ua": "Літературний український переклад цього речення",
+  "explanation": "Чітке, дружнє пояснення (2-3 речення): чому виникає плутанина і як правильно запам'ятати.",
+  "examples": [
+    {{"de": "Правильне речення 1", "ua": "Переклад 1"}},
+    {{"de": "Правильне речення 2", "ua": "Переклад 2"}}
+  ],
+  "pro_tip": "💡 <b>Правило-підказка:</b> легка мнемонічна підказка або лайфхак для запам'ятовування."
+}}
+"""
+    try:
+        resp = model.generate_content(prompt)
+        data = clean_json_response(resp.text)
+        data["rubric_name"] = "Типова помилка"
+        data["rubric_emoji"] = "⚠️"
+        clean_correct = data.get("correct_phrase", "").replace("✅", "").strip()
+        data["word"] = clean_correct or data.get("mistake_title", "Typischer Fehler")
+        data["clean_word"] = clean_correct
+        data["translation"] = data.get("card_example_ua", "")
+        data["telegram_post"] = format_mistake_post(data)
+        data["audio_text"] = f"{clean_correct}. {data.get('card_example_de', '')}".strip()
+        data["post_type"] = "mistake"
+        return data
+    except Exception as e:
+        logger.error(f"Помилка генерації типової помилки: {e}")
+        fallback = FALLBACK_MISTAKE.copy()
+        fallback["telegram_post"] = format_mistake_post(fallback)
+        fallback["word"] = fallback.get("correct_phrase", "Mir ist kalt!")
+        fallback["audio_text"] = fallback.get("card_example_de", "")
+        fallback["post_type"] = "mistake"
+        return fallback
+
+
+# ==========================================================
+# 6. ЖИВИЙ МІНІ-ДІАЛОГ У РЕАЛЬНІЙ СИТУАЦІЇ
+# ==========================================================
+def format_dialogue_post(data: dict) -> str:
+    """Форматує пост із живим міні-діалогом для Telegram."""
+    lines = [
+        "🏙️ <b>Німецька для українців | Живий діалог</b>",
+        f"📍 <b>Локація:</b> <i>{data.get('location', 'Щоденна ситуація')}</i>",
+        f"🎯 <b>Тема:</b> <i>{data.get('topic', 'Розмова')}</i>",
+        "",
+        "💬 <b>Міні-діалог:</b>"
+    ]
+    for d in data.get("dialogue", []):
+        lines.append(f"👤 <b>{d.get('speaker', '')}:</b> <i>{d.get('de', '')}</i>")
+        lines.append(f"   ↳ {d.get('ua', '')}")
+    
+    lines.append("")
+    lines.append("🔑 <b>Корисні фрази з діалогу:</b>")
+    for v in data.get("vocabulary", []):
+        lines.append(f"🔹 <b>{v.get('de', '')}</b> — {v.get('ua', '')}")
+    
+    if data.get("pro_tip"):
+        lines.append("")
+        lines.append(data.get("pro_tip"))
+    
+    lines.append("")
+    lines.append("🎧 <i>Слухайте правильну вимову діалогу в аудіо вище!</i>")
+    lines.append("")
+    lines.append("#ЖивийДіалог #РозмовнаНімецька #Німеччина #Alltag")
+    return "\n".join(lines)
+
+
+def generate_dialogue_content(history_file_path: str = "history.json", api_key: str = None) -> dict:
+    """Генерує практичний міні-діалог у реальній життєвій ситуації в Німеччині."""
+    history = load_history(history_file_path)
+    used_dialogues = history.get("used_dialogues", [])
+
+    model = get_gemini_model(api_key)
+    if not model:
+        fallback = FALLBACK_DIALOGUE.copy()
+        fallback["telegram_post"] = format_dialogue_post(fallback)
+        fallback["word"] = fallback.get("topic", "Діалог")
+        fallback["audio_text"] = fallback.get("card_example_de", "")
+        fallback["post_type"] = "dialogue"
+        return fallback
+
+    recent_dialogues_str = ", ".join(used_dialogues[-50:]) if used_dialogues else "немає"
+    prompt = f"""
+Ти — викладач розмовної німецької мови для щоденного життя в Німеччині. Створи живий, практичний міні-діалог (рівень A1-B1) у реальній побутовій ситуації в Німеччині.
+
+Локації для вибору:
+- В аптеці (In der Apotheke: ліки від застуди, спрей для носа, рецепт)
+- У пекарні (In der Bäckerei: замовлення хліба, булочок, кави)
+- На касі в супермаркеті (An der Kasse: картка, готівка, чек, пакет, здача пляшок Pfand)
+- У лікаря (Beim Arzt: запис на прийом, опис симптомів, лікарняний Krankschreibung)
+- У громадському транспорті (Im Zug / Bus: покупка квитка, запізнення, пересадка)
+- На пошті Deutsche Post / DHL (відправка посилки, рекомендованого листа Einschreiben)
+- У Bürgeramt / Ausländerbehörde (прості розмовні запитання)
+
+СУВОРО УНИКАЙ ВЖЕ ВИКОРИСТАНИХ ТЕМ: {recent_dialogues_str}
+
+СУВОРІ ВИМОГИ ДО ЛІТЕРАТУРНОЇ ЧИСТОТИ УКРАЇНСЬКОЇ МОВИ:
+- Жодного суржику та кальок з російської (обов'язково "решти не треба", "квиток", "лікарняний", "готівка").
+
+Поверни валідний JSON:
+{{
+  "location": "Локація (наприклад: В аптеці / In der Apotheke)",
+  "topic": "Тема діалогу (наприклад: Купівля ліків від болю в горлі)",
+  "level": "A1-A2",
+  "card_example_de": "Ключова фраза або репліка діалогу (до 10 слів) для графічної картки",
+  "card_example_ua": "Літературний український переклад цієї фрази",
+  "dialogue": [
+    {{"speaker": "Фармацевт", "de": "Guten Tag! Wie kann ich Ihnen helfen?", "ua": "Доброго дня! Чим можу допомогти?"}},
+    {{"speaker": "Ви", "de": "Репліка 2", "ua": "Переклад 2"}},
+    {{"speaker": "Фармацевт", "de": "Репліка 3", "ua": "Переклад 3"}},
+    {{"speaker": "Ви", "de": "Репліка 4", "ua": "Переклад 4"}}
+  ],
+  "vocabulary": [
+    {{"de": "німецький вираз 1", "ua": "український переклад 1"}},
+    {{"de": "німецький вираз 2", "ua": "український переклад 2"}},
+    {{"de": "німецький вираз 3", "ua": "український переклад 3"}}
+  ],
+  "pro_tip": "💡 <b>Культурна порада:</b> корисний нюанс для цієї ситуації в Німеччині."
+}}
+"""
+    try:
+        resp = model.generate_content(prompt)
+        data = clean_json_response(resp.text)
+        data["rubric_name"] = "Живий діалог"
+        data["rubric_emoji"] = "🏙️"
+        data["word"] = data.get("topic", "Живий діалог")
+        data["clean_word"] = data.get("card_example_de", "")
+        data["translation"] = data.get("card_example_ua", "")
+        data["telegram_post"] = format_dialogue_post(data)
+        
+        # Для озвучення: ключова фраза або перші репліки
+        dialogue_audio = ". ".join([d.get("de", "") for d in data.get("dialogue", [])[:2]])
+        data["audio_text"] = (data.get("card_example_de") or dialogue_audio)[:250]
+        data["post_type"] = "dialogue"
+        return data
+    except Exception as e:
+        logger.error(f"Помилка генерації живого діалогу: {e}")
+        fallback = FALLBACK_DIALOGUE.copy()
+        fallback["telegram_post"] = format_dialogue_post(fallback)
+        fallback["word"] = fallback.get("topic", "Діалог")
+        fallback["audio_text"] = fallback.get("card_example_de", "")
+        fallback["post_type"] = "dialogue"
         return fallback
 
 

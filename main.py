@@ -24,6 +24,8 @@ from generator import (
     generate_afternoon_content,
     generate_evening_quiz,
     generate_musterbrief_content,
+    generate_mistake_content,
+    generate_dialogue_content,
     load_history
 )
 from image_maker import generate_card_image
@@ -67,30 +69,51 @@ def validate_environment() -> tuple[str, str, str]:
 
 def determine_post_type(arg_type: str = "auto") -> str:
     """
-    Визначає тип публікації:
-    Якщо передано явне значення — використовує його.
-    Якщо 'auto' — обирає за часом UTC та днем тижня:
-    - 05:00 - 09:59 UTC -> morning (Слово дня)
-    - 10:00 - 14:59 UTC:
-        • У суботу (день 5) -> letter (Офіційний лист Musterbrief)
-        • В інші дні -> afternoon (Розмовна фраза)
-    - 15:00 - 04:59 UTC -> evening (Quiz-опитування)
+    Визначає тип публікації з 6 щоденних форматів:
+    1. morning   — 08:05 DE (06:05 UTC) — «Слово дня» (звук УВІМКНЕНО)
+    2. phrase    — 10:35 DE (08:35 UTC) — «Жива розмовна фраза» (ТИХИЙ пост)
+    3. mistake   — 13:05 DE (11:05 UTC) — «Типова помилка українців» (ТИХИЙ пост)
+    4. dialogue  — 15:35 DE (13:35 UTC) — «Живий ситуативний діалог» (ТИХИЙ пост)
+    5. letter    — 18:05 DE (16:05 UTC) — «Шаблон листа (Musterbrief)» (ТИХИЙ пост)
+    6. quiz      — 20:35 DE (18:35 UTC) — «Вечірній Quiz-батл» (звук УВІМКНЕНО)
     """
-    if arg_type in ["morning", "afternoon", "evening", "letter", "musterbrief"]:
-        return arg_type
+    aliases = {
+        "morning": "morning",
+        "phrase": "phrase",
+        "afternoon": "phrase",
+        "mistake": "mistake",
+        "dialogue": "dialogue",
+        "letter": "letter",
+        "musterbrief": "letter",
+        "quiz": "quiz",
+        "evening": "quiz"
+    }
+    if arg_type in aliases:
+        return aliases[arg_type]
 
-    utc_hour = datetime.utcnow().hour
-    weekday = datetime.utcnow().weekday()
-    logger.info(f"Режим 'auto': поточна година UTC = {utc_hour}, день тижня = {weekday}")
+    now = datetime.utcnow()
+    current_minutes = now.hour * 60 + now.minute
+    logger.info(f"Режим 'auto': поточний час UTC = {now.strftime('%H:%M')} ({current_minutes} хв)")
 
-    if weekday == 5 and 10 <= utc_hour < 15:
-        return "letter"
-    elif 5 <= utc_hour < 10:
+    # Розподіл 6 часових вікон за UTC:
+    # 06:05 UTC (08:05 DE) -> 05:00 - 07:19 UTC (300..439 хв)
+    # 08:35 UTC (10:35 DE) -> 07:20 - 09:49 UTC (440..589 хв)
+    # 11:05 UTC (13:05 DE) -> 09:50 - 12:19 UTC (590..739 хв)
+    # 13:35 UTC (15:35 DE) -> 12:20 - 14:49 UTC (740..889 хв)
+    # 16:05 UTC (18:05 DE) -> 14:50 - 17:19 UTC (890..1039 хв)
+    # 18:35 UTC (20:35 DE) -> 17:20 - 04:59 UTC (>= 1040 або < 300 хв)
+    if 300 <= current_minutes < 440:
         return "morning"
-    elif 10 <= utc_hour < 15:
-        return "afternoon"
+    elif 440 <= current_minutes < 590:
+        return "phrase"
+    elif 590 <= current_minutes < 740:
+        return "mistake"
+    elif 740 <= current_minutes < 890:
+        return "dialogue"
+    elif 890 <= current_minutes < 1040:
+        return "letter"
     else:
-        return "evening"
+        return "quiz"
 
 
 def create_audio_pronunciation(text: str, output_path: str = AUDIO_FILE) -> str | None:
@@ -106,8 +129,16 @@ def create_audio_pronunciation(text: str, output_path: str = AUDIO_FILE) -> str 
         return None
 
 
-def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, caption_text: str, audio_path: str | None, title: str):
-    """Надсилає фотопост із підписом та аудіо вимови."""
+def send_telegram_media_post(
+    bot_token: str,
+    chat_id: str,
+    image_path: str,
+    caption_text: str,
+    audio_path: str | None,
+    title: str,
+    silent: bool = False
+):
+    """Надсилає фотопост із підписом та аудіо вимови (підтримує тихі сповіщення silent=True)."""
     api_url = f"https://api.telegram.org/bot{bot_token}"
 
     with open(image_path, "rb") as photo_file:
@@ -117,7 +148,8 @@ def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, capt
                 data={
                     "chat_id": chat_id,
                     "caption": caption_text,
-                    "parse_mode": "HTML"
+                    "parse_mode": "HTML",
+                    "disable_notification": silent
                 },
                 files={"photo": photo_file},
                 timeout=30
@@ -129,7 +161,8 @@ def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, capt
                 data={
                     "chat_id": chat_id,
                     "caption": short_caption,
-                    "parse_mode": "HTML"
+                    "parse_mode": "HTML",
+                    "disable_notification": silent
                 },
                 files={"photo": photo_file},
                 timeout=30
@@ -140,7 +173,8 @@ def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, capt
                     "chat_id": chat_id,
                     "text": caption_text,
                     "parse_mode": "HTML",
-                    "disable_web_page_preview": True
+                    "disable_web_page_preview": True,
+                    "disable_notification": silent
                 },
                 timeout=30
             )
@@ -159,7 +193,8 @@ def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, capt
                     data={
                         "chat_id": chat_id,
                         "caption": voice_caption,
-                        "parse_mode": "HTML"
+                        "parse_mode": "HTML",
+                        "disable_notification": silent
                     },
                     files={"voice": voice_file},
                     timeout=30
@@ -173,7 +208,8 @@ def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, capt
                             "title": title,
                             "performer": "Deutsch für Ukrainer",
                             "caption": voice_caption,
-                            "parse_mode": "HTML"
+                            "parse_mode": "HTML",
+                            "disable_notification": silent
                         },
                         files={"audio": voice_file},
                         timeout=30
@@ -183,7 +219,7 @@ def send_telegram_media_post(bot_token: str, chat_id: str, image_path: str, capt
             logger.warning(f"Не вдалося надіслати аудіо: {e}")
 
 
-def send_telegram_poll(bot_token: str, chat_id: str, quiz_data: dict):
+def send_telegram_poll(bot_token: str, chat_id: str, quiz_data: dict, silent: bool = False):
     """
     Надсилає нативне інтерактивне Quiz-опитування в Telegram.
     При натисканні правильної відповіді показується анімація конфеті та пояснення.
@@ -199,7 +235,8 @@ def send_telegram_poll(bot_token: str, chat_id: str, quiz_data: dict):
         "type": "quiz",
         "correct_option_id": quiz_data["correct_option_id"],
         "explanation": quiz_data["explanation"],
-        "explanation_parse_mode": "HTML"
+        "explanation_parse_mode": "HTML",
+        "disable_notification": silent
     }
 
     resp = requests.post(api_url, json=payload, timeout=30)
@@ -256,6 +293,26 @@ def update_history_file(data: dict, history_file_path: str = HISTORY_FILE):
             "topic": topic,
             "situation": data.get("situation")
         })
+    elif post_type == "mistake":
+        title = data.get("mistake_title") or data.get("word")
+        if title and title not in history.get("used_mistakes", []):
+            history.setdefault("used_mistakes", []).append(title)
+        history["history"].append({
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "type": "mistake",
+            "topic": title,
+            "correct_phrase": data.get("correct_phrase")
+        })
+    elif post_type == "dialogue":
+        loc = data.get("location") or data.get("topic")
+        if loc and loc not in history.get("used_dialogues", []):
+            history.setdefault("used_dialogues", []).append(loc)
+        history["history"].append({
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "type": "dialogue",
+            "location": loc,
+            "topic": data.get("topic")
+        })
 
     history["last_updated"] = datetime.now().isoformat()
     try:
@@ -284,13 +341,16 @@ def cleanup_temp_files(*file_paths):
 
 
 def run_pipeline(post_type: str = "auto"):
-    """Головний цикл запуску публікації."""
+    """Головний цикл запуску публікації одного з 6 щоденних форматів."""
     bot_token, chat_id, gemini_key = validate_environment()
     actual_type = determine_post_type(post_type)
-    logger.info(f"=== Запуск публікації: тип [{actual_type.upper()}] ===")
+    
+    # 4 денні публікації надсилаються без звуку (silent), щоб не перевантажувати підписників
+    is_silent = actual_type in ["phrase", "afternoon", "mistake", "dialogue", "letter", "musterbrief"]
+    logger.info(f"=== Запуск публікації: тип [{actual_type.upper()}], тихий режим={is_silent} ===")
 
     if actual_type == "morning":
-        # 1. Ранковий пост (Слово дня)
+        # 1. 08:05 — «Слово дня» (Alltag & Grammatik) [звук УВІМКНЕНО]
         logger.info("Генерація ранкового слова дня...")
         content_data = generate_morning_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
         title = content_data.get("clean_word") or content_data.get("word")
@@ -303,14 +363,15 @@ def run_pipeline(post_type: str = "auto"):
             image_path=card_path,
             caption_text=content_data.get("telegram_post", ""),
             audio_path=audio_path,
-            title=title
+            title=title,
+            silent=is_silent
         )
         update_history_file(content_data, history_file_path=HISTORY_FILE)
         cleanup_temp_files(card_path, audio_path)
 
-    elif actual_type == "afternoon":
-        # 2. Денний пост (Розмовна фраза)
-        logger.info("Генерація денної розмовної фрази...")
+    elif actual_type in ["phrase", "afternoon"]:
+        # 2. 10:35 — «Жива розмовна фраза дня» [ТИХИЙ]
+        logger.info("Генерація розмовної фрази...")
         content_data = generate_afternoon_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
         title = content_data.get("phrase", "Розмовна фраза")
         card_path = generate_card_image(content_data, output_path=CARD_IMAGE_FILE)
@@ -322,22 +383,54 @@ def run_pipeline(post_type: str = "auto"):
             image_path=card_path,
             caption_text=content_data.get("telegram_post", ""),
             audio_path=audio_path,
-            title=title
+            title=title,
+            silent=is_silent
         )
         update_history_file(content_data, history_file_path=HISTORY_FILE)
         cleanup_temp_files(card_path, audio_path)
 
-    elif actual_type == "evening":
-        # 3. Вечірній пост (Інтерактивне Quiz-опитування)
-        logger.info("Генерація вечірньої інтерактивної вікторини...")
-        quiz_data = generate_evening_quiz(history_file_path=HISTORY_FILE, api_key=gemini_key)
-        send_telegram_poll(
+    elif actual_type == "mistake":
+        # 3. 13:05 — «Типова помилка українців» [ТИХИЙ]
+        logger.info("Генерація типової помилки українців...")
+        content_data = generate_mistake_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
+        title = content_data.get("word", "Типова помилка")
+        card_path = generate_card_image(content_data, output_path=CARD_IMAGE_FILE)
+        audio_path = create_audio_pronunciation(content_data.get("audio_text", title), output_path=AUDIO_FILE)
+
+        send_telegram_media_post(
             bot_token=bot_token,
             chat_id=chat_id,
-            quiz_data=quiz_data
+            image_path=card_path,
+            caption_text=content_data.get("telegram_post", ""),
+            audio_path=audio_path,
+            title=title,
+            silent=is_silent
         )
+        update_history_file(content_data, history_file_path=HISTORY_FILE)
+        cleanup_temp_files(card_path, audio_path)
+
+    elif actual_type == "dialogue":
+        # 4. 15:35 — «Живий ситуативний діалог» [ТИХИЙ]
+        logger.info("Генерація живого діалогу...")
+        content_data = generate_dialogue_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
+        title = content_data.get("word", "Діалог")
+        card_path = generate_card_image(content_data, output_path=CARD_IMAGE_FILE)
+        audio_path = create_audio_pronunciation(content_data.get("audio_text", title), output_path=AUDIO_FILE)
+
+        send_telegram_media_post(
+            bot_token=bot_token,
+            chat_id=chat_id,
+            image_path=card_path,
+            caption_text=content_data.get("telegram_post", ""),
+            audio_path=audio_path,
+            title=title,
+            silent=is_silent
+        )
+        update_history_file(content_data, history_file_path=HISTORY_FILE)
+        cleanup_temp_files(card_path, audio_path)
+
     elif actual_type in ["letter", "musterbrief"]:
-        # 4. Спеціальний пост: Офіційний лист (Musterbrief)
+        # 5. 18:05 — «Офіційний лист (Musterbrief)» [ТИХИЙ]
         logger.info("Генерація офіційного листа (Musterbrief)...")
         content_data = generate_musterbrief_content(history_file_path=HISTORY_FILE, api_key=gemini_key)
         title = content_data.get("topic", "Musterbrief")
@@ -350,10 +443,23 @@ def run_pipeline(post_type: str = "auto"):
             image_path=card_path,
             caption_text=content_data.get("telegram_post", ""),
             audio_path=audio_path,
-            title=title
+            title=title,
+            silent=is_silent
         )
         update_history_file(content_data, history_file_path=HISTORY_FILE)
         cleanup_temp_files(card_path, audio_path)
+
+    elif actual_type in ["quiz", "evening"]:
+        # 6. 20:35 — «Вечірній Quiz-батл (Poll)» [звук УВІМКНЕНО]
+        logger.info("Генерація вечірньої інтерактивної вікторини...")
+        quiz_data = generate_evening_quiz(history_file_path=HISTORY_FILE, api_key=gemini_key)
+        send_telegram_poll(
+            bot_token=bot_token,
+            chat_id=chat_id,
+            quiz_data=quiz_data,
+            silent=is_silent
+        )
+        update_history_file(quiz_data, history_file_path=HISTORY_FILE)
 
     logger.info(f"=== Публікацію [{actual_type.upper()}] успішно завершено! ===")
 
@@ -363,9 +469,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--type",
         dest="post_type",
-        choices=["auto", "morning", "afternoon", "evening", "letter", "musterbrief"],
+        choices=["auto", "morning", "phrase", "afternoon", "mistake", "dialogue", "letter", "musterbrief", "quiz", "evening"],
         default="auto",
-        help="Тип публікації: morning, afternoon, evening, letter (або musterbrief), auto"
+        help="Тип публікації: morning, phrase, mistake, dialogue, letter, quiz, auto"
     )
     args = parser.parse_args()
 

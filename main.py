@@ -242,6 +242,10 @@ def update_history_file(data: dict, history_file_path: str = HISTORY_FILE):
             history.setdefault("used_quizzes", []).append(topic)
         history["history"].append({
             "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "type": "evening_quiz",
+            "question": data.get("question"),
+            "topic": topic
+        })
     elif post_type in ["musterbrief", "letter"]:
         topic = data.get("topic", "Musterbrief")
         if topic and topic not in history.get("used_letters", []):

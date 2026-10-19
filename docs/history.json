@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-19T19:28:09.124070",
+  "last_updated": "2026-10-19T20:59:55.923074",
   "history": [
     {
       "date": "2026-10-13",
@@ -130,6 +130,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильне дієслово:\n«Ich ___ diesen Mann schon seit vielen Jahren.»",
       "topic": "Різниця між kennen та wissen"
+    },
+    {
+      "date": "2026-10-19 20:59",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний варіант:\n\n«Ich bleibe heute im Bett, _____ ich erkältet bin.»",
+      "topic": "Сполучники weil, denn та deshalb"
     }
   ],
   "used_phrases": [
@@ -143,7 +149,8 @@
     "Змінні прийменники: Akkusativ чи Dativ",
     "Порівняння: als чи wie",
     "Вираження самопочуття в німецькій",
-    "Різниця між kennen та wissen"
+    "Різниця між kennen та wissen",
+    "Сполучники weil, denn та deshalb"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)"

@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-18T21:00:20.262443",
+  "last_updated": "2026-10-19T12:55:54.895383",
   "history": [
     {
       "date": "2026-10-13",
@@ -106,6 +106,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно сказати німецькою мовою: «Мені холодно»?",
       "topic": "Вираження самопочуття в німецькій"
+    },
+    {
+      "date": "2026-10-19 12:55",
+      "type": "dialogue",
+      "location": "У пекарні / In der Bäckerei",
+      "topic": "Замовлення випічки та кави з собою"
     }
   ],
   "used_phrases": [
@@ -122,5 +128,7 @@
   ],
   "used_letters": [],
   "used_mistakes": [],
-  "used_dialogues": []
+  "used_dialogues": [
+    "У пекарні / In der Bäckerei"
+  ]
 }

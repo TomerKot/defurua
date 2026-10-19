@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-19T12:55:54.895383",
+  "last_updated": "2026-10-19T15:51:19.661487",
   "history": [
     {
       "date": "2026-10-13",
@@ -112,6 +112,12 @@
       "type": "dialogue",
       "location": "У пекарні / In der Bäckerei",
       "topic": "Замовлення випічки та кави з собою"
+    },
+    {
+      "date": "2026-10-19 15:51",
+      "type": "musterbrief",
+      "topic": "Розірвання договору (Kündigung des Vertrags)",
+      "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
     }
   ],
   "used_phrases": [
@@ -126,7 +132,9 @@
     "Порівняння: als чи wie",
     "Вираження самопочуття в німецькій"
   ],
-  "used_letters": [],
+  "used_letters": [
+    "Розірвання договору (Kündigung des Vertrags)"
+  ],
   "used_mistakes": [],
   "used_dialogues": [
     "У пекарні / In der Bäckerei"

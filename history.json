@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-19T20:59:55.923074",
+  "last_updated": "2026-10-19T22:37:38.522696",
   "history": [
     {
       "date": "2026-10-13",
@@ -136,6 +136,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний варіант:\n\n«Ich bleibe heute im Bett, _____ ich erkältet bin.»",
       "topic": "Сполучники weil, denn та deshalb"
+    },
+    {
+      "date": "2026-10-19 22:37",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Як правильно німецькою сказати: «Тут заборонено палити»?",
+      "topic": "Заборона: dürfen чи müssen"
     }
   ],
   "used_phrases": [
@@ -150,7 +156,8 @@
     "Порівняння: als чи wie",
     "Вираження самопочуття в німецькій",
     "Різниця між kennen та wissen",
-    "Сполучники weil, denn та deshalb"
+    "Сполучники weil, denn та deshalb",
+    "Заборона: dürfen чи müssen"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)"

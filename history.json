@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-19T17:23:06.494646",
+  "last_updated": "2026-10-19T19:28:09.124070",
   "history": [
     {
       "date": "2026-10-13",
@@ -124,6 +124,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
       "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-19 19:28",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильне дієслово:\n«Ich ___ diesen Mann schon seit vielen Jahren.»",
+      "topic": "Різниця між kennen та wissen"
     }
   ],
   "used_phrases": [
@@ -136,7 +142,8 @@
     "Керування дієслів у німецькій",
     "Змінні прийменники: Akkusativ чи Dativ",
     "Порівняння: als чи wie",
-    "Вираження самопочуття в німецькій"
+    "Вираження самопочуття в німецькій",
+    "Різниця між kennen та wissen"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)"

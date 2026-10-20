@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-20T13:50:54.153377",
+  "last_updated": "2026-10-20T15:36:42.080548",
   "history": [
     {
       "date": "2026-10-13",
@@ -154,6 +154,12 @@
       "type": "dialogue",
       "location": "На касі в супермаркеті / An der Kasse",
       "topic": "Сплата покупок, решта чека за пляшки (Pfand) та оплата карткою"
+    },
+    {
+      "date": "2026-10-20 15:36",
+      "type": "musterbrief",
+      "topic": "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung",
+      "situation": "Лист надсилається кредитору, комунальним службам чи відомству у разі неможливості сплатити всю суму рахунку одразу, аби запобігти судовим стягненням та нарахуванню штрафів."
     }
   ],
   "used_phrases": [
@@ -172,7 +178,8 @@
     "Заборона: dürfen чи müssen"
   ],
   "used_letters": [
-    "Розірвання договору (Kündigung des Vertrags)"
+    "Розірвання договору (Kündigung des Vertrags)",
+    "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?"

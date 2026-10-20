@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-20T11:25:00.162167",
+  "last_updated": "2026-10-20T13:50:54.153377",
   "history": [
     {
       "date": "2026-10-13",
@@ -148,6 +148,12 @@
       "type": "mistake",
       "topic": "«Знати» людину чи факт: kennen чи wissen?",
       "correct_phrase": "✅ Kennst du diesen Mann?"
+    },
+    {
+      "date": "2026-10-20 13:50",
+      "type": "dialogue",
+      "location": "На касі в супермаркеті / An der Kasse",
+      "topic": "Сплата покупок, решта чека за пляшки (Pfand) та оплата карткою"
     }
   ],
   "used_phrases": [
@@ -172,6 +178,7 @@
     "«Знати» людину чи факт: kennen чи wissen?"
   ],
   "used_dialogues": [
-    "У пекарні / In der Bäckerei"
+    "У пекарні / In der Bäckerei",
+    "На касі в супермаркеті / An der Kasse"
   ]
 }

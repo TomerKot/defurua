@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-19T22:37:38.522696",
+  "last_updated": "2026-10-20T11:25:00.162167",
   "history": [
     {
       "date": "2026-10-13",
@@ -142,6 +142,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно німецькою сказати: «Тут заборонено палити»?",
       "topic": "Заборона: dürfen чи müssen"
+    },
+    {
+      "date": "2026-10-20 11:25",
+      "type": "mistake",
+      "topic": "«Знати» людину чи факт: kennen чи wissen?",
+      "correct_phrase": "✅ Kennst du diesen Mann?"
     }
   ],
   "used_phrases": [
@@ -162,7 +168,9 @@
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)"
   ],
-  "used_mistakes": [],
+  "used_mistakes": [
+    "«Знати» людину чи факт: kennen чи wissen?"
+  ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei"
   ]

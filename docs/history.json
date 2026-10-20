@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-20T15:36:42.080548",
+  "last_updated": "2026-10-20T18:05:53.546718",
   "history": [
     {
       "date": "2026-10-13",
@@ -160,6 +160,12 @@
       "type": "musterbrief",
       "topic": "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung",
       "situation": "Лист надсилається кредитору, комунальним службам чи відомству у разі неможливості сплатити всю суму рахунку одразу, аби запобігти судовим стягненням та нарахуванню штрафів."
+    },
+    {
+      "date": "2026-10-20 18:05",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть граматично правильний варіант:\n„Gestern ___ ich den ganzen Tag zu Hause geblieben.“",
+      "topic": "Perfekt із дієсловом bleiben"
     }
   ],
   "used_phrases": [
@@ -175,7 +181,8 @@
     "Вираження самопочуття в німецькій",
     "Різниця між kennen та wissen",
     "Сполучники weil, denn та deshalb",
-    "Заборона: dürfen чи müssen"
+    "Заборона: dürfen чи müssen",
+    "Perfekt із дієсловом bleiben"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

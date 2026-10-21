@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-21T20:02:26.735692",
+  "last_updated": "2026-10-21T21:58:34.071620",
   "history": [
     {
       "date": "2026-10-13",
@@ -208,6 +208,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
       "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-21 21:58",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильну граматичну форму:\n«Wir haben gestern einen neuen _____ eingestellt.» (Ми вчора найняли нового колегу.)",
+      "topic": "N-відміна іменників (N-Deklination)"
     }
   ],
   "used_phrases": [
@@ -226,7 +232,8 @@
     "Заборона: dürfen чи müssen",
     "Perfekt із дієсловом bleiben",
     "Прийменники: nach чи zu Hause",
-    "Зворотні займенники: Akkusativ чи Dativ"
+    "Зворотні займенники: Akkusativ чи Dativ",
+    "N-відміна іменників (N-Deklination)"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

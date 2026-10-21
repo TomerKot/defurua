@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-20T21:51:29.057930",
+  "last_updated": "2026-10-21T11:39:05.031007",
   "history": [
     {
       "date": "2026-10-13",
@@ -178,6 +178,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний займенник:\n\nIch putze _____ jeden Morgen gründlich die Zähne.",
       "topic": "Зворотні займенники: Akkusativ чи Dativ"
+    },
+    {
+      "date": "2026-10-21 11:39",
+      "type": "mistake",
+      "topic": "«Мені холодно»: Mir ist kalt чи Ich bin kalt?",
+      "correct_phrase": "✅ Mir ist kalt."
     }
   ],
   "used_phrases": [
@@ -203,7 +209,8 @@
     "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung"
   ],
   "used_mistakes": [
-    "«Знати» людину чи факт: kennen чи wissen?"
+    "«Знати» людину чи факт: kennen чи wissen?",
+    "«Мені холодно»: Mir ist kalt чи Ich bin kalt?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

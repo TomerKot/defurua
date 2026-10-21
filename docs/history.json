@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-21T14:06:25.164940",
+  "last_updated": "2026-10-21T15:52:58.963497",
   "history": [
     {
       "date": "2026-10-13",
@@ -190,6 +190,12 @@
       "type": "dialogue",
       "location": "В аптеці / In der Apotheke",
       "topic": "Купівля ліків від застуди та болю в горлі"
+    },
+    {
+      "date": "2026-10-21 15:52",
+      "type": "musterbrief",
+      "topic": "Розірвання договору (Kündigung des Vertrags)",
+      "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
     }
   ],
   "used_phrases": [

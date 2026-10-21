@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-21T11:39:05.031007",
+  "last_updated": "2026-10-21T14:06:25.164940",
   "history": [
     {
       "date": "2026-10-13",
@@ -184,6 +184,12 @@
       "type": "mistake",
       "topic": "«Мені холодно»: Mir ist kalt чи Ich bin kalt?",
       "correct_phrase": "✅ Mir ist kalt."
+    },
+    {
+      "date": "2026-10-21 14:06",
+      "type": "dialogue",
+      "location": "В аптеці / In der Apotheke",
+      "topic": "Купівля ліків від застуди та болю в горлі"
     }
   ],
   "used_phrases": [
@@ -214,6 +220,7 @@
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",
-    "На касі в супермаркеті / An der Kasse"
+    "На касі в супермаркеті / An der Kasse",
+    "В аптеці / In der Apotheke"
   ]
 }

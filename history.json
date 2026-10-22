@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-22T19:58:30.151630",
+  "last_updated": "2026-10-22T21:55:26.264014",
   "history": [
     {
       "date": "2026-10-13",
@@ -244,6 +244,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильну форму слова:\n«Ich wohne in dieser Stadt schon seit fünf ___.»",
       "topic": "Закінчення іменників у Dativ Plural"
+    },
+    {
+      "date": "2026-10-22 21:55",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Що насправді означає популярний німецький вираз «Ich habe die Nase voll»?",
+      "topic": "Ідіоми німецької мови"
     }
   ],
   "used_phrases": [
@@ -264,7 +270,8 @@
     "Прийменники: nach чи zu Hause",
     "Зворотні займенники: Akkusativ чи Dativ",
     "N-відміна іменників (N-Deklination)",
-    "Закінчення іменників у Dativ Plural"
+    "Закінчення іменників у Dativ Plural",
+    "Ідіоми німецької мови"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

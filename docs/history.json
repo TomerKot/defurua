@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-22T11:39:21.351072",
+  "last_updated": "2026-10-22T14:08:00.121620",
   "history": [
     {
       "date": "2026-10-13",
@@ -220,6 +220,12 @@
       "type": "mistake",
       "topic": "«Мені холодно» німецькою мовою",
       "correct_phrase": "✅ Mir ist kalt!"
+    },
+    {
+      "date": "2026-10-22 14:08",
+      "type": "dialogue",
+      "location": "На пошті / Bei der Post",
+      "topic": "Відправка важливих документів рекомендованим листом"
     }
   ],
   "used_phrases": [
@@ -253,6 +259,7 @@
   "used_dialogues": [
     "У пекарні / In der Bäckerei",
     "На касі в супермаркеті / An der Kasse",
-    "В аптеці / In der Apotheke"
+    "В аптеці / In der Apotheke",
+    "На пошті / Bei der Post"
   ]
 }

@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-22T18:07:51.409753",
+  "last_updated": "2026-10-22T19:58:30.151630",
   "history": [
     {
       "date": "2026-10-13",
@@ -238,6 +238,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
       "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-22 19:58",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильну форму слова:\n«Ich wohne in dieser Stadt schon seit fünf ___.»",
+      "topic": "Закінчення іменників у Dativ Plural"
     }
   ],
   "used_phrases": [
@@ -257,7 +263,8 @@
     "Perfekt із дієсловом bleiben",
     "Прийменники: nach чи zu Hause",
     "Зворотні займенники: Akkusativ чи Dativ",
-    "N-відміна іменників (N-Deklination)"
+    "N-відміна іменників (N-Deklination)",
+    "Закінчення іменників у Dativ Plural"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

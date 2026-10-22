@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-22T14:08:00.121620",
+  "last_updated": "2026-10-22T15:50:05.574704",
   "history": [
     {
       "date": "2026-10-13",
@@ -226,6 +226,12 @@
       "type": "dialogue",
       "location": "На пошті / Bei der Post",
       "topic": "Відправка важливих документів рекомендованим листом"
+    },
+    {
+      "date": "2026-10-22 15:50",
+      "type": "musterbrief",
+      "topic": "Запит на термін до Відомства у справах іноземців та видачу фікційного документа / Terminanfrage bei der Ausländerbehörde",
+      "situation": "Застосовується у випадках, коли термін дії дозволу на перебування добігає кінця, а записатися на прийом через онлайн-систему відомства неможливо."
     }
   ],
   "used_phrases": [
@@ -249,7 +255,8 @@
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",
-    "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung"
+    "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung",
+    "Запит на термін до Відомства у справах іноземців та видачу фікційного документа / Terminanfrage bei der Ausländerbehörde"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-23T13:47:41.927719",
+  "last_updated": "2026-10-23T15:44:01.919392",
   "history": [
     {
       "date": "2026-10-13",
@@ -262,6 +262,12 @@
       "type": "dialogue",
       "location": "У пекарні (In der Bäckerei)",
       "topic": "Купівля свіжих булочок та кави"
+    },
+    {
+      "date": "2026-10-23 15:44",
+      "type": "musterbrief",
+      "topic": "Клопотання про подовження терміну подання документів / Antrag auf Fristverlängerung",
+      "situation": "Використовується, коли державна установа (Jobcenter, Familienkasse, Finanzamt тощо) вимагає надати документи до певного терміну, але вам потрібен додатковий час для їх збору або перекладу."
     }
   ],
   "used_phrases": [
@@ -288,7 +294,8 @@
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",
     "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung",
-    "Запит на термін до Відомства у справах іноземців та видачу фікційного документа / Terminanfrage bei der Ausländerbehörde"
+    "Запит на термін до Відомства у справах іноземців та видачу фікційного документа / Terminanfrage bei der Ausländerbehörde",
+    "Клопотання про подовження терміну подання документів / Antrag auf Fristverlängerung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

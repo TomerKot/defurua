@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-23T19:59:05.785697",
+  "last_updated": "2026-10-23T21:40:50.290406",
   "history": [
     {
       "date": "2026-10-13",
@@ -280,6 +280,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний варіант для заповнення пропусків:\n\n„Wir treffen uns ___ Montag ___ 18:00 Uhr.“",
       "topic": "Часові прийменники: am чи um"
+    },
+    {
+      "date": "2026-10-23 21:40",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильне закінчення прикметника:\n\n«Ich wünsche dir einen schön___ Tag!»",
+      "topic": "Закінчення прикметників у Akkusativ"
     }
   ],
   "used_phrases": [
@@ -303,7 +309,8 @@
     "Закінчення іменників у Dativ Plural",
     "Ідіоми німецької мови",
     "Заперечення іменників: kein чи nicht",
-    "Часові прийменники: am чи um"
+    "Часові прийменники: am чи um",
+    "Закінчення прикметників у Akkusativ"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

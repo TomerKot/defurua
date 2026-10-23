@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-23T17:58:32.360125",
+  "last_updated": "2026-10-23T19:59:05.785697",
   "history": [
     {
       "date": "2026-10-13",
@@ -274,6 +274,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно перекласти речення: «У мене немає часу»?",
       "topic": "Заперечення іменників: kein чи nicht"
+    },
+    {
+      "date": "2026-10-23 19:59",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний варіант для заповнення пропусків:\n\n„Wir treffen uns ___ Montag ___ 18:00 Uhr.“",
+      "topic": "Часові прийменники: am чи um"
     }
   ],
   "used_phrases": [
@@ -296,7 +302,8 @@
     "N-відміна іменників (N-Deklination)",
     "Закінчення іменників у Dativ Plural",
     "Ідіоми німецької мови",
-    "Заперечення іменників: kein чи nicht"
+    "Заперечення іменників: kein чи nicht",
+    "Часові прийменники: am чи um"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

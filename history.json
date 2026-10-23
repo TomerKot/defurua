@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-22T21:55:26.264014",
+  "last_updated": "2026-10-23T11:32:04.930418",
   "history": [
     {
       "date": "2026-10-13",
@@ -250,6 +250,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Що насправді означає популярний німецький вираз «Ich habe die Nase voll»?",
       "topic": "Ідіоми німецької мови"
+    },
+    {
+      "date": "2026-10-23 11:32",
+      "type": "mistake",
+      "topic": "«Працювати» про техніку: funktionieren чи arbeiten?",
+      "correct_phrase": "✅ Mein Handy funktioniert heute nicht."
     }
   ],
   "used_phrases": [
@@ -281,7 +287,8 @@
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",
     "«Мені холодно»: Mir ist kalt чи Ich bin kalt?",
-    "«Мені холодно» німецькою мовою"
+    "«Мені холодно» німецькою мовою",
+    "«Працювати» про техніку: funktionieren чи arbeiten?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-23T21:40:50.290406",
+  "last_updated": "2026-10-24T10:49:27.852379",
   "history": [
     {
       "date": "2026-10-13",
@@ -286,6 +286,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильне закінчення прикметника:\n\n«Ich wünsche dir einen schön___ Tag!»",
       "topic": "Закінчення прикметників у Akkusativ"
+    },
+    {
+      "date": "2026-10-24 10:49",
+      "type": "mistake",
+      "topic": "Транспортом чи пішки: fahren чи gehen?",
+      "correct_phrase": "✅ Ich fahre mit dem Bus zur Arbeit."
     }
   ],
   "used_phrases": [
@@ -322,7 +328,8 @@
     "«Знати» людину чи факт: kennen чи wissen?",
     "«Мені холодно»: Mir ist kalt чи Ich bin kalt?",
     "«Мені холодно» німецькою мовою",
-    "«Працювати» про техніку: funktionieren чи arbeiten?"
+    "«Працювати» про техніку: funktionieren чи arbeiten?",
+    "Транспортом чи пішки: fahren чи gehen?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

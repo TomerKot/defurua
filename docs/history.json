@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-24T10:49:27.852379",
+  "last_updated": "2026-10-24T12:56:08.159131",
   "history": [
     {
       "date": "2026-10-13",
@@ -292,6 +292,12 @@
       "type": "mistake",
       "topic": "Транспортом чи пішки: fahren чи gehen?",
       "correct_phrase": "✅ Ich fahre mit dem Bus zur Arbeit."
+    },
+    {
+      "date": "2026-10-24 12:56",
+      "type": "dialogue",
+      "location": "У лікаря / Beim Arzt",
+      "topic": "Візит без попереднього запису та отримання лікарняного"
     }
   ],
   "used_phrases": [
@@ -336,6 +342,7 @@
     "На касі в супермаркеті / An der Kasse",
     "В аптеці / In der Apotheke",
     "На пошті / Bei der Post",
-    "У пекарні (In der Bäckerei)"
+    "У пекарні (In der Bäckerei)",
+    "У лікаря / Beim Arzt"
   ]
 }

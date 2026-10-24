@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-24T16:51:44.845083",
+  "last_updated": "2026-10-24T18:47:21.500744",
   "history": [
     {
       "date": "2026-10-13",
@@ -310,6 +310,12 @@
       "type": "musterbrief",
       "topic": "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit",
       "situation": "Використовується для офіційного письмового підтвердження поважної причини пропуску дитиною шкільних занять відповідно до законодавства про обов'язкову освіту."
+    },
+    {
+      "date": "2026-10-24 18:47",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний сполучник:\n«___ ich ein Kind war, lebte meine Familie in Berlin.»",
+      "topic": "Сполучники часу: wenn чи als"
     }
   ],
   "used_phrases": [
@@ -334,7 +340,8 @@
     "Ідіоми німецької мови",
     "Заперечення іменників: kein чи nicht",
     "Часові прийменники: am чи um",
-    "Закінчення прикметників у Akkusativ"
+    "Закінчення прикметників у Akkusativ",
+    "Сполучники часу: wenn чи als"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

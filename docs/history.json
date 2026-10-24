@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-24T14:26:07.713746",
+  "last_updated": "2026-10-24T16:51:44.845083",
   "history": [
     {
       "date": "2026-10-13",
@@ -304,6 +304,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Zug",
       "topic": "Запізнення потяга та пересадка"
+    },
+    {
+      "date": "2026-10-24 16:51",
+      "type": "musterbrief",
+      "topic": "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit",
+      "situation": "Використовується для офіційного письмового підтвердження поважної причини пропуску дитиною шкільних занять відповідно до законодавства про обов'язкову освіту."
     }
   ],
   "used_phrases": [
@@ -334,7 +340,8 @@
     "Розірвання договору (Kündigung des Vertrags)",
     "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung",
     "Запит на термін до Відомства у справах іноземців та видачу фікційного документа / Terminanfrage bei der Ausländerbehörde",
-    "Клопотання про подовження терміну подання документів / Antrag auf Fristverlängerung"
+    "Клопотання про подовження терміну подання документів / Antrag auf Fristverlängerung",
+    "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

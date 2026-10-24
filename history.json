@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-24T18:47:21.500744",
+  "last_updated": "2026-10-24T21:10:08.319061",
   "history": [
     {
       "date": "2026-10-13",
@@ -316,6 +316,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний сполучник:\n«___ ich ein Kind war, lebte meine Familie in Berlin.»",
       "topic": "Сполучники часу: wenn чи als"
+    },
+    {
+      "date": "2026-10-24 21:10",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний варіант для пропуску:\n«Nächsten Monat fliegen wir geschäftlich ... Türkei.»",
+      "topic": "Країни з артиклями: напрямок руху"
     }
   ],
   "used_phrases": [
@@ -341,7 +347,8 @@
     "Заперечення іменників: kein чи nicht",
     "Часові прийменники: am чи um",
     "Закінчення прикметників у Akkusativ",
-    "Сполучники часу: wenn чи als"
+    "Сполучники часу: wenn чи als",
+    "Країни з артиклями: напрямок руху"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

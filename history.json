@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-24T21:10:08.319061",
+  "last_updated": "2026-10-25T11:14:52.765342",
   "history": [
     {
       "date": "2026-10-13",
@@ -322,6 +322,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний варіант для пропуску:\n«Nächsten Monat fliegen wir geschäftlich ... Türkei.»",
       "topic": "Країни з артиклями: напрямок руху"
+    },
+    {
+      "date": "2026-10-25 11:14",
+      "type": "mistake",
+      "topic": "«Вчитися» в університеті: studieren чи lernen?",
+      "correct_phrase": "✅ Ich studiere an der Universität Medizin."
     }
   ],
   "used_phrases": [
@@ -362,7 +368,8 @@
     "«Мені холодно»: Mir ist kalt чи Ich bin kalt?",
     "«Мені холодно» німецькою мовою",
     "«Працювати» про техніку: funktionieren чи arbeiten?",
-    "Транспортом чи пішки: fahren чи gehen?"
+    "Транспортом чи пішки: fahren чи gehen?",
+    "«Вчитися» в університеті: studieren чи lernen?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

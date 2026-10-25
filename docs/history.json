@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-25T17:18:36.153036",
+  "last_updated": "2026-10-25T18:55:57.356824",
   "history": [
     {
       "date": "2026-10-13",
@@ -346,6 +346,12 @@
       "type": "musterbrief",
       "topic": "Повідомлення про зміну банківських реквізитів / Mitteilung über die Änderung der Bankverbindung",
       "situation": "Застосовується для своєчасного сповіщення відомств (Jobcenter, Familienkasse, Krankenkasse) або контрагентів про новий банківський рахунок, аби запобігти затримкам у виплатах."
+    },
+    {
+      "date": "2026-10-25 18:55",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний прийменник:\n\n«Ich lerne Deutsch schon ______ einem Jahr.»",
+      "topic": "Прийменник seit у часовому значенні"
     }
   ],
   "used_phrases": [
@@ -372,7 +378,8 @@
     "Часові прийменники: am чи um",
     "Закінчення прикметників у Akkusativ",
     "Сполучники часу: wenn чи als",
-    "Країни з артиклями: напрямок руху"
+    "Країни з артиклями: напрямок руху",
+    "Прийменник seit у часовому значенні"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

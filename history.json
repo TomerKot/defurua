@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-25T14:54:18.298696",
+  "last_updated": "2026-10-25T17:18:36.153036",
   "history": [
     {
       "date": "2026-10-13",
@@ -340,6 +340,12 @@
       "type": "musterbrief",
       "topic": "Розірвання договору (Kündigung des Vertrags)",
       "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
+    },
+    {
+      "date": "2026-10-25 17:18",
+      "type": "musterbrief",
+      "topic": "Повідомлення про зміну банківських реквізитів / Mitteilung über die Änderung der Bankverbindung",
+      "situation": "Застосовується для своєчасного сповіщення відомств (Jobcenter, Familienkasse, Krankenkasse) або контрагентів про новий банківський рахунок, аби запобігти затримкам у виплатах."
     }
   ],
   "used_phrases": [
@@ -373,7 +379,8 @@
     "Заява про сплату заборгованості частинами / Antrag auf Ratenzahlung",
     "Запит на термін до Відомства у справах іноземців та видачу фікційного документа / Terminanfrage bei der Ausländerbehörde",
     "Клопотання про подовження терміну подання документів / Antrag auf Fristverlängerung",
-    "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit"
+    "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit",
+    "Повідомлення про зміну банківських реквізитів / Mitteilung über die Änderung der Bankverbindung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

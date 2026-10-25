@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-25T18:55:57.356824",
+  "last_updated": "2026-10-25T21:13:48.744600",
   "history": [
     {
       "date": "2026-10-13",
@@ -352,6 +352,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний прийменник:\n\n«Ich lerne Deutsch schon ______ einem Jahr.»",
       "topic": "Прийменник seit у часовому значенні"
+    },
+    {
+      "date": "2026-10-25 21:13",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильний варіант:\n\n„Ich lerne fleißig Deutsch, _____ eine gute Arbeit zu finden.“",
+      "topic": "Конструкція um ... zu"
     }
   ],
   "used_phrases": [
@@ -379,7 +385,8 @@
     "Закінчення прикметників у Akkusativ",
     "Сполучники часу: wenn чи als",
     "Країни з артиклями: напрямок руху",
-    "Прийменник seit у часовому значенні"
+    "Прийменник seit у часовому значенні",
+    "Конструкція um ... zu"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

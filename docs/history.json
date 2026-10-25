@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-25T13:24:04.457999",
+  "last_updated": "2026-10-25T14:54:18.298696",
   "history": [
     {
       "date": "2026-10-13",
@@ -334,6 +334,12 @@
       "type": "dialogue",
       "location": "У Відділі реєстрації громадян / Im Bürgeramt",
       "topic": "Реєстрація місця проживання (Anmeldung)"
+    },
+    {
+      "date": "2026-10-25 14:54",
+      "type": "musterbrief",
+      "topic": "Розірвання договору (Kündigung des Vertrags)",
+      "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
     }
   ],
   "used_phrases": [

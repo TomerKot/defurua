@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-25T11:14:52.765342",
+  "last_updated": "2026-10-25T13:24:04.457999",
   "history": [
     {
       "date": "2026-10-13",
@@ -328,6 +328,12 @@
       "type": "mistake",
       "topic": "«Вчитися» в університеті: studieren чи lernen?",
       "correct_phrase": "✅ Ich studiere an der Universität Medizin."
+    },
+    {
+      "date": "2026-10-25 13:24",
+      "type": "dialogue",
+      "location": "У Відділі реєстрації громадян / Im Bürgeramt",
+      "topic": "Реєстрація місця проживання (Anmeldung)"
     }
   ],
   "used_phrases": [
@@ -378,6 +384,7 @@
     "На пошті / Bei der Post",
     "У пекарні (In der Bäckerei)",
     "У лікаря / Beim Arzt",
-    "У громадському транспорті / Im Zug"
+    "У громадському транспорті / Im Zug",
+    "У Відділі реєстрації громадян / Im Bürgeramt"
   ]
 }

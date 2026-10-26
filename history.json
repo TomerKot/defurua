@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-26T19:30:18.800204",
+  "last_updated": "2026-10-26T21:00:11.923526",
   "history": [
     {
       "date": "2026-10-13",
@@ -382,6 +382,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
       "topic": "Quiz"
+    },
+    {
+      "date": "2026-10-26 21:00",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть граматично правильне завершення речення:\n«Morgen ist frei, du brauchst nicht ...»",
+      "topic": "Конструкція brauchen + zu"
     }
   ],
   "used_phrases": [
@@ -410,7 +416,8 @@
     "Сполучники часу: wenn чи als",
     "Країни з артиклями: напрямок руху",
     "Прийменник seit у часовому значенні",
-    "Конструкція um ... zu"
+    "Конструкція um ... zu",
+    "Конструкція brauchen + zu"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

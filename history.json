@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-26T15:36:51.265316",
+  "last_updated": "2026-10-26T17:20:52.902694",
   "history": [
     {
       "date": "2026-10-13",
@@ -367,6 +367,12 @@
     },
     {
       "date": "2026-10-26 15:36",
+      "type": "musterbrief",
+      "topic": "Розірвання договору (Kündigung des Vertrags)",
+      "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
+    },
+    {
+      "date": "2026-10-26 17:20",
       "type": "musterbrief",
       "topic": "Розірвання договору (Kündigung des Vertrags)",
       "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"

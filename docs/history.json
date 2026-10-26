@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-26T21:00:11.923526",
+  "last_updated": "2026-10-26T22:55:30.010656",
   "history": [
     {
       "date": "2026-10-13",
@@ -388,6 +388,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть граматично правильне завершення речення:\n«Morgen ist frei, du brauchst nicht ...»",
       "topic": "Конструкція brauchen + zu"
+    },
+    {
+      "date": "2026-10-26 22:55",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Оберіть правильну форму для пропуску в реченні:\n\n«Wir gehen spazieren, trotz ____ .» (попри сильний дощ)",
+      "topic": "Прийменник trotz і Genitiv"
     }
   ],
   "used_phrases": [
@@ -417,7 +423,8 @@
     "Країни з артиклями: напрямок руху",
     "Прийменник seit у часовому значенні",
     "Конструкція um ... zu",
-    "Конструкція brauchen + zu"
+    "Конструкція brauchen + zu",
+    "Прийменник trotz і Genitiv"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

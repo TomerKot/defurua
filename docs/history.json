@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-26T12:53:31.483515",
+  "last_updated": "2026-10-26T15:36:51.265316",
   "history": [
     {
       "date": "2026-10-13",
@@ -364,6 +364,12 @@
       "type": "dialogue",
       "location": "У Відомстві у справах іноземців / In der Ausländerbehörde",
       "topic": "Отримання картки посвідки на перебування (eAT)"
+    },
+    {
+      "date": "2026-10-26 15:36",
+      "type": "musterbrief",
+      "topic": "Розірвання договору (Kündigung des Vertrags)",
+      "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
     }
   ],
   "used_phrases": [

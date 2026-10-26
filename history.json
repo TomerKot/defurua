@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-26T17:20:52.902694",
+  "last_updated": "2026-10-26T19:30:18.800204",
   "history": [
     {
       "date": "2026-10-13",
@@ -376,6 +376,12 @@
       "type": "musterbrief",
       "topic": "Розірвання договору (Kündigung des Vertrags)",
       "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
+    },
+    {
+      "date": "2026-10-26 19:30",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Як німецькою сказати офіціанту 'Решти не треба'?",
+      "topic": "Quiz"
     }
   ],
   "used_phrases": [

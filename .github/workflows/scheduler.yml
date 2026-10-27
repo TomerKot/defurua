@@ -68,7 +68,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python main.py --type "${{ inputs.post_type || 'auto' }}"
+          python main.py --type "${{ inputs.post_type || 'auto' }}" --cron "${{ github.event.schedule }}"
 
       - name: Збереження оновленої історії в репозиторій
         run: |

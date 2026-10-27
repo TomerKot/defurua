@@ -32,6 +32,7 @@ from generator import (
     generate_evening_quiz,
     generate_morning_content,
     generate_musterbrief_content,
+    generate_with_gemini_cascade,
     FALLBACK_QUIZ,
     FALLBACK_WORDS,
     FALLBACK_MUSTERBRIEF
@@ -59,17 +60,10 @@ if not BOT_TOKEN:
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # Налаштування Gemini AI
-ai_model = None
 if GEMINI_KEY:
-    try:
-        genai.configure(api_key=GEMINI_KEY)
-        ai_model = genai.GenerativeModel(
-            model_name="gemini-3.8-flash",
-            generation_config={"temperature": 0.7}
-        )
-        logger.info("Google Gemini (gemini-3.8-flash) успішно ініціалізовано!")
-    except Exception as e:
-        logger.error(f"Помилка ініціалізації Gemini: {e}")
+    logger.info("Google Gemini API підключено (використовується мульти-модельний каскад)")
+else:
+    logger.warning("GEMINI_API_KEY не знайдено в .env")
 
 
 # ==========================================================
@@ -368,8 +362,8 @@ def handle_webapp_command(chat_id: int):
 # AI РЕПЕТИТОР ДЛЯ ДОКЛАДНИХ ВІДПОВІДЕЙ ТА ГОЛОСУ
 # ==========================================================
 def answer_user_query_with_ai(chat_id: int, user_query: str):
-    """Відповідає на будь-яке запитання користувача через Gemini та надсилає озвучку."""
-    if not ai_model:
+    """Відповідає на будь-яке запитання користувача через каскад Gemini та надсилає озвучку."""
+    if not GEMINI_KEY:
         send_message(
             chat_id,
             "Вибачте, сервіс AI зараз тимчасово недоступний. "
@@ -400,8 +394,7 @@ AUDIO_PHRASE: <найважливіша ключова німецька фраз
 """
 
     try:
-        response = ai_model.generate_content(prompt)
-        full_text = response.text.strip()
+        full_text = generate_with_gemini_cascade(prompt, api_key=GEMINI_KEY, response_mime_type=None).strip()
 
         # Виділяємо AUDIO_PHRASE
         audio_to_speak = ""

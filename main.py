@@ -13,7 +13,7 @@ import sys
 import json
 import logging
 import argparse
-from datetime import datetime
+from datetime import datetime, timezone
 import requests
 from gtts import gTTS
 from dotenv import load_dotenv
@@ -67,7 +67,28 @@ def validate_environment() -> tuple[str, str, str]:
     return bot_token, chat_id, gemini_key
 
 
-def determine_post_type(arg_type: str = "auto") -> str:
+CRON_SCHEDULE_MAP = {
+    "5 6 * * *": "morning",
+    "35 8 * * *": "phrase",
+    "5 11 * * *": "mistake",
+    "35 13 * * *": "dialogue",
+    "5 16 * * *": "letter",
+    "35 18 * * *": "quiz",
+}
+
+ORDERED_POST_TYPES = ["morning", "phrase", "mistake", "dialogue", "letter", "quiz"]
+
+TYPE_ALIASES = {
+    "morning": ["morning", "morning_word"],
+    "phrase": ["phrase", "afternoon", "afternoon_phrase"],
+    "mistake": ["mistake"],
+    "dialogue": ["dialogue"],
+    "letter": ["letter", "musterbrief"],
+    "quiz": ["quiz", "evening", "evening_quiz"],
+}
+
+
+def determine_post_type(arg_type: str = "auto", cron_expr: str = None) -> str:
     """
     Визначає тип публікації з 6 щоденних форматів:
     1. morning   — 08:05 DE (06:05 UTC) — «Слово дня» (звук УВІМКНЕНО)
@@ -77,6 +98,11 @@ def determine_post_type(arg_type: str = "auto") -> str:
     5. letter    — 18:05 DE (16:05 UTC) — «Шаблон листа (Musterbrief)» (ТИХИЙ пост)
     6. quiz      — 20:35 DE (18:35 UTC) — «Вечірній Quiz-батл» (звук УВІМКНЕНО)
     """
+    if cron_expr and cron_expr.strip() in CRON_SCHEDULE_MAP:
+        matched = CRON_SCHEDULE_MAP[cron_expr.strip()]
+        logger.info(f"Визначено тип публікації за розкладом cron '{cron_expr}' -> [{matched.upper()}]")
+        return matched
+
     aliases = {
         "morning": "morning",
         "phrase": "phrase",
@@ -91,7 +117,7 @@ def determine_post_type(arg_type: str = "auto") -> str:
     if arg_type in aliases:
         return aliases[arg_type]
 
-    now = datetime.utcnow()
+    now = datetime.now(timezone.utc)
     current_minutes = now.hour * 60 + now.minute
     logger.info(f"Режим 'auto': поточний час UTC = {now.strftime('%H:%M')} ({current_minutes} хв)")
 
@@ -114,6 +140,21 @@ def determine_post_type(arg_type: str = "auto") -> str:
         return "letter"
     else:
         return "quiz"
+
+
+def get_already_posted_types_today(history: dict, today_str: str = None) -> set:
+    """Повертає множину канонічних типів постів, які вже були опубліковані сьогодні."""
+    if not today_str:
+        today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    posted = set()
+    for item in history.get("history", []):
+        d = str(item.get("date", ""))
+        t = str(item.get("type", ""))
+        if d.startswith(today_str):
+            for canonical, aliases in TYPE_ALIASES.items():
+                if t in aliases or t == canonical:
+                    posted.add(canonical)
+    return posted
 
 
 def create_audio_pronunciation(text: str, output_path: str = AUDIO_FILE) -> str | None:
@@ -340,11 +381,28 @@ def cleanup_temp_files(*file_paths):
                 pass
 
 
-def run_pipeline(post_type: str = "auto"):
+def run_pipeline(post_type: str = "auto", cron_expr: str = None, force: bool = False):
     """Головний цикл запуску публікації одного з 6 щоденних форматів."""
     bot_token, chat_id, gemini_key = validate_environment()
-    actual_type = determine_post_type(post_type)
-    
+    actual_type = determine_post_type(post_type, cron_expr)
+
+    # Захист від повторної публікації того самого формату в один день
+    history = load_history(HISTORY_FILE)
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    already_posted = get_already_posted_types_today(history, today_str)
+
+    if not force and actual_type in already_posted:
+        logger.warning(f"Увага: тип [{actual_type.upper()}] вже публікувався сьогодні ({today_str})!")
+        current_idx = ORDERED_POST_TYPES.index(actual_type) if actual_type in ORDERED_POST_TYPES else len(ORDERED_POST_TYPES)
+        # Шукаємо, чи є сьогодні пропущені слоти, які ще не публікувалися
+        missed = [pt for pt in ORDERED_POST_TYPES[:current_idx] if pt not in already_posted]
+        if missed:
+            actual_type = missed[0]
+            logger.info(f"Знайдено пропущений слот раніше сьогодні: перемикаємося на [{actual_type.upper()}].")
+        else:
+            logger.info(f"Сьогодні формат [{actual_type.upper()}] вже опубліковано і немає пропущених слотів. Пропускаємо запуск, щоб запобігти повторці.")
+            return
+
     # 4 денні публікації надсилаються без звуку (silent), щоб не перевантажувати підписників
     is_silent = actual_type in ["phrase", "afternoon", "mistake", "dialogue", "letter", "musterbrief"]
     logger.info(f"=== Запуск публікації: тип [{actual_type.upper()}], тихий режим={is_silent} ===")
@@ -473,10 +531,22 @@ if __name__ == "__main__":
         default="auto",
         help="Тип публікації: morning, phrase, mistake, dialogue, letter, quiz, auto"
     )
+    parser.add_argument(
+        "--cron",
+        dest="cron_expr",
+        default=None,
+        help="Розклад cron GitHub Actions (наприклад, '5 6 * * *')"
+    )
+    parser.add_argument(
+        "--force",
+        dest="force",
+        action="store_true",
+        help="Примусова публікація без перевірки на вже опубліковані сьогодні пости"
+    )
     args = parser.parse_args()
 
     try:
-        run_pipeline(post_type=args.post_type)
+        run_pipeline(post_type=args.post_type, cron_expr=args.cron_expr, force=args.force)
     except Exception as e:
         logger.critical(f"Критична помилка виконання: {e}", exc_info=True)
         sys.exit(1)

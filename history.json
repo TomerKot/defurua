@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-27T14:58:26.342171",
+  "last_updated": "2026-10-27T16:25:41.850306",
   "history": [
     {
       "date": "2026-10-13",
@@ -406,6 +406,12 @@
       "type": "musterbrief",
       "topic": "Повідомлення про зміну адреси проживання / Mitteilung über Adressänderung nach Umzug",
       "situation": "Використовується для офіційного сповіщення установ (Jobcenter, Krankenkasse, страхових компаній, банків або відомств) про зміну адреси після переїзду."
+    },
+    {
+      "date": "2026-10-27 16:25",
+      "type": "musterbrief",
+      "topic": "Розірвання договору (Kündigung des Vertrags)",
+      "situation": "Розірвання контракту на спортзал (Fitnessstudio), мобільний зв'язок або інтернет"
     }
   ],
   "used_phrases": [

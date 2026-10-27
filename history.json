@@ -6,7 +6,7 @@
     "die Mülltrennung",
     "das Pfand"
   ],
-  "last_updated": "2026-10-27T12:00:53.950702",
+  "last_updated": "2026-10-27T14:58:26.342171",
   "history": [
     {
       "date": "2026-10-13",
@@ -400,6 +400,12 @@
       "type": "mistake",
       "topic": "«Мені холодно» німецькою мовою",
       "correct_phrase": "✅ Mir ist kalt!"
+    },
+    {
+      "date": "2026-10-27 14:58",
+      "type": "musterbrief",
+      "topic": "Повідомлення про зміну адреси проживання / Mitteilung über Adressänderung nach Umzug",
+      "situation": "Використовується для офіційного сповіщення установ (Jobcenter, Krankenkasse, страхових компаній, банків або відомств) про зміну адреси після переїзду."
     }
   ],
   "used_phrases": [
@@ -438,7 +444,8 @@
     "Запит на термін до Відомства у справах іноземців та видачу фікційного документа / Terminanfrage bei der Ausländerbehörde",
     "Клопотання про подовження терміну подання документів / Antrag auf Fristverlängerung",
     "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit",
-    "Повідомлення про зміну банківських реквізитів / Mitteilung über die Änderung der Bankverbindung"
+    "Повідомлення про зміну банківських реквізитів / Mitteilung über die Änderung der Bankverbindung",
+    "Повідомлення про зміну адреси проживання / Mitteilung über Adressänderung nach Umzug"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

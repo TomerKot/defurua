@@ -7,7 +7,7 @@
     "das Pfand",
     "der Lebenslauf"
   ],
-  "last_updated": "2026-10-28T12:40:45.320167",
+  "last_updated": "2026-10-28T15:33:30.247809",
   "history": [
     {
       "date": "2026-10-13",
@@ -438,12 +438,19 @@
       "word": "der Lebenslauf, die Lebensläufe",
       "translation": "резюме, життєпис",
       "rubric": "Робота та бюрократія (Bürokratie & Beruf)"
+    },
+    {
+      "date": "2026-10-28 15:33",
+      "type": "afternoon_phrase",
+      "phrase": "Das geht auf mich!",
+      "translation": "Це за мій рахунок! / Я пригощаю!"
     }
   ],
   "used_phrases": [
     "Passt schon!",
     "Stimmt so!",
-    "Das wär's, danke!"
+    "Das wär's, danke!",
+    "Das geht auf mich!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

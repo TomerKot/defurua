@@ -7,7 +7,7 @@
     "das Pfand",
     "der Lebenslauf"
   ],
-  "last_updated": "2026-10-28T19:00:28.623669",
+  "last_updated": "2026-10-28T20:56:03.378194",
   "history": [
     {
       "date": "2026-10-13",
@@ -456,6 +456,12 @@
       "type": "dialogue",
       "location": "У банку / Bei der Bank",
       "topic": "Відкриття нового поточного рахунку"
+    },
+    {
+      "date": "2026-10-28 20:56",
+      "type": "musterbrief",
+      "topic": "Запит на прийом до Bürgeramt / Terminvereinbarung",
+      "situation": "Використовується для електронного запису на прийом до міського управління для реєстрації місця проживання або оформлення довідок."
     }
   ],
   "used_phrases": [
@@ -496,7 +502,8 @@
     "Клопотання про подовження терміну подання документів / Antrag auf Fristverlängerung",
     "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit",
     "Повідомлення про зміну банківських реквізитів / Mitteilung über die Änderung der Bankverbindung",
-    "Повідомлення про зміну адреси проживання / Mitteilung über Adressänderung nach Umzug"
+    "Повідомлення про зміну адреси проживання / Mitteilung über Adressänderung nach Umzug",
+    "Запит на прийом до Bürgeramt / Terminvereinbarung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

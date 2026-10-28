@@ -7,7 +7,7 @@
     "das Pfand",
     "der Lebenslauf"
   ],
-  "last_updated": "2026-10-28T17:03:07.319558",
+  "last_updated": "2026-10-28T19:00:28.623669",
   "history": [
     {
       "date": "2026-10-13",
@@ -450,6 +450,12 @@
       "type": "mistake",
       "topic": "Дякувати за щось: danken vs. sich bedanken",
       "correct_phrase": "✅ Ich danke dir für deine Hilfe / Ich bedanke mich für deine Hilfe."
+    },
+    {
+      "date": "2026-10-28 19:00",
+      "type": "dialogue",
+      "location": "У банку / Bei der Bank",
+      "topic": "Відкриття нового поточного рахунку"
     }
   ],
   "used_phrases": [
@@ -510,6 +516,7 @@
     "У лікаря / Beim Arzt",
     "У громадському транспорті / Im Zug",
     "У Відділі реєстрації громадян / Im Bürgeramt",
-    "У Відомстві у справах іноземців / In der Ausländerbehörde"
+    "У Відомстві у справах іноземців / In der Ausländerbehörde",
+    "У банку / Bei der Bank"
   ]
 }

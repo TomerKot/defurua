@@ -7,7 +7,7 @@
     "das Pfand",
     "der Lebenslauf"
   ],
-  "last_updated": "2026-10-28T15:33:30.247809",
+  "last_updated": "2026-10-28T17:03:07.319558",
   "history": [
     {
       "date": "2026-10-13",
@@ -444,6 +444,12 @@
       "type": "afternoon_phrase",
       "phrase": "Das geht auf mich!",
       "translation": "Це за мій рахунок! / Я пригощаю!"
+    },
+    {
+      "date": "2026-10-28 17:03",
+      "type": "mistake",
+      "topic": "Дякувати за щось: danken vs. sich bedanken",
+      "correct_phrase": "✅ Ich danke dir für deine Hilfe / Ich bedanke mich für deine Hilfe."
     }
   ],
   "used_phrases": [
@@ -492,7 +498,8 @@
     "«Мені холодно» німецькою мовою",
     "«Працювати» про техніку: funktionieren чи arbeiten?",
     "Транспортом чи пішки: fahren чи gehen?",
-    "«Вчитися» в університеті: studieren чи lernen?"
+    "«Вчитися» в університеті: studieren чи lernen?",
+    "Дякувати за щось: danken vs. sich bedanken"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

@@ -8,7 +8,7 @@
     "der Lebenslauf",
     "der Bock"
   ],
-  "last_updated": "2026-10-29T15:31:56.369776",
+  "last_updated": "2026-10-29T17:21:39.265633",
   "history": [
     {
       "date": "2026-10-13",
@@ -482,6 +482,12 @@
       "type": "afternoon_phrase",
       "phrase": "Gern geschehen!",
       "translation": "Із задоволенням!"
+    },
+    {
+      "date": "2026-10-29 17:21",
+      "type": "mistake",
+      "topic": "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu",
+      "correct_phrase": "✅ Ich gehe zu meinem Freund."
     }
   ],
   "used_phrases": [
@@ -534,7 +540,8 @@
     "«Працювати» про техніку: funktionieren чи arbeiten?",
     "Транспортом чи пішки: fahren чи gehen?",
     "«Вчитися» в університеті: studieren чи lernen?",
-    "Дякувати за щось: danken vs. sich bedanken"
+    "Дякувати за щось: danken vs. sich bedanken",
+    "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

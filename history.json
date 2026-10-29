@@ -8,7 +8,7 @@
     "der Lebenslauf",
     "der Bock"
   ],
-  "last_updated": "2026-10-29T19:07:59.831410",
+  "last_updated": "2026-10-29T20:59:35.955432",
   "history": [
     {
       "date": "2026-10-13",
@@ -494,6 +494,12 @@
       "type": "dialogue",
       "location": "У кав'ярні / Im Café",
       "topic": "Замовлення кави та круасана на винос"
+    },
+    {
+      "date": "2026-10-29 20:59",
+      "type": "musterbrief",
+      "topic": "Повідомлення про хворобу роботодавцю / Krankmeldung",
+      "situation": "Використовується для негайного інформування роботодавця про непрацездатність у перший день хвороби."
     }
   ],
   "used_phrases": [
@@ -537,7 +543,8 @@
     "Пояснення відсутності дитини в школі через хворобу / Entschuldigung wegen Krankheit",
     "Повідомлення про зміну банківських реквізитів / Mitteilung über die Änderung der Bankverbindung",
     "Повідомлення про зміну адреси проживання / Mitteilung über Adressänderung nach Umzug",
-    "Запит на прийом до Bürgeramt / Terminvereinbarung"
+    "Запит на прийом до Bürgeramt / Terminvereinbarung",
+    "Повідомлення про хворобу роботодавцю / Krankmeldung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

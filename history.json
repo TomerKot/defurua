@@ -8,7 +8,7 @@
     "der Lebenslauf",
     "der Bock"
   ],
-  "last_updated": "2026-10-29T12:49:33.856588",
+  "last_updated": "2026-10-29T15:31:56.369776",
   "history": [
     {
       "date": "2026-10-13",
@@ -476,13 +476,20 @@
       "word": "der Bock",
       "translation": "бажання, охота",
       "rubric": "Розмовна мова та сленг (Umgangssprache)"
+    },
+    {
+      "date": "2026-10-29 15:31",
+      "type": "afternoon_phrase",
+      "phrase": "Gern geschehen!",
+      "translation": "Із задоволенням!"
     }
   ],
   "used_phrases": [
     "Passt schon!",
     "Stimmt so!",
     "Das wär's, danke!",
-    "Das geht auf mich!"
+    "Das geht auf mich!",
+    "Gern geschehen!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

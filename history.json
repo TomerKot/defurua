@@ -5,9 +5,10 @@
     "die Gemütlichkeit",
     "die Mülltrennung",
     "das Pfand",
-    "der Lebenslauf"
+    "der Lebenslauf",
+    "der Bock"
   ],
-  "last_updated": "2026-10-28T22:49:41.807110",
+  "last_updated": "2026-10-29T12:49:33.856588",
   "history": [
     {
       "date": "2026-10-13",
@@ -468,6 +469,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як віжливо замовити каву в берлінській кав'ярні: «Я б хотів чашку кави»?",
       "topic": "Модальне дієслово mögen у кон'юнктиві"
+    },
+    {
+      "date": "2026-10-29 12:49",
+      "type": "morning_word",
+      "word": "der Bock",
+      "translation": "бажання, охота",
+      "rubric": "Розмовна мова та сленг (Umgangssprache)"
     }
   ],
   "used_phrases": [

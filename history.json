@@ -8,7 +8,7 @@
     "der Lebenslauf",
     "der Bock"
   ],
-  "last_updated": "2026-10-29T17:21:39.265633",
+  "last_updated": "2026-10-29T19:07:59.831410",
   "history": [
     {
       "date": "2026-10-13",
@@ -488,6 +488,12 @@
       "type": "mistake",
       "topic": "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu",
       "correct_phrase": "✅ Ich gehe zu meinem Freund."
+    },
+    {
+      "date": "2026-10-29 19:07",
+      "type": "dialogue",
+      "location": "У кав'ярні / Im Café",
+      "topic": "Замовлення кави та круасана на винос"
     }
   ],
   "used_phrases": [
@@ -553,6 +559,7 @@
     "У громадському транспорті / Im Zug",
     "У Відділі реєстрації громадян / Im Bürgeramt",
     "У Відомстві у справах іноземців / In der Ausländerbehörde",
-    "У банку / Bei der Bank"
+    "У банку / Bei der Bank",
+    "У кав'ярні / Im Café"
   ]
 }

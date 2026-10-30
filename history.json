@@ -6,9 +6,10 @@
     "die Mülltrennung",
     "das Pfand",
     "der Lebenslauf",
-    "der Bock"
+    "der Bock",
+    "bekommen"
   ],
-  "last_updated": "2026-10-29T22:56:51.303522",
+  "last_updated": "2026-10-30T12:41:37.602346",
   "history": [
     {
       "date": "2026-10-13",
@@ -506,6 +507,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як утворити множину від слова das Zimmer (кімната)?",
       "topic": "Множина іменників без закінчень"
+    },
+    {
+      "date": "2026-10-30 12:41",
+      "type": "morning_word",
+      "word": "bekommen",
+      "translation": "отримувати, одержувати",
+      "rubric": "Типові помилки українців (Typische Fehler)"
     }
   ],
   "used_phrases": [

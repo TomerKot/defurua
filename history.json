@@ -9,7 +9,7 @@
     "der Bock",
     "bekommen"
   ],
-  "last_updated": "2026-10-30T16:58:25.494098",
+  "last_updated": "2026-10-30T18:46:29.182959",
   "history": [
     {
       "date": "2026-10-13",
@@ -526,6 +526,12 @@
       "type": "mistake",
       "topic": "«Чекати на когось/щось»: warten auf vs. erwarten",
       "correct_phrase": "✅ Ich warte auf den Bus."
+    },
+    {
+      "date": "2026-10-30 18:46",
+      "type": "dialogue",
+      "location": "У секонд-хенді або комісійному магазині / Im Second-Hand-Laden",
+      "topic": "Питання про можливість оплати карткою та повернення товару"
     }
   ],
   "used_phrases": [
@@ -596,6 +602,7 @@
     "У Відділі реєстрації громадян / Im Bürgeramt",
     "У Відомстві у справах іноземців / In der Ausländerbehörde",
     "У банку / Bei der Bank",
-    "У кав'ярні / Im Café"
+    "У кав'ярні / Im Café",
+    "У секонд-хенді або комісійному магазині / Im Second-Hand-Laden"
   ]
 }

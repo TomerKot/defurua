@@ -9,7 +9,7 @@
     "der Bock",
     "bekommen"
   ],
-  "last_updated": "2026-10-30T15:18:42.856300",
+  "last_updated": "2026-10-30T16:58:25.494098",
   "history": [
     {
       "date": "2026-10-13",
@@ -520,6 +520,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich verstehe nur Bahnhof",
       "translation": "Я нічогісінько не розумію"
+    },
+    {
+      "date": "2026-10-30 16:58",
+      "type": "mistake",
+      "topic": "«Чекати на когось/щось»: warten auf vs. erwarten",
+      "correct_phrase": "✅ Ich warte auf den Bus."
     }
   ],
   "used_phrases": [
@@ -576,7 +582,8 @@
     "Транспортом чи пішки: fahren чи gehen?",
     "«Вчитися» в університеті: studieren чи lernen?",
     "Дякувати за щось: danken vs. sich bedanken",
-    "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu"
+    "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu",
+    "«Чекати на когось/щось»: warten auf vs. erwarten"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

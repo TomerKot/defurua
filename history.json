@@ -9,7 +9,7 @@
     "der Bock",
     "bekommen"
   ],
-  "last_updated": "2026-10-30T12:41:37.602346",
+  "last_updated": "2026-10-30T15:18:42.856300",
   "history": [
     {
       "date": "2026-10-13",
@@ -514,6 +514,12 @@
       "word": "bekommen",
       "translation": "отримувати, одержувати",
       "rubric": "Типові помилки українців (Typische Fehler)"
+    },
+    {
+      "date": "2026-10-30 15:18",
+      "type": "afternoon_phrase",
+      "phrase": "Ich verstehe nur Bahnhof",
+      "translation": "Я нічогісінько не розумію"
     }
   ],
   "used_phrases": [
@@ -521,7 +527,8 @@
     "Stimmt so!",
     "Das wär's, danke!",
     "Das geht auf mich!",
-    "Gern geschehen!"
+    "Gern geschehen!",
+    "Ich verstehe nur Bahnhof"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

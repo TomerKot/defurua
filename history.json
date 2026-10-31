@@ -10,7 +10,7 @@
     "bekommen",
     "die Ruhezeit"
   ],
-  "last_updated": "2026-10-31T12:10:58.069075",
+  "last_updated": "2026-10-31T14:43:24.423025",
   "history": [
     {
       "date": "2026-10-13",
@@ -552,6 +552,12 @@
       "word": "die Ruhezeit, -en",
       "translation": "час спокою, години тиші",
       "rubric": "Ідіоми та менталітет (Redewendungen & Kultur)"
+    },
+    {
+      "date": "2026-10-31 14:43",
+      "type": "afternoon_phrase",
+      "phrase": "Wie viel macht das?",
+      "translation": "Скільки з мене?"
     }
   ],
   "used_phrases": [
@@ -560,7 +566,8 @@
     "Das wär's, danke!",
     "Das geht auf mich!",
     "Gern geschehen!",
-    "Ich verstehe nur Bahnhof"
+    "Ich verstehe nur Bahnhof",
+    "Wie viel macht das?"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

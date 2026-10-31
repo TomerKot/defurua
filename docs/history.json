@@ -7,9 +7,10 @@
     "das Pfand",
     "der Lebenslauf",
     "der Bock",
-    "bekommen"
+    "bekommen",
+    "die Ruhezeit"
   ],
-  "last_updated": "2026-10-30T22:37:41.336342",
+  "last_updated": "2026-10-31T12:10:58.069075",
   "history": [
     {
       "date": "2026-10-13",
@@ -544,6 +545,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно сказати: «Я чекаю на автобус»?",
       "topic": "Дієслова з прийменниками: warten auf"
+    },
+    {
+      "date": "2026-10-31 12:10",
+      "type": "morning_word",
+      "word": "die Ruhezeit, -en",
+      "translation": "час спокою, години тиші",
+      "rubric": "Ідіоми та менталітет (Redewendungen & Kultur)"
     }
   ],
   "used_phrases": [

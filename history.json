@@ -10,7 +10,7 @@
     "bekommen",
     "die Ruhezeit"
   ],
-  "last_updated": "2026-10-31T17:52:39.088586",
+  "last_updated": "2026-10-31T19:52:49.885603",
   "history": [
     {
       "date": "2026-10-13",
@@ -570,6 +570,12 @@
       "type": "dialogue",
       "location": "У фітнес-центрі / Im Fitnessstudio",
       "topic": "Укладання договору або з'ясування деталей абонемента"
+    },
+    {
+      "date": "2026-10-31 19:52",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за комунальні послуги / Antrag auf Ratenzahlung",
+      "situation": "Використовується у разі неможливості одноразової сплати рахунку за комунальні послуги та для уникнення відключення постачання."
     }
   ],
   "used_phrases": [
@@ -619,7 +625,8 @@
     "Повідомлення про зміну адреси проживання / Mitteilung über Adressänderung nach Umzug",
     "Запит на прийом до Bürgeramt / Terminvereinbarung",
     "Повідомлення про хворобу роботодавцю / Krankmeldung",
-    "Запит на прийом до вузькопрофільного лікаря / Terminvereinbarung beim Facharzt"
+    "Запит на прийом до вузькопрофільного лікаря / Terminvereinbarung beim Facharzt",
+    "Запит на розстрочення боргу за комунальні послуги / Antrag auf Ratenzahlung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

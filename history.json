@@ -10,7 +10,7 @@
     "bekommen",
     "die Ruhezeit"
   ],
-  "last_updated": "2026-10-31T15:59:12.540362",
+  "last_updated": "2026-10-31T17:52:39.088586",
   "history": [
     {
       "date": "2026-10-13",
@@ -564,6 +564,12 @@
       "type": "mistake",
       "topic": "'Питати' когось: fragen vs. sich erkundigen",
       "correct_phrase": "✅ Ichfrage den Lehrer (у німецькій дієслово fragen вимагає знахідного відмінка — Akkusativ, тобто когось, а не в когось)"
+    },
+    {
+      "date": "2026-10-31 17:52",
+      "type": "dialogue",
+      "location": "У фітнес-центрі / Im Fitnessstudio",
+      "topic": "Укладання договору або з'ясування деталей абонемента"
     }
   ],
   "used_phrases": [
@@ -639,6 +645,7 @@
     "У Відомстві у справах іноземців / In der Ausländerbehörde",
     "У банку / Bei der Bank",
     "У кав'ярні / Im Café",
-    "У секонд-хенді або комісійному магазині / Im Second-Hand-Laden"
+    "У секонд-хенді або комісійному магазині / Im Second-Hand-Laden",
+    "У фітнес-центрі / Im Fitnessstudio"
   ]
 }

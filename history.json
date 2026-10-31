@@ -10,7 +10,7 @@
     "bekommen",
     "die Ruhezeit"
   ],
-  "last_updated": "2026-10-31T14:43:24.423025",
+  "last_updated": "2026-10-31T15:59:12.540362",
   "history": [
     {
       "date": "2026-10-13",
@@ -558,6 +558,12 @@
       "type": "afternoon_phrase",
       "phrase": "Wie viel macht das?",
       "translation": "Скільки з мене?"
+    },
+    {
+      "date": "2026-10-31 15:59",
+      "type": "mistake",
+      "topic": "'Питати' когось: fragen vs. sich erkundigen",
+      "correct_phrase": "✅ Ichfrage den Lehrer (у німецькій дієслово fragen вимагає знахідного відмінка — Akkusativ, тобто когось, а не в когось)"
     }
   ],
   "used_phrases": [
@@ -618,7 +624,8 @@
     "«Вчитися» в університеті: studieren чи lernen?",
     "Дякувати за щось: danken vs. sich bedanken",
     "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu",
-    "«Чекати на когось/щось»: warten auf vs. erwarten"
+    "«Чекати на когось/щось»: warten auf vs. erwarten",
+    "'Питати' когось: fragen vs. sich erkundigen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

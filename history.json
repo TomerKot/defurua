@@ -11,7 +11,7 @@
     "die Ruhezeit",
     "die Verspätung"
   ],
-  "last_updated": "2026-11-01T18:30:13.868946",
+  "last_updated": "2026-11-01T20:25:20.584572",
   "history": [
     {
       "date": "2026-10-13",
@@ -608,6 +608,12 @@
       "type": "dialogue",
       "location": "На автозаправній станції / An der Tankstelle",
       "topic": "Заправка автомобіля та оплата пального"
+    },
+    {
+      "date": "2026-11-01 20:25",
+      "type": "musterbrief",
+      "topic": "Запит на розірвання договору добровільного страхування / Vorzeitige Kündigung der Zusatzversicherung",
+      "situation": "Використовується для дострокового припинення додаткового приватного страхування (наприклад, стоматологічного чи лікарняного) через зміну фінансового становища."
     }
   ],
   "used_phrases": [
@@ -660,7 +666,8 @@
     "Запит на прийом до Bürgeramt / Terminvereinbarung",
     "Повідомлення про хворобу роботодавцю / Krankmeldung",
     "Запит на прийом до вузькопрофільного лікаря / Terminvereinbarung beim Facharzt",
-    "Запит на розстрочення боргу за комунальні послуги / Antrag auf Ratenzahlung"
+    "Запит на розстрочення боргу за комунальні послуги / Antrag auf Ratenzahlung",
+    "Запит на розірвання договору добровільного страхування / Vorzeitige Kündigung der Zusatzversicherung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

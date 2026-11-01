@@ -11,7 +11,7 @@
     "die Ruhezeit",
     "die Verspätung"
   ],
-  "last_updated": "2026-11-01T17:02:43.549597",
+  "last_updated": "2026-11-01T18:30:13.868946",
   "history": [
     {
       "date": "2026-10-13",
@@ -602,6 +602,12 @@
       "type": "mistake",
       "topic": "«Вибачатися»: entschuldigen vs. sich entschuldigen",
       "correct_phrase": "✅ Entschuldige bitte meine Verspätung."
+    },
+    {
+      "date": "2026-11-01 18:30",
+      "type": "dialogue",
+      "location": "На автозаправній станції / An der Tankstelle",
+      "topic": "Заправка автомобіля та оплата пального"
     }
   ],
   "used_phrases": [
@@ -682,6 +688,7 @@
     "У банку / Bei der Bank",
     "У кав'ярні / Im Café",
     "У секонд-хенді або комісійному магазині / Im Second-Hand-Laden",
-    "У фітнес-центрі / Im Fitnessstudio"
+    "У фітнес-центрі / Im Fitnessstudio",
+    "На автозаправній станції / An der Tankstelle"
   ]
 }

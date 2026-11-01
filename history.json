@@ -11,7 +11,7 @@
     "die Ruhezeit",
     "die Verspätung"
   ],
-  "last_updated": "2026-11-01T15:26:19.831530",
+  "last_updated": "2026-11-01T17:02:43.549597",
   "history": [
     {
       "date": "2026-10-13",
@@ -596,6 +596,12 @@
       "type": "afternoon_phrase",
       "phrase": "Wie läuft's?",
       "translation": "Як справи? / Як воно?"
+    },
+    {
+      "date": "2026-11-01 17:02",
+      "type": "mistake",
+      "topic": "«Вибачатися»: entschuldigen vs. sich entschuldigen",
+      "correct_phrase": "✅ Entschuldige bitte meine Verspätung."
     }
   ],
   "used_phrases": [
@@ -660,7 +666,8 @@
     "Дякувати за щось: danken vs. sich bedanken",
     "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu",
     "«Чекати на когось/щось»: warten auf vs. erwarten",
-    "'Питати' когось: fragen vs. sich erkundigen"
+    "'Питати' когось: fragen vs. sich erkundigen",
+    "«Вибачатися»: entschuldigen vs. sich entschuldigen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

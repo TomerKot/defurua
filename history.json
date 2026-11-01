@@ -11,7 +11,7 @@
     "die Ruhezeit",
     "die Verspätung"
   ],
-  "last_updated": "2026-11-01T13:10:21.481447",
+  "last_updated": "2026-11-01T15:26:19.831530",
   "history": [
     {
       "date": "2026-10-13",
@@ -590,6 +590,12 @@
       "word": "die Verspätung (die Verspätungen)",
       "translation": "запізнення",
       "rubric": "Практика та міні-тест (Quiz & Wiederholung)"
+    },
+    {
+      "date": "2026-11-01 15:26",
+      "type": "afternoon_phrase",
+      "phrase": "Wie läuft's?",
+      "translation": "Як справи? / Як воно?"
     }
   ],
   "used_phrases": [
@@ -599,7 +605,8 @@
     "Das geht auf mich!",
     "Gern geschehen!",
     "Ich verstehe nur Bahnhof",
-    "Wie viel macht das?"
+    "Wie viel macht das?",
+    "Wie läuft's?"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

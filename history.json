@@ -12,7 +12,7 @@
     "die Verspätung",
     "ді фа́ркате"
   ],
-  "last_updated": "2026-11-02T22:26:30.568228",
+  "last_updated": "2026-11-02T23:24:20.447388",
   "history": [
     {
       "date": "2026-10-13",
@@ -646,6 +646,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Bus",
       "topic": "Запит зупинки у водія автобуса"
+    },
+    {
+      "date": "2026-11-02 23:24",
+      "type": "musterbrief",
+      "topic": "Розірвання договору на відвідування спортивного залу / Kündigung des Fitnessstudiotrags",
+      "situation": "Використовується для дострокового або своєчасного скасування членства у фітнес-клубі з дотриманням термінів попередження."
     }
   ],
   "used_phrases": [
@@ -701,7 +707,8 @@
     "Повідомлення про хворобу роботодавцю / Krankmeldung",
     "Запит на прийом до вузькопрофільного лікаря / Terminvereinbarung beim Facharzt",
     "Запит на розстрочення боргу за комунальні послуги / Antrag auf Ratenzahlung",
-    "Запит на розірвання договору добровільного страхування / Vorzeitige Kündigung der Zusatzversicherung"
+    "Запит на розірвання договору добровільного страхування / Vorzeitige Kündigung der Zusatzversicherung",
+    "Розірвання договору на відвідування спортивного залу / Kündigung des Fitnessstudiotrags"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

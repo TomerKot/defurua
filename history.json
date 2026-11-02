@@ -12,7 +12,7 @@
     "die Verspätung",
     "ді фа́ркате"
   ],
-  "last_updated": "2026-11-02T18:48:32.245950",
+  "last_updated": "2026-11-02T20:39:44.143037",
   "history": [
     {
       "date": "2026-10-13",
@@ -634,6 +634,12 @@
       "type": "afternoon_phrase",
       "phrase": "Schön, dich kennenzulernen!",
       "translation": "Приємно познайомитися!"
+    },
+    {
+      "date": "2026-11-02 20:39",
+      "type": "mistake",
+      "topic": "Брати участь: teilnehmen vs. besuchen",
+      "correct_phrase": "✅ Ich nehme an dem Meeting teil."
     }
   ],
   "used_phrases": [
@@ -702,7 +708,8 @@
     "Відвідувати захід чи ходити до когось: besuchen vs. gehen zu",
     "«Чекати на когось/щось»: warten auf vs. erwarten",
     "'Питати' когось: fragen vs. sich erkundigen",
-    "«Вибачатися»: entschuldigen vs. sich entschuldigen"
+    "«Вибачатися»: entschuldigen vs. sich entschuldigen",
+    "Брати участь: teilnehmen vs. besuchen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

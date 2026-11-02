@@ -9,9 +9,10 @@
     "der Bock",
     "bekommen",
     "die Ruhezeit",
-    "die Verspätung"
+    "die Verspätung",
+    "ді фа́ркате"
   ],
-  "last_updated": "2026-11-01T22:21:26.673058",
+  "last_updated": "2026-11-02T15:35:16.027552",
   "history": [
     {
       "date": "2026-10-13",
@@ -620,6 +621,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як утворюється множина від слова «das Buch» (книга)?",
       "topic": "Утворення множини іменників"
+    },
+    {
+      "date": "2026-11-02 15:35",
+      "type": "morning_word",
+      "word": "die Fahrkarte, -n",
+      "translation": "квиток",
+      "rubric": "Побут та щоденне життя (Alltag)"
     }
   ],
   "used_phrases": [

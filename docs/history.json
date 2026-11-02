@@ -12,7 +12,7 @@
     "die Verspätung",
     "ді фа́ркате"
   ],
-  "last_updated": "2026-11-02T15:35:16.027552",
+  "last_updated": "2026-11-02T18:48:32.245950",
   "history": [
     {
       "date": "2026-10-13",
@@ -628,6 +628,12 @@
       "word": "die Fahrkarte, -n",
       "translation": "квиток",
       "rubric": "Побут та щоденне життя (Alltag)"
+    },
+    {
+      "date": "2026-11-02 18:48",
+      "type": "afternoon_phrase",
+      "phrase": "Schön, dich kennenzulernen!",
+      "translation": "Приємно познайомитися!"
     }
   ],
   "used_phrases": [
@@ -638,7 +644,8 @@
     "Gern geschehen!",
     "Ich verstehe nur Bahnhof",
     "Wie viel macht das?",
-    "Wie läuft's?"
+    "Wie läuft's?",
+    "Schön, dich kennenzulernen!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

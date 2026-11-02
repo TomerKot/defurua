@@ -12,7 +12,7 @@
     "die Verspätung",
     "ді фа́ркате"
   ],
-  "last_updated": "2026-11-02T20:39:44.143037",
+  "last_updated": "2026-11-02T22:26:30.568228",
   "history": [
     {
       "date": "2026-10-13",
@@ -640,6 +640,12 @@
       "type": "mistake",
       "topic": "Брати участь: teilnehmen vs. besuchen",
       "correct_phrase": "✅ Ich nehme an dem Meeting teil."
+    },
+    {
+      "date": "2026-11-02 22:26",
+      "type": "dialogue",
+      "location": "У громадському транспорті / Im Bus",
+      "topic": "Запит зупинки у водія автобуса"
     }
   ],
   "used_phrases": [
@@ -725,6 +731,7 @@
     "У кав'ярні / Im Café",
     "У секонд-хенді або комісійному магазині / Im Second-Hand-Laden",
     "У фітнес-центрі / Im Fitnessstudio",
-    "На автозаправній станції / An der Tankstelle"
+    "На автозаправній станції / An der Tankstelle",
+    "У громадському транспорті / Im Bus"
   ]
 }

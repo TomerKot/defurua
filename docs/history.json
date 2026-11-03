@@ -13,7 +13,7 @@
     "ді фа́ркате",
     "ді юбервайзунг"
   ],
-  "last_updated": "2026-11-03T18:17:28.704669",
+  "last_updated": "2026-11-03T20:15:06.366956",
   "history": [
     {
       "date": "2026-10-13",
@@ -678,6 +678,12 @@
       "type": "mistake",
       "topic": "«Мати вільний час»: haben vs. frei haben",
       "correct_phrase": "✅ Ich habe frei."
+    },
+    {
+      "date": "2026-11-03 20:15",
+      "type": "dialogue",
+      "location": "У громадському транспорті / Im Zug",
+      "topic": "Запит про затримку потяга та пересадку"
     }
   ],
   "used_phrases": [

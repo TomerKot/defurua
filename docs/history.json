@@ -13,7 +13,7 @@
     "ді фа́ркате",
     "ді юбервайзунг"
   ],
-  "last_updated": "2026-11-03T20:15:06.366956",
+  "last_updated": "2026-11-03T21:39:53.193048",
   "history": [
     {
       "date": "2026-10-13",
@@ -684,6 +684,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Zug",
       "topic": "Запит про затримку потяга та пересадку"
+    },
+    {
+      "date": "2026-11-03 21:39",
+      "type": "musterbrief",
+      "topic": "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung",
+      "situation": "Використовується для дострокового припинення дії приватного чи додаткового медичного страхування з дотриманням строків попередження."
     }
   ],
   "used_phrases": [
@@ -742,7 +748,8 @@
     "Запит на прийом до вузькопрофільного лікаря / Terminvereinbarung beim Facharzt",
     "Запит на розстрочення боргу за комунальні послуги / Antrag auf Ratenzahlung",
     "Запит на розірвання договору добровільного страхування / Vorzeitige Kündigung der Zusatzversicherung",
-    "Розірвання договору на відвідування спортивного залу / Kündigung des Fitnessstudiotrags"
+    "Розірвання договору на відвідування спортивного залу / Kündigung des Fitnessstudiotrags",
+    "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

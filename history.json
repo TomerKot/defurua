@@ -10,9 +10,10 @@
     "bekommen",
     "die Ruhezeit",
     "die Verspätung",
-    "ді фа́ркате"
+    "ді фа́ркате",
+    "ді юбервайзунг"
   ],
-  "last_updated": "2026-11-03T01:12:29.551119",
+  "last_updated": "2026-11-03T14:01:06.362196",
   "history": [
     {
       "date": "2026-10-13",
@@ -658,6 +659,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як віжливо сказати в німецькому магазині: «Я хотів би розрахуватися готівкою»?",
       "topic": "Розмовна лексика: в магазині"
+    },
+    {
+      "date": "2026-11-03 14:01",
+      "type": "morning_word",
+      "word": "die Überweisung (-en)",
+      "translation": "банківський переказ",
+      "rubric": "Граматика без нудоти (Grammatik)"
     }
   ],
   "used_phrases": [

@@ -14,7 +14,7 @@
     "ді юбервайзунг",
     "der Bescheid"
   ],
-  "last_updated": "2026-11-04T18:31:33.510050",
+  "last_updated": "2026-11-04T20:30:31.440758",
   "history": [
     {
       "date": "2026-10-13",
@@ -710,6 +710,12 @@
       "type": "mistake",
       "topic": "«Фотографувати»: фотографувати vs. фотографуватися",
       "correct_phrase": "✅ Ich möchte mich mit dir fotografieren lassen / Ich möchte ein Foto mit dir machen"
+    },
+    {
+      "date": "2026-11-04 20:30",
+      "type": "dialogue",
+      "location": "У громадському транспорті / Im Zug",
+      "topic": "Запитання про запізнення потяга та пересадку"
     }
   ],
   "used_phrases": [

@@ -11,9 +11,10 @@
     "die Ruhezeit",
     "die Verspätung",
     "ді фа́ркате",
-    "ді юбервайзунг"
+    "ді юбервайзунг",
+    "der Bescheid"
   ],
-  "last_updated": "2026-11-03T21:39:53.193048",
+  "last_updated": "2026-11-04T14:22:38.551547",
   "history": [
     {
       "date": "2026-10-13",
@@ -690,6 +691,13 @@
       "type": "musterbrief",
       "topic": "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung",
       "situation": "Використовується для дострокового припинення дії приватного чи додаткового медичного страхування з дотриманням строків попередження."
+    },
+    {
+      "date": "2026-11-04 14:22",
+      "type": "morning_word",
+      "word": "der Bescheid, die Bescheide",
+      "translation": "офіційне повідомлення, рішення установи",
+      "rubric": "Робота та бюрократія (Bürokratie & Beruf)"
     }
   ],
   "used_phrases": [

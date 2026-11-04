@@ -14,7 +14,7 @@
     "ді юбервайзунг",
     "der Bescheid"
   ],
-  "last_updated": "2026-11-04T14:22:38.551547",
+  "last_updated": "2026-11-04T16:34:13.059569",
   "history": [
     {
       "date": "2026-10-13",
@@ -698,6 +698,12 @@
       "word": "der Bescheid, die Bescheide",
       "translation": "офіційне повідомлення, рішення установи",
       "rubric": "Робота та бюрократія (Bürokratie & Beruf)"
+    },
+    {
+      "date": "2026-11-04 16:34",
+      "type": "afternoon_phrase",
+      "phrase": "Alles klar!",
+      "translation": "Усе зрозуміло! / Домовилися!"
     }
   ],
   "used_phrases": [
@@ -710,7 +716,8 @@
     "Wie viel macht das?",
     "Wie läuft's?",
     "Schön, dich kennenzulernen!",
-    "Mach's gut!"
+    "Mach's gut!",
+    "Alles klar!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

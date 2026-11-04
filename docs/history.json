@@ -14,7 +14,7 @@
     "ді юбервайзунг",
     "der Bescheid"
   ],
-  "last_updated": "2026-11-04T16:34:13.059569",
+  "last_updated": "2026-11-04T18:31:33.510050",
   "history": [
     {
       "date": "2026-10-13",
@@ -704,6 +704,12 @@
       "type": "afternoon_phrase",
       "phrase": "Alles klar!",
       "translation": "Усе зрозуміло! / Домовилися!"
+    },
+    {
+      "date": "2026-11-04 18:31",
+      "type": "mistake",
+      "topic": "«Фотографувати»: фотографувати vs. фотографуватися",
+      "correct_phrase": "✅ Ich möchte mich mit dir fotografieren lassen / Ich möchte ein Foto mit dir machen"
     }
   ],
   "used_phrases": [
@@ -779,7 +785,8 @@
     "'Питати' когось: fragen vs. sich erkundigen",
     "«Вибачатися»: entschuldigen vs. sich entschuldigen",
     "Брати участь: teilnehmen vs. besuchen",
-    "«Мати вільний час»: haben vs. frei haben"
+    "«Мати вільний час»: haben vs. frei haben",
+    "«Фотографувати»: фотографувати vs. фотографуватися"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

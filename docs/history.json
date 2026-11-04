@@ -14,7 +14,7 @@
     "ді юбервайзунг",
     "der Bescheid"
   ],
-  "last_updated": "2026-11-04T20:30:31.440758",
+  "last_updated": "2026-11-04T21:48:28.736107",
   "history": [
     {
       "date": "2026-10-13",
@@ -716,6 +716,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Zug",
       "topic": "Запитання про запізнення потяга та пересадку"
+    },
+    {
+      "date": "2026-11-04 21:48",
+      "type": "musterbrief",
+      "topic": "Розірвання договору на домашній інтернет / Kündigung des Internetvertrags",
+      "situation": "Використовується для своєчасного скасування договору на послуги зв'язку та інтернету відповідно до термінів попередження (Kündigungsfrist)."
     }
   ],
   "used_phrases": [
@@ -776,7 +782,8 @@
     "Запит на розстрочення боргу за комунальні послуги / Antrag auf Ratenzahlung",
     "Запит на розірвання договору добровільного страхування / Vorzeitige Kündigung der Zusatzversicherung",
     "Розірвання договору на відвідування спортивного залу / Kündigung des Fitnessstudiotrags",
-    "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung"
+    "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung",
+    "Розірвання договору на домашній інтернет / Kündigung des Internetvertrags"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

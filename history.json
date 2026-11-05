@@ -12,9 +12,10 @@
     "die Verspätung",
     "ді фа́ркате",
     "ді юбервайзунг",
-    "der Bescheid"
+    "der Bescheid",
+    "der Quatsch"
   ],
-  "last_updated": "2026-11-04T23:54:19.670388",
+  "last_updated": "2026-11-05T14:30:42.305627",
   "history": [
     {
       "date": "2026-10-13",
@@ -728,6 +729,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно сказати в Perfekt: «Я прибрав свою кімнату»?",
       "topic": "Розділові дієслова у Perfekt"
+    },
+    {
+      "date": "2026-11-05 14:30",
+      "type": "morning_word",
+      "word": "der Quatsch (kein Plural)",
+      "translation": "нісенітниця, дурниця",
+      "rubric": "Розмовна мова та сленг (Umgangssprache)"
     }
   ],
   "used_phrases": [

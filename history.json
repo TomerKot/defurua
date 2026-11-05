@@ -15,7 +15,7 @@
     "der Bescheid",
     "der Quatsch"
   ],
-  "last_updated": "2026-11-05T20:46:51.520400",
+  "last_updated": "2026-11-05T21:54:05.161547",
   "history": [
     {
       "date": "2026-10-13",
@@ -754,6 +754,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Bus",
       "topic": "Запит зупинки у водія автобуса"
+    },
+    {
+      "date": "2026-11-05 21:54",
+      "type": "musterbrief",
+      "topic": "Розірвання договору мовного зв'язку / Kündigung des Mobilfunkvertrags",
+      "situation": "Використовується для своєчасного припинення дії контракту на мобільний зв'язок після завершення мінімального терміну дії."
     }
   ],
   "used_phrases": [
@@ -817,7 +823,8 @@
     "Запит на розірвання договору добровільного страхування / Vorzeitige Kündigung der Zusatzversicherung",
     "Розірвання договору на відвідування спортивного залу / Kündigung des Fitnessstudiotrags",
     "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung",
-    "Розірвання договору на домашній інтернет / Kündigung des Internetvertrags"
+    "Розірвання договору на домашній інтернет / Kündigung des Internetvertrags",
+    "Розірвання договору мовного зв'язку / Kündigung des Mobilfunkvertrags"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

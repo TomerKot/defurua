@@ -15,7 +15,7 @@
     "der Bescheid",
     "der Quatsch"
   ],
-  "last_updated": "2026-11-05T18:34:55.969541",
+  "last_updated": "2026-11-05T20:46:51.520400",
   "history": [
     {
       "date": "2026-10-13",
@@ -748,6 +748,12 @@
       "type": "mistake",
       "topic": "'Пройматися' чи боятися: sich fürchten vs. Angst haben",
       "correct_phrase": "✅ Ich habe Angst vor Hunden / Ich fürchte mich vor Hunden."
+    },
+    {
+      "date": "2026-11-05 20:46",
+      "type": "dialogue",
+      "location": "У громадському транспорті / Im Bus",
+      "topic": "Запит зупинки у водія автобуса"
     }
   ],
   "used_phrases": [

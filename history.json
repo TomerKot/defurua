@@ -15,7 +15,7 @@
     "der Bescheid",
     "der Quatsch"
   ],
-  "last_updated": "2026-11-05T16:47:33.734953",
+  "last_updated": "2026-11-05T18:34:55.969541",
   "history": [
     {
       "date": "2026-10-13",
@@ -742,6 +742,12 @@
       "type": "afternoon_phrase",
       "phrase": "Kein Thema!",
       "translation": "Жодних проблем! / Без питань!"
+    },
+    {
+      "date": "2026-11-05 18:34",
+      "type": "mistake",
+      "topic": "'Пройматися' чи боятися: sich fürchten vs. Angst haben",
+      "correct_phrase": "✅ Ich habe Angst vor Hunden / Ich fürchte mich vor Hunden."
     }
   ],
   "used_phrases": [
@@ -821,7 +827,8 @@
     "«Вибачатися»: entschuldigen vs. sich entschuldigen",
     "Брати участь: teilnehmen vs. besuchen",
     "«Мати вільний час»: haben vs. frei haben",
-    "«Фотографувати»: фотографувати vs. фотографуватися"
+    "«Фотографувати»: фотографувати vs. фотографуватися",
+    "'Пройматися' чи боятися: sich fürchten vs. Angst haben"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

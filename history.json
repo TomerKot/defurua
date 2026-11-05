@@ -15,7 +15,7 @@
     "der Bescheid",
     "der Quatsch"
   ],
-  "last_updated": "2026-11-05T14:30:42.305627",
+  "last_updated": "2026-11-05T16:47:33.734953",
   "history": [
     {
       "date": "2026-10-13",
@@ -736,6 +736,12 @@
       "word": "der Quatsch (kein Plural)",
       "translation": "нісенітниця, дурниця",
       "rubric": "Розмовна мова та сленг (Umgangssprache)"
+    },
+    {
+      "date": "2026-11-05 16:47",
+      "type": "afternoon_phrase",
+      "phrase": "Kein Thema!",
+      "translation": "Жодних проблем! / Без питань!"
     }
   ],
   "used_phrases": [
@@ -749,7 +755,8 @@
     "Wie läuft's?",
     "Schön, dich kennenzulernen!",
     "Mach's gut!",
-    "Alles klar!"
+    "Alles klar!",
+    "Kein Thema!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

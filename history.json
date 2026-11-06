@@ -16,7 +16,7 @@
     "der Quatsch",
     "ді інформаціон"
   ],
-  "last_updated": "2026-11-06T17:51:54.622280",
+  "last_updated": "2026-11-06T20:02:45.916102",
   "history": [
     {
       "date": "2026-10-13",
@@ -786,6 +786,12 @@
       "type": "mistake",
       "topic": "Думка про щось: 'думати' як denken чи meinen?",
       "correct_phrase": "✅ Ich denke, dass dieses Buch sehr interessant ist"
+    },
+    {
+      "date": "2026-11-06 20:02",
+      "type": "dialogue",
+      "location": "У громадському транспорті / Im Zug / Bus",
+      "topic": "Уточнення зупинки та пересадки"
     }
   ],
   "used_phrases": [
@@ -887,6 +893,7 @@
     "У секонд-хенді або комісійному магазині / Im Second-Hand-Laden",
     "У фітнес-центрі / Im Fitnessstudio",
     "На автозаправній станції / An der Tankstelle",
-    "У громадському транспорті / Im Bus"
+    "У громадському транспорті / Im Bus",
+    "У громадському транспорті / Im Zug / Bus"
   ]
 }

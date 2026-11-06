@@ -13,9 +13,10 @@
     "ді фа́ркате",
     "ді юбервайзунг",
     "der Bescheid",
-    "der Quatsch"
+    "der Quatsch",
+    "ді інформаціон"
   ],
-  "last_updated": "2026-11-05T23:50:24.528752",
+  "last_updated": "2026-11-06T14:07:51.228258",
   "history": [
     {
       "date": "2026-10-13",
@@ -766,6 +767,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно перекласти німецькою: \"Кімната прибирається щодня\"?",
       "topic": "Пасивний стан у Презенс"
+    },
+    {
+      "date": "2026-11-06 14:07",
+      "type": "morning_word",
+      "word": "die Information, -en",
+      "translation": "довідка, інформація",
+      "rubric": "Типові помилки українців (Typische Fehler)"
     }
   ],
   "used_phrases": [

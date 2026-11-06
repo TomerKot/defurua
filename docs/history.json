@@ -16,7 +16,7 @@
     "der Quatsch",
     "ді інформаціон"
   ],
-  "last_updated": "2026-11-06T20:02:45.916102",
+  "last_updated": "2026-11-06T21:25:57.043152",
   "history": [
     {
       "date": "2026-10-13",
@@ -792,6 +792,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Zug / Bus",
       "topic": "Уточнення зупинки та пересадки"
+    },
+    {
+      "date": "2026-11-06 21:25",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за комунальні послуги / Ratenzahlungsvereinbarung",
+      "situation": "Використовується для звернення до комунального підприємства з проханням розбити заборгованість на щомісячні посильні платежі."
     }
   ],
   "used_phrases": [
@@ -858,7 +864,8 @@
     "Розірвання договору на відвідування спортивного залу / Kündigung des Fitnessstudiotrags",
     "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung",
     "Розірвання договору на домашній інтернет / Kündigung des Internetvertrags",
-    "Розірвання договору мовного зв'язку / Kündigung des Mobilfunkvertrags"
+    "Розірвання договору мовного зв'язку / Kündigung des Mobilfunkvertrags",
+    "Запит на розстрочення боргу за комунальні послуги / Ratenzahlungsvereinbarung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

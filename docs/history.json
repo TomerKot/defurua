@@ -17,7 +17,7 @@
     "ді інформаціон",
     "jemandem die Daumen drücken"
   ],
-  "last_updated": "2026-11-07T16:46:49.702175",
+  "last_updated": "2026-11-07T18:12:13.397345",
   "history": [
     {
       "date": "2026-10-13",
@@ -824,6 +824,12 @@
       "type": "mistake",
       "topic": "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen",
       "correct_phrase": "✅ Ich mache ein Foto."
+    },
+    {
+      "date": "2026-11-07 18:12",
+      "type": "dialogue",
+      "location": "У громадському транспорті / Im Zug / Bus",
+      "topic": "Запит про зупинку та перевірку розкладу"
     }
   ],
   "used_phrases": [

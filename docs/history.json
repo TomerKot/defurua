@@ -14,9 +14,10 @@
     "ді юбервайзунг",
     "der Bescheid",
     "der Quatsch",
-    "ді інформаціон"
+    "ді інформаціон",
+    "jemandem die Daumen drücken"
   ],
-  "last_updated": "2026-11-06T23:29:11.310537",
+  "last_updated": "2026-11-07T12:51:33.986770",
   "history": [
     {
       "date": "2026-10-13",
@@ -804,6 +805,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Яку пораду краще дати другу, який скаржиться на втому?",
       "topic": "Модальне дієслово sollen у порадах"
+    },
+    {
+      "date": "2026-11-07 12:51",
+      "type": "morning_word",
+      "word": "jemandem die Daumen drücken",
+      "translation": "тримати кулаки за когось, бажати удачі",
+      "rubric": "Ідіоми та менталітет (Redewendungen & Kultur)"
     }
   ],
   "used_phrases": [

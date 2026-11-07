@@ -17,7 +17,7 @@
     "ді інформаціон",
     "jemandem die Daumen drücken"
   ],
-  "last_updated": "2026-11-07T15:05:54.794446",
+  "last_updated": "2026-11-07T16:46:49.702175",
   "history": [
     {
       "date": "2026-10-13",
@@ -818,6 +818,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich drücke dir die Daumen!",
       "translation": "Тримаю за тебе кулаки!"
+    },
+    {
+      "date": "2026-11-07 16:46",
+      "type": "mistake",
+      "topic": "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen",
+      "correct_phrase": "✅ Ich mache ein Foto."
     }
   ],
   "used_phrases": [
@@ -905,7 +911,8 @@
     "«Мати вільний час»: haben vs. frei haben",
     "«Фотографувати»: фотографувати vs. фотографуватися",
     "'Пройматися' чи боятися: sich fürchten vs. Angst haben",
-    "Думка про щось: 'думати' як denken чи meinen?"
+    "Думка про щось: 'думати' як denken чи meinen?",
+    "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

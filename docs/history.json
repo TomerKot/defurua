@@ -17,7 +17,7 @@
     "ді інформаціон",
     "jemandem die Daumen drücken"
   ],
-  "last_updated": "2026-11-07T18:12:13.397345",
+  "last_updated": "2026-11-07T20:07:15.509175",
   "history": [
     {
       "date": "2026-10-13",
@@ -830,6 +830,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Zug / Bus",
       "topic": "Запит про зупинку та перевірку розкладу"
+    },
+    {
+      "date": "2026-11-07 20:07",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за страховими внесками / Antrag auf Ratenzahlung",
+      "situation": "Використовується у випадках, коли ви не можете сплатити всю суму заборгованості за страховими внесками одразу і просите надати можливість сплачувати її частинами."
     }
   ],
   "used_phrases": [
@@ -899,7 +905,8 @@
     "Розірвання договору добровільного медичного страхування / Vorzeitige Kündigung der privaten Krankenversicherung",
     "Розірвання договору на домашній інтернет / Kündigung des Internetvertrags",
     "Розірвання договору мовного зв'язку / Kündigung des Mobilfunkvertrags",
-    "Запит на розстрочення боргу за комунальні послуги / Ratenzahlungsvereinbarung"
+    "Запит на розстрочення боргу за комунальні послуги / Ratenzahlungsvereinbarung",
+    "Запит на розстрочення боргу за страховими внесками / Antrag auf Ratenzahlung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

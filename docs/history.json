@@ -17,7 +17,7 @@
     "ді інформаціон",
     "jemandem die Daumen drücken"
   ],
-  "last_updated": "2026-11-07T12:51:33.986770",
+  "last_updated": "2026-11-07T15:05:54.794446",
   "history": [
     {
       "date": "2026-10-13",
@@ -812,6 +812,12 @@
       "word": "jemandem die Daumen drücken",
       "translation": "тримати кулаки за когось, бажати удачі",
       "rubric": "Ідіоми та менталітет (Redewendungen & Kultur)"
+    },
+    {
+      "date": "2026-11-07 15:05",
+      "type": "afternoon_phrase",
+      "phrase": "Ich drücke dir die Daumen!",
+      "translation": "Тримаю за тебе кулаки!"
     }
   ],
   "used_phrases": [
@@ -827,7 +833,8 @@
     "Mach's gut!",
     "Alles klar!",
     "Kein Thema!",
-    "Ich bin dann mal weg"
+    "Ich bin dann mal weg",
+    "Ich drücke dir die Daumen!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

@@ -18,7 +18,7 @@
     "jemandem die Daumen drücken",
     "ді уберштунде"
   ],
-  "last_updated": "2026-11-08T18:26:33.130467",
+  "last_updated": "2026-11-08T20:21:47.155592",
   "history": [
     {
       "date": "2026-10-13",
@@ -868,6 +868,12 @@
       "type": "dialogue",
       "location": "У Bürgeramt / Ausländerbehörde",
       "topic": "Запит щодо статусу виготовлення посвідки на проживання"
+    },
+    {
+      "date": "2026-11-08 20:21",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за електроенергію / Ratenzahlungsvereinbarung Stromkosten",
+      "situation": "Використовується у разі неможливості сплатити рахунок за електроенергію одразу та для уникнення відключення послуги."
     }
   ],
   "used_phrases": [
@@ -940,7 +946,8 @@
     "Розірвання договору на домашній інтернет / Kündigung des Internetvertrags",
     "Розірвання договору мовного зв'язку / Kündigung des Mobilfunkvertrags",
     "Запит на розстрочення боргу за комунальні послуги / Ratenzahlungsvereinbarung",
-    "Запит на розстрочення боргу за страховими внесками / Antrag auf Ratenzahlung"
+    "Запит на розстрочення боргу за страховими внесками / Antrag auf Ratenzahlung",
+    "Запит на розстрочення боргу за електроенергію / Ratenzahlungsvereinbarung Stromkosten"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

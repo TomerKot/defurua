@@ -18,7 +18,7 @@
     "jemandem die Daumen drücken",
     "ді уберштунде"
   ],
-  "last_updated": "2026-11-08T15:33:38.191261",
+  "last_updated": "2026-11-08T16:57:09.986919",
   "history": [
     {
       "date": "2026-10-13",
@@ -856,6 +856,12 @@
       "type": "afternoon_phrase",
       "phrase": "Gerne doch!",
       "translation": "Із задоволенням! / Будь ласка!"
+    },
+    {
+      "date": "2026-11-08 16:57",
+      "type": "mistake",
+      "topic": "Ділитись чи брати участь: teilen vs. teilnehmen",
+      "correct_phrase": "✅ Ich teile das Foto mit meinen Freunden"
     }
   ],
   "used_phrases": [
@@ -947,7 +953,8 @@
     "«Фотографувати»: фотографувати vs. фотографуватися",
     "'Пройматися' чи боятися: sich fürchten vs. Angst haben",
     "Думка про щось: 'думати' як denken чи meinen?",
-    "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen"
+    "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen",
+    "Ділитись чи брати участь: teilen vs. teilnehmen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

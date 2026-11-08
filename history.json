@@ -18,7 +18,7 @@
     "jemandem die Daumen drücken",
     "ді уберштунде"
   ],
-  "last_updated": "2026-11-08T16:57:09.986919",
+  "last_updated": "2026-11-08T18:26:33.130467",
   "history": [
     {
       "date": "2026-10-13",
@@ -862,6 +862,12 @@
       "type": "mistake",
       "topic": "Ділитись чи брати участь: teilen vs. teilnehmen",
       "correct_phrase": "✅ Ich teile das Foto mit meinen Freunden"
+    },
+    {
+      "date": "2026-11-08 18:26",
+      "type": "dialogue",
+      "location": "У Bürgeramt / Ausländerbehörde",
+      "topic": "Запит щодо статусу виготовлення посвідки на проживання"
     }
   ],
   "used_phrases": [
@@ -972,6 +978,7 @@
     "У фітнес-центрі / Im Fitnessstudio",
     "На автозаправній станції / An der Tankstelle",
     "У громадському транспорті / Im Bus",
-    "У громадському транспорті / Im Zug / Bus"
+    "У громадському транспорті / Im Zug / Bus",
+    "У Bürgeramt / Ausländerbehörde"
   ]
 }

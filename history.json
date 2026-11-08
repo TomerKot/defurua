@@ -15,9 +15,10 @@
     "der Bescheid",
     "der Quatsch",
     "ді інформаціон",
-    "jemandem die Daumen drücken"
+    "jemandem die Daumen drücken",
+    "ді уберштунде"
   ],
-  "last_updated": "2026-11-07T22:15:37.908174",
+  "last_updated": "2026-11-08T13:13:07.605888",
   "history": [
     {
       "date": "2026-10-13",
@@ -842,6 +843,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Який прийменник потрібен з дієсловом «sich freuen» на майбутню подію?",
       "topic": "Дієслова з фіксованими прийменниками"
+    },
+    {
+      "date": "2026-11-08 13:13",
+      "type": "morning_word",
+      "word": "die Überstunde, die Überstunden",
+      "translation": "надурочна година, понаднормова робота",
+      "rubric": "Практика та міні-тест (Quiz & Wiederholung)"
     }
   ],
   "used_phrases": [

@@ -16,9 +16,10 @@
     "der Quatsch",
     "ді інформаціон",
     "jemandem die Daumen drücken",
-    "ді уберштунде"
+    "ді уберштунде",
+    "ді ка́сенцетель"
   ],
-  "last_updated": "2026-11-08T22:26:22.367438",
+  "last_updated": "2026-11-09T15:59:29.583589",
   "history": [
     {
       "date": "2026-10-13",
@@ -880,6 +881,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно перекласти німецькою: «Тут не можна палити»?",
       "topic": "Використання займенника man"
+    },
+    {
+      "date": "2026-11-09 15:59",
+      "type": "morning_word",
+      "word": "die Kassenzettel, die Kassenzettel",
+      "translation": "касовий чек",
+      "rubric": "Побут та щоденне життя (Alltag)"
     }
   ],
   "used_phrases": [

@@ -19,7 +19,7 @@
     "ді уберштунде",
     "ді ка́сенцетель"
   ],
-  "last_updated": "2026-11-09T15:59:29.583589",
+  "last_updated": "2026-11-09T19:05:36.957553",
   "history": [
     {
       "date": "2026-10-13",
@@ -888,6 +888,12 @@
       "word": "die Kassenzettel, die Kassenzettel",
       "translation": "касовий чек",
       "rubric": "Побут та щоденне життя (Alltag)"
+    },
+    {
+      "date": "2026-11-09 19:05",
+      "type": "afternoon_phrase",
+      "phrase": "Ich bin o. B.",
+      "translation": "Я без грошей / У мене наразі скрутно з фінансами"
     }
   ],
   "used_phrases": [
@@ -905,7 +911,8 @@
     "Kein Thema!",
     "Ich bin dann mal weg",
     "Ich drücke dir die Daumen!",
-    "Gerne doch!"
+    "Gerne doch!",
+    "Ich bin o. B."
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

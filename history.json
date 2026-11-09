@@ -19,7 +19,7 @@
     "ді уберштунде",
     "ді ка́сенцетель"
   ],
-  "last_updated": "2026-11-09T21:20:59.873973",
+  "last_updated": "2026-11-09T23:06:25.994055",
   "history": [
     {
       "date": "2026-10-13",
@@ -900,6 +900,12 @@
       "type": "mistake",
       "topic": "«Починати» щось: anfangen чи beginnen?",
       "correct_phrase": "✅ Ich fange die Schule um 8 Uhr an."
+    },
+    {
+      "date": "2026-11-09 23:06",
+      "type": "dialogue",
+      "location": "На блошиному ринку / Auf dem Flohmarkt",
+      "topic": "Торг та покупка вживаної речі"
     }
   ],
   "used_phrases": [
@@ -1015,6 +1021,7 @@
     "На автозаправній станції / An der Tankstelle",
     "У громадському транспорті / Im Bus",
     "У громадському транспорті / Im Zug / Bus",
-    "У Bürgeramt / Ausländerbehörde"
+    "У Bürgeramt / Ausländerbehörde",
+    "На блошиному ринку / Auf dem Flohmarkt"
   ]
 }

@@ -19,7 +19,7 @@
     "ді уберштунде",
     "ді ка́сенцетель"
   ],
-  "last_updated": "2026-11-09T19:05:36.957553",
+  "last_updated": "2026-11-09T21:20:59.873973",
   "history": [
     {
       "date": "2026-10-13",
@@ -894,6 +894,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich bin o. B.",
       "translation": "Я без грошей / У мене наразі скрутно з фінансами"
+    },
+    {
+      "date": "2026-11-09 21:20",
+      "type": "mistake",
+      "topic": "«Починати» щось: anfangen чи beginnen?",
+      "correct_phrase": "✅ Ich fange die Schule um 8 Uhr an."
     }
   ],
   "used_phrases": [
@@ -989,7 +995,8 @@
     "'Пройматися' чи боятися: sich fürchten vs. Angst haben",
     "Думка про щось: 'думати' як denken чи meinen?",
     "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen",
-    "Ділитись чи брати участь: teilen vs. teilnehmen"
+    "Ділитись чи брати участь: teilen vs. teilnehmen",
+    "«Починати» щось: anfangen чи beginnen?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

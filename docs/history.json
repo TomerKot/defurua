@@ -19,7 +19,7 @@
     "ді уберштунде",
     "ді ка́сенцетель"
   ],
-  "last_updated": "2026-11-09T23:06:25.994055",
+  "last_updated": "2026-11-10T00:06:38.281713",
   "history": [
     {
       "date": "2026-10-13",
@@ -906,6 +906,12 @@
       "type": "dialogue",
       "location": "На блошиному ринку / Auf dem Flohmarkt",
       "topic": "Торг та покупка вживаної речі"
+    },
+    {
+      "date": "2026-11-10 00:06",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу перед енергопостачальною компанією / Ratenzahlungsvereinbarung für Stromkosten",
+      "situation": "Використовується для звернення до постачальника електроенергії з проханням розбити заборгованість на щомісячні посильні платежі."
     }
   ],
   "used_phrases": [
@@ -981,7 +987,8 @@
     "Розірвання договору мовного зв'язку / Kündigung des Mobilfunkvertrags",
     "Запит на розстрочення боргу за комунальні послуги / Ratenzahlungsvereinbarung",
     "Запит на розстрочення боргу за страховими внесками / Antrag auf Ratenzahlung",
-    "Запит на розстрочення боргу за електроенергію / Ratenzahlungsvereinbarung Stromkosten"
+    "Запит на розстрочення боргу за електроенергію / Ratenzahlungsvereinbarung Stromkosten",
+    "Запит на розстрочення боргу перед енергопостачальною компанією / Ratenzahlungsvereinbarung für Stromkosten"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

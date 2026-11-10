@@ -20,7 +20,7 @@
     "ді ка́сенцетель",
     "ді үбервайзунг"
   ],
-  "last_updated": "2026-11-10T16:35:36.783122",
+  "last_updated": "2026-11-10T18:31:48.289788",
   "history": [
     {
       "date": "2026-10-13",
@@ -932,6 +932,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich bin platt",
       "translation": "Я дуже стомлений / Я вимотаний"
+    },
+    {
+      "date": "2026-11-10 18:31",
+      "type": "mistake",
+      "topic": "«Одружуватися з кимось»: heiraten mit vs. heiraten",
+      "correct_phrase": "✅ Ich will dich heiraten."
     }
   ],
   "used_phrases": [
@@ -1031,7 +1037,8 @@
     "Думка про щось: 'думати' як denken чи meinen?",
     "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen",
     "Ділитись чи брати участь: teilen vs. teilnehmen",
-    "«Починати» щось: anfangen чи beginnen?"
+    "«Починати» щось: anfangen чи beginnen?",
+    "«Одружуватися з кимось»: heiraten mit vs. heiraten"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

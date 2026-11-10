@@ -17,9 +17,10 @@
     "ді інформаціон",
     "jemandem die Daumen drücken",
     "ді уберштунде",
-    "ді ка́сенцетель"
+    "ді ка́сенцетель",
+    "ді үбервайзунг"
   ],
-  "last_updated": "2026-11-10T01:44:53.358744",
+  "last_updated": "2026-11-10T14:45:46.866026",
   "history": [
     {
       "date": "2026-10-13",
@@ -918,6 +919,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Що ввічливіше сказати в ресторані: «Ich ... einen Kaffee»?",
       "topic": "Модальне дієслово wollen vs möchten"
+    },
+    {
+      "date": "2026-11-10 14:45",
+      "type": "morning_word",
+      "word": "die Überweisung, -en",
+      "translation": "скеровування (до лікаря) або грошовий переказ",
+      "rubric": "Граматика без нудоти (Grammatik)"
     }
   ],
   "used_phrases": [

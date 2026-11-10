@@ -20,7 +20,7 @@
     "ді ка́сенцетель",
     "ді үбервайзунг"
   ],
-  "last_updated": "2026-11-10T14:45:46.866026",
+  "last_updated": "2026-11-10T16:35:36.783122",
   "history": [
     {
       "date": "2026-10-13",
@@ -926,6 +926,12 @@
       "word": "die Überweisung, -en",
       "translation": "скеровування (до лікаря) або грошовий переказ",
       "rubric": "Граматика без нудоти (Grammatik)"
+    },
+    {
+      "date": "2026-11-10 16:35",
+      "type": "afternoon_phrase",
+      "phrase": "Ich bin platt",
+      "translation": "Я дуже стомлений / Я вимотаний"
     }
   ],
   "used_phrases": [
@@ -944,7 +950,8 @@
     "Ich bin dann mal weg",
     "Ich drücke dir die Daumen!",
     "Gerne doch!",
-    "Ich bin o. B."
+    "Ich bin o. B.",
+    "Ich bin platt"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

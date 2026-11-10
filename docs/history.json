@@ -20,7 +20,7 @@
     "ді ка́сенцетель",
     "ді үбервайзунг"
   ],
-  "last_updated": "2026-11-10T18:31:48.289788",
+  "last_updated": "2026-11-10T20:33:50.140995",
   "history": [
     {
       "date": "2026-10-13",
@@ -938,6 +938,12 @@
       "type": "mistake",
       "topic": "«Одружуватися з кимось»: heiraten mit vs. heiraten",
       "correct_phrase": "✅ Ich will dich heiraten."
+    },
+    {
+      "date": "2026-11-10 20:33",
+      "type": "dialogue",
+      "location": "У квітковому магазині / Im Blumenladen",
+      "topic": "Покупка невеликого букета в подарунок"
     }
   ],
   "used_phrases": [
@@ -1058,6 +1064,7 @@
     "У громадському транспорті / Im Bus",
     "У громадському транспорті / Im Zug / Bus",
     "У Bürgeramt / Ausländerbehörde",
-    "На блошиному ринку / Auf dem Flohmarkt"
+    "На блошиному ринку / Auf dem Flohmarkt",
+    "У квітковому магазині / Im Blumenladen"
   ]
 }

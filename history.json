@@ -18,9 +18,10 @@
     "jemandem die Daumen drücken",
     "ді уберштунде",
     "ді ка́сенцетель",
-    "ді үбервайзунг"
+    "ді үбервайзунг",
+    "ді Бештайнігунг"
   ],
-  "last_updated": "2026-11-10T20:33:50.140995",
+  "last_updated": "2026-11-11T14:05:31.834364",
   "history": [
     {
       "date": "2026-10-13",
@@ -944,6 +945,13 @@
       "type": "dialogue",
       "location": "У квітковому магазині / Im Blumenladen",
       "topic": "Покупка невеликого букета в подарунок"
+    },
+    {
+      "date": "2026-11-11 14:05",
+      "type": "morning_word",
+      "word": "die Bescheinigung, -en",
+      "translation": "довідка, підтвердження",
+      "rubric": "Робота та бюрократія (Bürokratie & Beruf)"
     }
   ],
   "used_phrases": [

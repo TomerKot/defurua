@@ -21,7 +21,7 @@
     "ді үбервайзунг",
     "ді Бештайнігунг"
   ],
-  "last_updated": "2026-11-11T18:28:49.847680",
+  "last_updated": "2026-11-11T22:36:20.728713",
   "history": [
     {
       "date": "2026-10-13",
@@ -964,6 +964,12 @@
       "type": "mistake",
       "topic": "«Займатися спортом»: machen vs. treiben",
       "correct_phrase": "✅ Sport treiben або Sport machen"
+    },
+    {
+      "date": "2026-11-11 22:36",
+      "type": "musterbrief",
+      "topic": "Запит на отримання виписки з реєстру мешканців / Antrag auf erweiterte Meldebescheinigung",
+      "situation": "Використовується для звернення до міського управління з метою отримання розширеної довідки про реєстрацію за місцем проживання."
     }
   ],
   "used_phrases": [
@@ -1043,7 +1049,8 @@
     "Запит на розстрочення боргу за комунальні послуги / Ratenzahlungsvereinbarung",
     "Запит на розстрочення боргу за страховими внесками / Antrag auf Ratenzahlung",
     "Запит на розстрочення боргу за електроенергію / Ratenzahlungsvereinbarung Stromkosten",
-    "Запит на розстрочення боргу перед енергопостачальною компанією / Ratenzahlungsvereinbarung für Stromkosten"
+    "Запит на розстрочення боргу перед енергопостачальною компанією / Ratenzahlungsvereinbarung für Stromkosten",
+    "Запит на отримання виписки з реєстру мешканців / Antrag auf erweiterte Meldebescheinigung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

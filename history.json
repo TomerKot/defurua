@@ -21,7 +21,7 @@
     "ді үбервайзунг",
     "ді Бештайнігунг"
   ],
-  "last_updated": "2026-11-11T14:05:31.834364",
+  "last_updated": "2026-11-11T16:37:01.097192",
   "history": [
     {
       "date": "2026-10-13",
@@ -952,6 +952,12 @@
       "word": "die Bescheinigung, -en",
       "translation": "довідка, підтвердження",
       "rubric": "Робота та бюрократія (Bürokratie & Beruf)"
+    },
+    {
+      "date": "2026-11-11 16:37",
+      "type": "afternoon_phrase",
+      "phrase": "Kann ich das so haben?",
+      "translation": "Чи можна мені це ось так?"
     }
   ],
   "used_phrases": [
@@ -971,7 +977,8 @@
     "Ich drücke dir die Daumen!",
     "Gerne doch!",
     "Ich bin o. B.",
-    "Ich bin platt"
+    "Ich bin platt",
+    "Kann ich das so haben?"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

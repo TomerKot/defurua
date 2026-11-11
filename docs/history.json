@@ -21,7 +21,7 @@
     "ді үбервайзунг",
     "ді Бештайнігунг"
   ],
-  "last_updated": "2026-11-11T16:37:01.097192",
+  "last_updated": "2026-11-11T18:28:49.847680",
   "history": [
     {
       "date": "2026-10-13",
@@ -958,6 +958,12 @@
       "type": "afternoon_phrase",
       "phrase": "Kann ich das so haben?",
       "translation": "Чи можна мені це ось так?"
+    },
+    {
+      "date": "2026-11-11 18:28",
+      "type": "mistake",
+      "topic": "«Займатися спортом»: machen vs. treiben",
+      "correct_phrase": "✅ Sport treiben або Sport machen"
     }
   ],
   "used_phrases": [
@@ -1059,7 +1065,8 @@
     "«Фотографувати» чи «робити фото»: fotografieren vs. ein Foto machen",
     "Ділитись чи брати участь: teilen vs. teilnehmen",
     "«Починати» щось: anfangen чи beginnen?",
-    "«Одружуватися з кимось»: heiraten mit vs. heiraten"
+    "«Одружуватися з кимось»: heiraten mit vs. heiraten",
+    "«Займатися спортом»: machen vs. treiben"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

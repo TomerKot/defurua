@@ -22,7 +22,7 @@
     "ді Бештайнігунг",
     "der Bock haben"
   ],
-  "last_updated": "2026-11-12T17:02:52.214304",
+  "last_updated": "2026-11-12T21:01:02.288140",
   "history": [
     {
       "date": "2026-10-13",
@@ -990,6 +990,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich bin gleich soweit!",
       "translation": "Я зараз буду готовий! / Я вже майже все!"
+    },
+    {
+      "date": "2026-11-12 21:01",
+      "type": "dialogue",
+      "location": "У громадському транспорті / Im Zug / Bus",
+      "topic": "Запит про пересадку на інший потяг через запізнення"
     }
   ],
   "used_phrases": [

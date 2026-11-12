@@ -19,9 +19,10 @@
     "ді уберштунде",
     "ді ка́сенцетель",
     "ді үбервайзунг",
-    "ді Бештайнігунг"
+    "ді Бештайнігунг",
+    "der Bock haben"
   ],
-  "last_updated": "2026-11-12T00:58:05.995316",
+  "last_updated": "2026-11-12T15:02:54.823530",
   "history": [
     {
       "date": "2026-10-13",
@@ -976,6 +977,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Оберіть правильний варіант: \"Das ist Maria und das ist ... Bruder Thomas.\"",
       "topic": "Присвійні займенники у Nominativ"
+    },
+    {
+      "date": "2026-11-12 15:02",
+      "type": "morning_word",
+      "word": "der Bock haben",
+      "translation": "мати бажання, хотітися",
+      "rubric": "Розмовна мова та сленг (Umgangssprache)"
     }
   ],
   "used_phrases": [

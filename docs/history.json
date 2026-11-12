@@ -22,7 +22,7 @@
     "ді Бештайнігунг",
     "der Bock haben"
   ],
-  "last_updated": "2026-11-12T15:02:54.823530",
+  "last_updated": "2026-11-12T17:02:52.214304",
   "history": [
     {
       "date": "2026-10-13",
@@ -984,6 +984,12 @@
       "word": "der Bock haben",
       "translation": "мати бажання, хотітися",
       "rubric": "Розмовна мова та сленг (Umgangssprache)"
+    },
+    {
+      "date": "2026-11-12 17:02",
+      "type": "afternoon_phrase",
+      "phrase": "Ich bin gleich soweit!",
+      "translation": "Я зараз буду готовий! / Я вже майже все!"
     }
   ],
   "used_phrases": [
@@ -1004,7 +1010,8 @@
     "Gerne doch!",
     "Ich bin o. B.",
     "Ich bin platt",
-    "Kann ich das so haben?"
+    "Kann ich das so haben?",
+    "Ich bin gleich soweit!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

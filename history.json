@@ -22,7 +22,7 @@
     "ді Бештайнігунг",
     "der Bock haben"
   ],
-  "last_updated": "2026-11-12T21:01:02.288140",
+  "last_updated": "2026-11-12T22:11:09.789522",
   "history": [
     {
       "date": "2026-10-13",
@@ -996,6 +996,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті / Im Zug / Bus",
       "topic": "Запит про пересадку на інший потяг через запізнення"
+    },
+    {
+      "date": "2026-11-12 22:11",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände",
+      "situation": "Використовується для укладення угоди з орендодавцем про погашення заборгованості за житло частинами у разі тимчасових фінансових труднощів."
     }
   ],
   "used_phrases": [
@@ -1078,7 +1084,8 @@
     "Запит на розстрочення боргу за страховими внесками / Antrag auf Ratenzahlung",
     "Запит на розстрочення боргу за електроенергію / Ratenzahlungsvereinbarung Stromkosten",
     "Запит на розстрочення боргу перед енергопостачальною компанією / Ratenzahlungsvereinbarung für Stromkosten",
-    "Запит на отримання виписки з реєстру мешканців / Antrag auf erweiterte Meldebescheinigung"
+    "Запит на отримання виписки з реєстру мешканців / Antrag auf erweiterte Meldebescheinigung",
+    "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

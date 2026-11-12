@@ -22,7 +22,7 @@
     "ді Бештайнігунг",
     "der Bock haben"
   ],
-  "last_updated": "2026-11-12T22:11:09.789522",
+  "last_updated": "2026-11-12T23:51:11.514667",
   "history": [
     {
       "date": "2026-10-13",
@@ -1002,6 +1002,12 @@
       "type": "musterbrief",
       "topic": "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände",
       "situation": "Використовується для укладення угоди з орендодавцем про погашення заборгованості за житло частинами у разі тимчасових фінансових труднощів."
+    },
+    {
+      "date": "2026-11-12 23:51",
+      "type": "mistake",
+      "topic": "«Я хочу» чи «Я хотів би»: wollen чи möchten?",
+      "correct_phrase": "✅ Ich möchte einen Kaffee, bitte."
     }
   ],
   "used_phrases": [
@@ -1108,7 +1114,8 @@
     "Ділитись чи брати участь: teilen vs. teilnehmen",
     "«Починати» щось: anfangen чи beginnen?",
     "«Одружуватися з кимось»: heiraten mit vs. heiraten",
-    "«Займатися спортом»: machen vs. treiben"
+    "«Займатися спортом»: machen vs. treiben",
+    "«Я хочу» чи «Я хотів би»: wollen чи möchten?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

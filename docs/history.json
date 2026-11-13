@@ -23,7 +23,7 @@
     "der Bock haben",
     "werden"
   ],
-  "last_updated": "2026-11-13T14:27:48.327534",
+  "last_updated": "2026-11-13T21:54:01.256133",
   "history": [
     {
       "date": "2026-10-13",
@@ -1016,6 +1016,12 @@
       "word": "werden (wird, wurde, ist geworden)",
       "translation": "ставати (кимсь / чимось), робитися",
       "rubric": "Типові помилки українців (Typische Fehler)"
+    },
+    {
+      "date": "2026-11-13 21:54",
+      "type": "musterbrief",
+      "topic": "Запит на отримання довідки про склад сім'ї або розширеної довідки з реєстру мешканців / Erweiterte Meldebescheinigung",
+      "situation": "Використовується для звернення до мешканського бюро (Bürgeramt) з метою отримання офіційного підтвердження про зареєстрованих осіб за вашою адресою для подачі до відомств."
     }
   ],
   "used_phrases": [
@@ -1099,7 +1105,8 @@
     "Запит на розстрочення боргу за електроенергію / Ratenzahlungsvereinbarung Stromkosten",
     "Запит на розстрочення боргу перед енергопостачальною компанією / Ratenzahlungsvereinbarung für Stromkosten",
     "Запит на отримання виписки з реєстру мешканців / Antrag auf erweiterte Meldebescheinigung",
-    "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände"
+    "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände",
+    "Запит на отримання довідки про склад сім'ї або розширеної довідки з реєстру мешканців / Erweiterte Meldebescheinigung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

@@ -20,9 +20,10 @@
     "ді ка́сенцетель",
     "ді үбервайзунг",
     "ді Бештайнігунг",
-    "der Bock haben"
+    "der Bock haben",
+    "werden"
   ],
-  "last_updated": "2026-11-12T23:51:11.514667",
+  "last_updated": "2026-11-13T14:27:48.327534",
   "history": [
     {
       "date": "2026-10-13",
@@ -1008,6 +1009,13 @@
       "type": "mistake",
       "topic": "«Я хочу» чи «Я хотів би»: wollen чи möchten?",
       "correct_phrase": "✅ Ich möchte einen Kaffee, bitte."
+    },
+    {
+      "date": "2026-11-13 14:27",
+      "type": "morning_word",
+      "word": "werden (wird, wurde, ist geworden)",
+      "translation": "ставати (кимсь / чимось), робитися",
+      "rubric": "Типові помилки українців (Typische Fehler)"
     }
   ],
   "used_phrases": [

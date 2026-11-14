@@ -21,9 +21,10 @@
     "ді үбервайзунг",
     "ді Бештайнігунг",
     "der Bock haben",
-    "werden"
+    "werden",
+    "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-13T23:50:10.752166",
+  "last_updated": "2026-11-14T13:23:52.304013",
   "history": [
     {
       "date": "2026-10-13",
@@ -1028,6 +1029,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно утворити Perfekt для дієслова з часткою zu: \"aufmachen\"?",
       "topic": "Дієслова з часткою zu у Perfekt"
+    },
+    {
+      "date": "2026-11-14 13:23",
+      "type": "morning_word",
+      "word": "jemanden auf den Arm nehmen",
+      "translation": "жартувати з когось, надурювати, розігрувати",
+      "rubric": "Ідіоми та менталітет (Redewendungen & Kultur)"
     }
   ],
   "used_phrases": [

@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-14T16:54:13.425074",
+  "last_updated": "2026-11-14T22:43:09.733219",
   "history": [
     {
       "date": "2026-10-13",
@@ -1048,6 +1048,12 @@
       "type": "mistake",
       "topic": "Забувати чи залишати: vergessen vs. verlassen",
       "correct_phrase": "✅ Ich habe mein Heft in der Schule vergessen."
+    },
+    {
+      "date": "2026-11-14 22:43",
+      "type": "evening_quiz",
+      "question": "🇩🇪 Яке речення з безособовим займенником «es» побудоване правильно?",
+      "topic": "Функція займенника es у безпідметних реченнях"
     }
   ],
   "used_phrases": [
@@ -1109,7 +1115,8 @@
     "Використання займенника man",
     "Модальне дієслово wollen vs möchten",
     "Присвійні займенники у Nominativ",
-    "Дієслова з часткою zu у Perfekt"
+    "Дієслова з часткою zu у Perfekt",
+    "Функція займенника es у безпідметних реченнях"
   ],
   "used_letters": [
     "Розірвання договору (Kündigung des Vertrags)",

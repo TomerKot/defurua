@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-14T15:19:23.188782",
+  "last_updated": "2026-11-14T16:54:13.425074",
   "history": [
     {
       "date": "2026-10-13",
@@ -1042,6 +1042,12 @@
       "type": "afternoon_phrase",
       "phrase": "Mach dir keinen Kopf!",
       "translation": "Не переймайся! / Не бери до голови!"
+    },
+    {
+      "date": "2026-11-14 16:54",
+      "type": "mistake",
+      "topic": "Забувати чи залишати: vergessen vs. verlassen",
+      "correct_phrase": "✅ Ich habe mein Heft in der Schule vergessen."
     }
   ],
   "used_phrases": [
@@ -1152,7 +1158,8 @@
     "«Починати» щось: anfangen чи beginnen?",
     "«Одружуватися з кимось»: heiraten mit vs. heiraten",
     "«Займатися спортом»: machen vs. treiben",
-    "«Я хочу» чи «Я хотів би»: wollen чи möchten?"
+    "«Я хочу» чи «Я хотів би»: wollen чи möchten?",
+    "Забувати чи залишати: vergessen vs. verlassen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

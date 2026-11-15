@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-15T19:27:13.073922",
+  "last_updated": "2026-11-15T20:58:06.963127",
   "history": [
     {
       "date": "2026-10-13",
@@ -1066,6 +1066,12 @@
       "type": "dialogue",
       "location": "У бібліотеці / In der Bibliothek",
       "topic": "Оформлення читацького квитка та оренда книг"
+    },
+    {
+      "date": "2026-11-15 20:58",
+      "type": "musterbrief",
+      "topic": "Запит на розірвання договору добровільного страхування відповідальності / Kündigung der Privathaftpflichtversicherung",
+      "situation": "Використовується для дострокового або своєчасного припинення дії договору приватної страхової компанії."
     }
   ],
   "used_phrases": [
@@ -1153,7 +1159,8 @@
     "Запит на розстрочення боргу перед енергопостачальною компанією / Ratenzahlungsvereinbarung für Stromkosten",
     "Запит на отримання виписки з реєстру мешканців / Antrag auf erweiterte Meldebescheinigung",
     "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände",
-    "Запит на отримання довідки про склад сім'ї або розширеної довідки з реєстру мешканців / Erweiterte Meldebescheinigung"
+    "Запит на отримання довідки про склад сім'ї або розширеної довідки з реєстру мешканців / Erweiterte Meldebescheinigung",
+    "Запит на розірвання договору добровільного страхування відповідальності / Kündigung der Privathaftpflichtversicherung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

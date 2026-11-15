@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-14T22:43:09.733219",
+  "last_updated": "2026-11-15T17:37:14.110335",
   "history": [
     {
       "date": "2026-10-13",
@@ -1054,6 +1054,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Яке речення з безособовим займенником «es» побудоване правильно?",
       "topic": "Функція займенника es у безпідметних реченнях"
+    },
+    {
+      "date": "2026-11-15 17:37",
+      "type": "mistake",
+      "topic": "«Подобатися» чи «знаходити гарним»: gefallen чи finden?",
+      "correct_phrase": "✅ Das Buch gefällt mir. / Ich finde das Buch gut."
     }
   ],
   "used_phrases": [
@@ -1166,7 +1172,8 @@
     "«Одружуватися з кимось»: heiraten mit vs. heiraten",
     "«Займатися спортом»: machen vs. treiben",
     "«Я хочу» чи «Я хотів би»: wollen чи möchten?",
-    "Забувати чи залишати: vergessen vs. verlassen"
+    "Забувати чи залишати: vergessen vs. verlassen",
+    "«Подобатися» чи «знаходити гарним»: gefallen чи finden?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

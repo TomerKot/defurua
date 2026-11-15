@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-15T17:37:14.110335",
+  "last_updated": "2026-11-15T19:27:13.073922",
   "history": [
     {
       "date": "2026-10-13",
@@ -1060,6 +1060,12 @@
       "type": "mistake",
       "topic": "«Подобатися» чи «знаходити гарним»: gefallen чи finden?",
       "correct_phrase": "✅ Das Buch gefällt mir. / Ich finde das Buch gut."
+    },
+    {
+      "date": "2026-11-15 19:27",
+      "type": "dialogue",
+      "location": "У бібліотеці / In der Bibliothek",
+      "topic": "Оформлення читацького квитка та оренда книг"
     }
   ],
   "used_phrases": [
@@ -1194,6 +1200,7 @@
     "У громадському транспорті / Im Zug / Bus",
     "У Bürgeramt / Ausländerbehörde",
     "На блошиному ринку / Auf dem Flohmarkt",
-    "У квітковому магазині / Im Blumenladen"
+    "У квітковому магазині / Im Blumenladen",
+    "У бібліотеці / In der Bibliothek"
   ]
 }

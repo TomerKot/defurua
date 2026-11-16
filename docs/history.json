@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-16T20:51:45.068906",
+  "last_updated": "2026-11-16T22:59:32.758482",
   "history": [
     {
       "date": "2026-10-13",
@@ -1090,6 +1090,12 @@
       "type": "mistake",
       "topic": "«Дякувати за допомогу»: helfen vs. danken",
       "correct_phrase": "✅ Ich helfe dir (допомагати комусь — у Dativ)"
+    },
+    {
+      "date": "2026-11-16 22:59",
+      "type": "dialogue",
+      "location": "У секонд-хенді / Im Second-Hand-Laden",
+      "topic": "Пошук куртки та запит про можливість примірки"
     }
   ],
   "used_phrases": [
@@ -1229,6 +1235,7 @@
     "У Bürgeramt / Ausländerbehörde",
     "На блошиному ринку / Auf dem Flohmarkt",
     "У квітковому магазині / Im Blumenladen",
-    "У бібліотеці / In der Bibliothek"
+    "У бібліотеці / In der Bibliothek",
+    "У секонд-хенді / Im Second-Hand-Laden"
   ]
 }

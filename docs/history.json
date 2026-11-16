@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-16T18:52:46.115234",
+  "last_updated": "2026-11-16T20:51:45.068906",
   "history": [
     {
       "date": "2026-10-13",
@@ -1084,6 +1084,12 @@
       "type": "afternoon_phrase",
       "phrase": "Schönen Feierabend!",
       "translation": "Гарного вечора після роботи!"
+    },
+    {
+      "date": "2026-11-16 20:51",
+      "type": "mistake",
+      "topic": "«Дякувати за допомогу»: helfen vs. danken",
+      "correct_phrase": "✅ Ich helfe dir (допомагати комусь — у Dativ)"
     }
   ],
   "used_phrases": [
@@ -1200,7 +1206,8 @@
     "«Займатися спортом»: machen vs. treiben",
     "«Я хочу» чи «Я хотів би»: wollen чи möchten?",
     "Забувати чи залишати: vergessen vs. verlassen",
-    "«Подобатися» чи «знаходити гарним»: gefallen чи finden?"
+    "«Подобатися» чи «знаходити гарним»: gefallen чи finden?",
+    "«Дякувати за допомогу»: helfen vs. danken"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

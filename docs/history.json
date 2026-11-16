@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-15T23:08:27.514360",
+  "last_updated": "2026-11-16T18:52:46.115234",
   "history": [
     {
       "date": "2026-10-13",
@@ -1078,6 +1078,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як утворити множину від іменника die Lehrerin (вчителька)?",
       "topic": "Утворення множини за допомогою -nen"
+    },
+    {
+      "date": "2026-11-16 18:52",
+      "type": "afternoon_phrase",
+      "phrase": "Schönen Feierabend!",
+      "translation": "Гарного вечора після роботи!"
     }
   ],
   "used_phrases": [
@@ -1100,7 +1106,8 @@
     "Ich bin platt",
     "Kann ich das so haben?",
     "Ich bin gleich soweit!",
-    "Mach dir keinen Kopf!"
+    "Mach dir keinen Kopf!",
+    "Schönen Feierabend!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

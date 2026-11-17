@@ -25,7 +25,7 @@
     "jemanden auf den Arm nehmen",
     "der Termin"
   ],
-  "last_updated": "2026-11-17T15:53:25.639997",
+  "last_updated": "2026-11-17T19:41:04.532303",
   "history": [
     {
       "date": "2026-10-13",
@@ -1116,6 +1116,12 @@
       "word": "der Termin, -e",
       "translation": "зустріч, призначений час, запис",
       "rubric": "Граматика без нудоти (Grammatik)"
+    },
+    {
+      "date": "2026-11-17 19:41",
+      "type": "mistake",
+      "topic": "«Займатися» чимось: beschäftigen vs. sich beschäftigen",
+      "correct_phrase": "✅ Ich beschäftige mich mit diesem Thema."
     }
   ],
   "used_phrases": [
@@ -1235,7 +1241,8 @@
     "«Я хочу» чи «Я хотів би»: wollen чи möchten?",
     "Забувати чи залишати: vergessen vs. verlassen",
     "«Подобатися» чи «знаходити гарним»: gefallen чи finden?",
-    "«Дякувати за допомогу»: helfen vs. danken"
+    "«Дякувати за допомогу»: helfen vs. danken",
+    "«Займатися» чимось: beschäftigen vs. sich beschäftigen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

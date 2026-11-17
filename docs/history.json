@@ -22,9 +22,10 @@
     "ді Бештайнігунг",
     "der Bock haben",
     "werden",
-    "jemanden auf den Arm nehmen"
+    "jemanden auf den Arm nehmen",
+    "der Termin"
   ],
-  "last_updated": "2026-11-17T02:02:18.730156",
+  "last_updated": "2026-11-17T15:53:25.639997",
   "history": [
     {
       "date": "2026-10-13",
@@ -1108,6 +1109,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно перекласти німецькою: «Сьогодні вітряно»?",
       "topic": "Функція займенника es у безособових реченнях"
+    },
+    {
+      "date": "2026-11-17 15:53",
+      "type": "morning_word",
+      "word": "der Termin, -e",
+      "translation": "зустріч, призначений час, запис",
+      "rubric": "Граматика без нудоти (Grammatik)"
     }
   ],
   "used_phrases": [

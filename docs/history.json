@@ -24,7 +24,7 @@
     "werden",
     "jemanden auf den Arm nehmen"
   ],
-  "last_updated": "2026-11-16T22:59:32.758482",
+  "last_updated": "2026-11-17T00:08:53.678300",
   "history": [
     {
       "date": "2026-10-13",
@@ -1096,6 +1096,12 @@
       "type": "dialogue",
       "location": "У секонд-хенді / Im Second-Hand-Laden",
       "topic": "Пошук куртки та запит про можливість примірки"
+    },
+    {
+      "date": "2026-11-17 00:08",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за споживчим кредитом / Ratenzahlungsvereinbarung",
+      "situation": "Використовується для звернення до банку чи кредитора з проханням розбити суму заборгованості на щомісячні посильні платежі через тимчасові фінансові труднощі."
     }
   ],
   "used_phrases": [
@@ -1186,7 +1192,8 @@
     "Запит на отримання виписки з реєстру мешканців / Antrag auf erweiterte Meldebescheinigung",
     "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände",
     "Запит на отримання довідки про склад сім'ї або розширеної довідки з реєстру мешканців / Erweiterte Meldebescheinigung",
-    "Запит на розірвання договору добровільного страхування відповідальності / Kündigung der Privathaftpflichtversicherung"
+    "Запит на розірвання договору добровільного страхування відповідальності / Kündigung der Privathaftpflichtversicherung",
+    "Запит на розстрочення боргу за споживчим кредитом / Ratenzahlungsvereinbarung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

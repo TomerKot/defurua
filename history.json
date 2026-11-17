@@ -25,7 +25,7 @@
     "jemanden auf den Arm nehmen",
     "der Termin"
   ],
-  "last_updated": "2026-11-17T19:41:04.532303",
+  "last_updated": "2026-11-17T21:52:32.727151",
   "history": [
     {
       "date": "2026-10-13",
@@ -1122,6 +1122,12 @@
       "type": "mistake",
       "topic": "«Займатися» чимось: beschäftigen vs. sich beschäftigen",
       "correct_phrase": "✅ Ich beschäftige mich mit diesem Thema."
+    },
+    {
+      "date": "2026-11-17 21:52",
+      "type": "dialogue",
+      "location": "У паרухмахера / Beim Friseur",
+      "topic": "Запис на стрижку та обговорення зачіски"
     }
   ],
   "used_phrases": [
@@ -1265,6 +1271,7 @@
     "На блошиному ринку / Auf dem Flohmarkt",
     "У квітковому магазині / Im Blumenladen",
     "У бібліотеці / In der Bibliothek",
-    "У секонд-хенді / Im Second-Hand-Laden"
+    "У секонд-хенді / Im Second-Hand-Laden",
+    "У паרухмахера / Beim Friseur"
   ]
 }

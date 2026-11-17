@@ -25,7 +25,7 @@
     "jemanden auf den Arm nehmen",
     "der Termin"
   ],
-  "last_updated": "2026-11-17T21:52:32.727151",
+  "last_updated": "2026-11-17T23:26:53.194251",
   "history": [
     {
       "date": "2026-10-13",
@@ -1128,6 +1128,12 @@
       "type": "dialogue",
       "location": "У паרухмахера / Beim Friseur",
       "topic": "Запис на стрижку та обговорення зачіски"
+    },
+    {
+      "date": "2026-11-17 23:26",
+      "type": "afternoon_phrase",
+      "phrase": "Wie geht's?",
+      "translation": "Як справи?"
     }
   ],
   "used_phrases": [
@@ -1151,7 +1157,8 @@
     "Kann ich das so haben?",
     "Ich bin gleich soweit!",
     "Mach dir keinen Kopf!",
-    "Schönen Feierabend!"
+    "Schönen Feierabend!",
+    "Wie geht's?"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

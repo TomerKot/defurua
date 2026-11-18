@@ -25,7 +25,7 @@
     "jemanden auf den Arm nehmen",
     "der Termin"
   ],
-  "last_updated": "2026-11-18T21:31:48.381084",
+  "last_updated": "2026-11-18T22:54:45.597126",
   "history": [
     {
       "date": "2026-10-13",
@@ -1152,6 +1152,12 @@
       "type": "dialogue",
       "location": "У підвалі будинку / Im Keller",
       "topic": "Розмова з сусідом про підключення пральної машини"
+    },
+    {
+      "date": "2026-11-18 22:54",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за медичне страхування / Antrag auf Ratenzahlung bei der Krankenkasse",
+      "situation": "Використовується для звернення до лікарняної каса щодо розбиття накопиченої заборгованості зі внесків на щомісячні посильні платежі."
     }
   ],
   "used_phrases": [
@@ -1246,7 +1252,8 @@
     "Запит на розстрочення боргу за оренду житла / Ratenzahlungsvereinbarung für Mietrückstände",
     "Запит на отримання довідки про склад сім'ї або розширеної довідки з реєстру мешканців / Erweiterte Meldebescheinigung",
     "Запит на розірвання договору добровільного страхування відповідальності / Kündigung der Privathaftpflichtversicherung",
-    "Запит на розстрочення боргу за споживчим кредитом / Ratenzahlungsvereinbarung"
+    "Запит на розстрочення боргу за споживчим кредитом / Ratenzahlungsvereinbarung",
+    "Запит на розстрочення боргу за медичне страхування / Antrag auf Ratenzahlung bei der Krankenkasse"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

@@ -25,7 +25,7 @@
     "jemanden auf den Arm nehmen",
     "der Termin"
   ],
-  "last_updated": "2026-11-18T19:16:53.969919",
+  "last_updated": "2026-11-18T21:31:48.381084",
   "history": [
     {
       "date": "2026-10-13",
@@ -1146,6 +1146,12 @@
       "type": "mistake",
       "topic": "«Сумніватися» у чомусь: zweifeln vs. bezweifeln",
       "correct_phrase": "✅ Ich zweifle an dieser Information / Ich bezweifle diese Information."
+    },
+    {
+      "date": "2026-11-18 21:31",
+      "type": "dialogue",
+      "location": "У підвалі будинку / Im Keller",
+      "topic": "Розмова з сусідом про підключення пральної машини"
     }
   ],
   "used_phrases": [
@@ -1293,6 +1299,7 @@
     "У квітковому магазині / Im Blumenladen",
     "У бібліотеці / In der Bibliothek",
     "У секонд-хенді / Im Second-Hand-Laden",
-    "У паרухмахера / Beim Friseur"
+    "У паרухмахера / Beim Friseur",
+    "У підвалі будинку / Im Keller"
   ]
 }

@@ -25,7 +25,7 @@
     "jemanden auf den Arm nehmen",
     "der Termin"
   ],
-  "last_updated": "2026-11-18T01:16:05.392584",
+  "last_updated": "2026-11-18T19:16:53.969919",
   "history": [
     {
       "date": "2026-10-13",
@@ -1140,6 +1140,12 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно сказати німецькою: «Я їжу на поїзді до Києва»?",
       "topic": "Прийменник mit і транспорт"
+    },
+    {
+      "date": "2026-11-18 19:16",
+      "type": "mistake",
+      "topic": "«Сумніватися» у чомусь: zweifeln vs. bezweifeln",
+      "correct_phrase": "✅ Ich zweifle an dieser Information / Ich bezweifle diese Information."
     }
   ],
   "used_phrases": [
@@ -1262,7 +1268,8 @@
     "Забувати чи залишати: vergessen vs. verlassen",
     "«Подобатися» чи «знаходити гарним»: gefallen чи finden?",
     "«Дякувати за допомогу»: helfen vs. danken",
-    "«Займатися» чимось: beschäftigen vs. sich beschäftigen"
+    "«Займатися» чимось: beschäftigen vs. sich beschäftigen",
+    "«Сумніватися» у чомусь: zweifeln vs. bezweifeln"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

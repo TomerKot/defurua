@@ -26,7 +26,7 @@
     "der Termin",
     "der Kumpel"
   ],
-  "last_updated": "2026-11-19T17:37:24.366326",
+  "last_updated": "2026-11-19T19:24:51.232900",
   "history": [
     {
       "date": "2026-10-13",
@@ -1178,6 +1178,12 @@
       "type": "afternoon_phrase",
       "phrase": "Könnte ich das bitte haben?",
       "translation": "Чи міг би я це отримати, будь ласка?"
+    },
+    {
+      "date": "2026-11-19 19:24",
+      "type": "mistake",
+      "topic": "«Подорожувати» літаком: fliegen vs reisen",
+      "correct_phrase": "✅ Ich fliege nach Berlin."
     }
   ],
   "used_phrases": [
@@ -1304,7 +1310,8 @@
     "«Подобатися» чи «знаходити гарним»: gefallen чи finden?",
     "«Дякувати за допомогу»: helfen vs. danken",
     "«Займатися» чимось: beschäftigen vs. sich beschäftigen",
-    "«Сумніватися» у чомусь: zweifeln vs. bezweifeln"
+    "«Сумніватися» у чомусь: zweifeln vs. bezweifeln",
+    "«Подорожувати» літаком: fliegen vs reisen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

@@ -26,7 +26,7 @@
     "der Termin",
     "der Kumpel"
   ],
-  "last_updated": "2026-11-19T21:43:51.421825",
+  "last_updated": "2026-11-19T23:00:11.806053",
   "history": [
     {
       "date": "2026-10-13",
@@ -1190,6 +1190,12 @@
       "type": "dialogue",
       "location": "У громадському транспорті (Im Zug / Bus)",
       "topic": "Запит щодо пересадки та затримки потяга"
+    },
+    {
+      "date": "2026-11-19 23:00",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за рахунок від лікаря або приватну медичну послугу / Antrag auf Ratenzahlung beim Arzt",
+      "situation": "Використовується для врегулювання заборгованості за медичні послуги, не покриті державним страхуванням, шляхом сплати частинами."
     }
   ],
   "used_phrases": [
@@ -1287,7 +1293,8 @@
     "Запит на отримання довідки про склад сім'ї або розширеної довідки з реєстру мешканців / Erweiterte Meldebescheinigung",
     "Запит на розірвання договору добровільного страхування відповідальності / Kündigung der Privathaftpflichtversicherung",
     "Запит на розстрочення боргу за споживчим кредитом / Ratenzahlungsvereinbarung",
-    "Запит на розстрочення боргу за медичне страхування / Antrag auf Ratenzahlung bei der Krankenkasse"
+    "Запит на розстрочення боргу за медичне страхування / Antrag auf Ratenzahlung bei der Krankenkasse",
+    "Запит на розстрочення боргу за рахунок від лікаря або приватну медичну послугу / Antrag auf Ratenzahlung beim Arzt"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

@@ -26,7 +26,7 @@
     "der Termin",
     "der Kumpel"
   ],
-  "last_updated": "2026-11-19T19:24:51.232900",
+  "last_updated": "2026-11-19T21:43:51.421825",
   "history": [
     {
       "date": "2026-10-13",
@@ -1184,6 +1184,12 @@
       "type": "mistake",
       "topic": "«Подорожувати» літаком: fliegen vs reisen",
       "correct_phrase": "✅ Ich fliege nach Berlin."
+    },
+    {
+      "date": "2026-11-19 21:43",
+      "type": "dialogue",
+      "location": "У громадському транспорті (Im Zug / Bus)",
+      "topic": "Запит щодо пересадки та затримки потяга"
     }
   ],
   "used_phrases": [
@@ -1336,6 +1342,7 @@
     "У бібліотеці / In der Bibliothek",
     "У секонд-хенді / Im Second-Hand-Laden",
     "У паרухмахера / Beim Friseur",
-    "У підвалі будинку / Im Keller"
+    "У підвалі будинку / Im Keller",
+    "У громадському транспорті (Im Zug / Bus)"
   ]
 }

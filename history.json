@@ -23,9 +23,10 @@
     "der Bock haben",
     "werden",
     "jemanden auf den Arm nehmen",
-    "der Termin"
+    "der Termin",
+    "der Kumpel"
   ],
-  "last_updated": "2026-11-19T00:42:45.646258",
+  "last_updated": "2026-11-19T15:39:50.702590",
   "history": [
     {
       "date": "2026-10-13",
@@ -1164,6 +1165,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Яке речення з інфінітивною групою побудоване правильно?",
       "topic": "Дієслова з часткою zu"
+    },
+    {
+      "date": "2026-11-19 15:39",
+      "type": "morning_word",
+      "word": "der Kumpel, -s",
+      "translation": "товариш, приятель, кореш",
+      "rubric": "Розмовна мова та сленг (Umgangssprache)"
     }
   ],
   "used_phrases": [

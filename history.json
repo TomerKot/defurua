@@ -27,7 +27,7 @@
     "der Kumpel",
     "wissen"
   ],
-  "last_updated": "2026-11-20T15:19:08.960963",
+  "last_updated": "2026-11-20T17:14:12.558950",
   "history": [
     {
       "date": "2026-10-13",
@@ -1210,6 +1210,12 @@
       "word": "wissen (wusste, gewusst)",
       "translation": "знати (мати інформацію)",
       "rubric": "Типові помилки українців (Typische Fehler)"
+    },
+    {
+      "date": "2026-11-20 17:14",
+      "type": "afternoon_phrase",
+      "phrase": "Das kommt darauf an.",
+      "translation": "Це залежить від обставин."
     }
   ],
   "used_phrases": [
@@ -1235,7 +1241,8 @@
     "Mach dir keinen Kopf!",
     "Schönen Feierabend!",
     "Wie geht's?",
-    "Könnte ich das bitte haben?"
+    "Könnte ich das bitte haben?",
+    "Das kommt darauf an."
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

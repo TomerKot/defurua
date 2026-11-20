@@ -24,9 +24,10 @@
     "werden",
     "jemanden auf den Arm nehmen",
     "der Termin",
-    "der Kumpel"
+    "der Kumpel",
+    "wissen"
   ],
-  "last_updated": "2026-11-20T00:53:16.038558",
+  "last_updated": "2026-11-20T15:19:08.960963",
   "history": [
     {
       "date": "2026-10-13",
@@ -1202,6 +1203,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Що треба обрати: Ich suche ... Schlüssel. (Я шукаю свій ключ)",
       "topic": "Присвійний займенник у Akkusativ"
+    },
+    {
+      "date": "2026-11-20 15:19",
+      "type": "morning_word",
+      "word": "wissen (wusste, gewusst)",
+      "translation": "знати (мати інформацію)",
+      "rubric": "Типові помилки українців (Typische Fehler)"
     }
   ],
   "used_phrases": [

@@ -27,7 +27,7 @@
     "der Kumpel",
     "wissen"
   ],
-  "last_updated": "2026-11-20T21:26:40.363804",
+  "last_updated": "2026-11-20T22:35:30.440735",
   "history": [
     {
       "date": "2026-10-13",
@@ -1228,6 +1228,12 @@
       "type": "dialogue",
       "location": "У комісійному магазині / Im Sozialkaufhaus",
       "topic": "Покупка вживаних меблів для нової квартири"
+    },
+    {
+      "date": "2026-11-20 22:35",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за послуги газопостачання / Antrag auf Ratenzahlung (Gas)",
+      "situation": "Використовується для звернення до постачальника газу з проханням про поетапне погашення заборгованості через фінансові труднощі."
     }
   ],
   "used_phrases": [
@@ -1328,7 +1334,8 @@
     "Запит на розірвання договору добровільного страхування відповідальності / Kündigung der Privathaftpflichtversicherung",
     "Запит на розстрочення боргу за споживчим кредитом / Ratenzahlungsvereinbarung",
     "Запит на розстрочення боргу за медичне страхування / Antrag auf Ratenzahlung bei der Krankenkasse",
-    "Запит на розстрочення боргу за рахунок від лікаря або приватну медичну послугу / Antrag auf Ratenzahlung beim Arzt"
+    "Запит на розстрочення боргу за рахунок від лікаря або приватну медичну послугу / Antrag auf Ratenzahlung beim Arzt",
+    "Запит на розстрочення боргу за послуги газопостачання / Antrag auf Ratenzahlung (Gas)"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

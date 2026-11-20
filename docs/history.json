@@ -27,7 +27,7 @@
     "der Kumpel",
     "wissen"
   ],
-  "last_updated": "2026-11-20T17:14:12.558950",
+  "last_updated": "2026-11-20T19:00:10.411833",
   "history": [
     {
       "date": "2026-10-13",
@@ -1216,6 +1216,12 @@
       "type": "afternoon_phrase",
       "phrase": "Das kommt darauf an.",
       "translation": "Це залежить від обставин."
+    },
+    {
+      "date": "2026-11-20 19:00",
+      "type": "mistake",
+      "topic": "«Бути одягненим» чи «носити»: tragen vs haben an",
+      "correct_phrase": "✅ Ich trage eine rote Jacke."
     }
   ],
   "used_phrases": [
@@ -1346,7 +1352,8 @@
     "«Дякувати за допомогу»: helfen vs. danken",
     "«Займатися» чимось: beschäftigen vs. sich beschäftigen",
     "«Сумніватися» у чомусь: zweifeln vs. bezweifeln",
-    "«Подорожувати» літаком: fliegen vs reisen"
+    "«Подорожувати» літаком: fliegen vs reisen",
+    "«Бути одягненим» чи «носити»: tragen vs haben an"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

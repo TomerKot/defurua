@@ -25,9 +25,10 @@
     "jemanden auf den Arm nehmen",
     "der Termin",
     "der Kumpel",
-    "wissen"
+    "wissen",
+    "ді Трепенгаусрайнігунг"
   ],
-  "last_updated": "2026-11-21T00:09:43.393788",
+  "last_updated": "2026-11-21T14:31:31.478908",
   "history": [
     {
       "date": "2026-10-13",
@@ -1240,6 +1241,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Який прийменник використовується з днями тижня: '___ Montag'?",
       "topic": "Часовий прийменник для днів тижня"
+    },
+    {
+      "date": "2026-11-21 14:31",
+      "type": "morning_word",
+      "word": "die Treppenhausreinigung",
+      "translation": "прибирання сходової клітки",
+      "rubric": "Ідіоми та менталітет (Redewendungen & Kultur)"
     }
   ],
   "used_phrases": [

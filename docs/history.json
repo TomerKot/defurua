@@ -28,7 +28,7 @@
     "wissen",
     "ді Трепенгаусрайнігунг"
   ],
-  "last_updated": "2026-11-21T16:22:14.019984",
+  "last_updated": "2026-11-21T17:55:09.387167",
   "history": [
     {
       "date": "2026-10-13",
@@ -1254,6 +1254,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich bin ganz Ohr",
       "translation": "Я уважно слухаю / я весь — увага"
+    },
+    {
+      "date": "2026-11-21 17:55",
+      "type": "mistake",
+      "topic": "«Питати» про щось: fragen чи anfragen",
+      "correct_phrase": "✅ Ich frage den Lehrer."
     }
   ],
   "used_phrases": [
@@ -1388,7 +1394,8 @@
     "«Займатися» чимось: beschäftigen vs. sich beschäftigen",
     "«Сумніватися» у чомусь: zweifeln vs. bezweifeln",
     "«Подорожувати» літаком: fliegen vs reisen",
-    "«Бути одягненим» чи «носити»: tragen vs haben an"
+    "«Бути одягненим» чи «носити»: tragen vs haben an",
+    "«Питати» про щось: fragen чи anfragen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

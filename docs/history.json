@@ -28,7 +28,7 @@
     "wissen",
     "ді Трепенгаусрайнігунг"
   ],
-  "last_updated": "2026-11-21T14:31:31.478908",
+  "last_updated": "2026-11-21T16:22:14.019984",
   "history": [
     {
       "date": "2026-10-13",
@@ -1248,6 +1248,12 @@
       "word": "die Treppenhausreinigung",
       "translation": "прибирання сходової клітки",
       "rubric": "Ідіоми та менталітет (Redewendungen & Kultur)"
+    },
+    {
+      "date": "2026-11-21 16:22",
+      "type": "afternoon_phrase",
+      "phrase": "Ich bin ganz Ohr",
+      "translation": "Я уважно слухаю / я весь — увага"
     }
   ],
   "used_phrases": [
@@ -1274,7 +1280,8 @@
     "Schönen Feierabend!",
     "Wie geht's?",
     "Könnte ich das bitte haben?",
-    "Das kommt darauf an."
+    "Das kommt darauf an.",
+    "Ich bin ganz Ohr"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

@@ -28,7 +28,7 @@
     "wissen",
     "ді Трепенгаусрайнігунг"
   ],
-  "last_updated": "2026-11-21T17:55:09.387167",
+  "last_updated": "2026-11-21T20:12:13.464688",
   "history": [
     {
       "date": "2026-10-13",
@@ -1260,6 +1260,12 @@
       "type": "mistake",
       "topic": "«Питати» про щось: fragen чи anfragen",
       "correct_phrase": "✅ Ich frage den Lehrer."
+    },
+    {
+      "date": "2026-11-21 20:12",
+      "type": "dialogue",
+      "location": "У ремонтній майстерні взуття / Beim Schuster",
+      "topic": "Решта взуття в ремонт"
     }
   ],
   "used_phrases": [
@@ -1422,6 +1428,7 @@
     "У паרухмахера / Beim Friseur",
     "У підвалі будинку / Im Keller",
     "У громадському транспорті (Im Zug / Bus)",
-    "У комісійному магазині / Im Sozialkaufhaus"
+    "У комісійному магазині / Im Sozialkaufhaus",
+    "У ремонтній майстерні взуття / Beim Schuster"
   ]
 }

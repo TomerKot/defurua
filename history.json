@@ -29,7 +29,7 @@
     "ді Трепенгаусрайнігунг",
     "ді форауццалунг"
   ],
-  "last_updated": "2026-11-22T14:27:47.739678",
+  "last_updated": "2026-11-22T16:37:19.959564",
   "history": [
     {
       "date": "2026-10-13",
@@ -1280,6 +1280,12 @@
       "word": "die Vorauszahlung, -en",
       "translation": "передоплата",
       "rubric": "Практика та міні-тест (Quiz & Wiederholung)"
+    },
+    {
+      "date": "2026-11-22 16:37",
+      "type": "afternoon_phrase",
+      "phrase": "Lass mal stecken!",
+      "translation": "Не треба / Залиште собі (про гроші або пропозицію допомоги)"
     }
   ],
   "used_phrases": [
@@ -1307,7 +1313,8 @@
     "Wie geht's?",
     "Könnte ich das bitte haben?",
     "Das kommt darauf an.",
-    "Ich bin ganz Ohr"
+    "Ich bin ganz Ohr",
+    "Lass mal stecken!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

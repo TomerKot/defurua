@@ -29,7 +29,7 @@
     "ді Трепенгаусрайнігунг",
     "ді форауццалунг"
   ],
-  "last_updated": "2026-11-22T18:20:07.682853",
+  "last_updated": "2026-11-22T20:26:41.959171",
   "history": [
     {
       "date": "2026-10-13",
@@ -1292,6 +1292,12 @@
       "type": "mistake",
       "topic": "«Слухати» музику чи лекцію: hören vs. zuhören",
       "correct_phrase": "✅ Ich höre dem Lehrer zu. (але: Ich höre Musik)"
+    },
+    {
+      "date": "2026-11-22 20:26",
+      "type": "dialogue",
+      "location": "У секонд-хенді / Im Second-Hand-Laden",
+      "topic": "Пошук куртки та питання про знижку"
     }
   ],
   "used_phrases": [

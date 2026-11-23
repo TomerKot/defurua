@@ -30,7 +30,7 @@
     "ді форауццалунг",
     "ді Бєкері"
   ],
-  "last_updated": "2026-11-23T20:30:29.874632",
+  "last_updated": "2026-11-23T22:29:22.806649",
   "history": [
     {
       "date": "2026-10-13",
@@ -1324,6 +1324,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich bin gleich dran.",
       "translation": "Зараз моя черга / Я зараз буду."
+    },
+    {
+      "date": "2026-11-23 22:29",
+      "type": "mistake",
+      "topic": "«Пити» чи «брати» каву: trinken vs. nehmen",
+      "correct_phrase": "✅ Ich nehme einen Kaffee, bitte."
     }
   ],
   "used_phrases": [
@@ -1465,7 +1471,8 @@
     "«Подорожувати» літаком: fliegen vs reisen",
     "«Бути одягненим» чи «носити»: tragen vs haben an",
     "«Питати» про щось: fragen чи anfragen",
-    "«Слухати» музику чи лекцію: hören vs. zuhören"
+    "«Слухати» музику чи лекцію: hören vs. zuhören",
+    "«Пити» чи «брати» каву: trinken vs. nehmen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

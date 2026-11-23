@@ -30,7 +30,7 @@
     "ді форауццалунг",
     "ді Бєкері"
   ],
-  "last_updated": "2026-11-23T17:57:14.458375",
+  "last_updated": "2026-11-23T20:30:29.874632",
   "history": [
     {
       "date": "2026-10-13",
@@ -1318,6 +1318,12 @@
       "word": "die Bäckerei, -en",
       "translation": "пекарня",
       "rubric": "Побут та щоденне життя (Alltag)"
+    },
+    {
+      "date": "2026-11-23 20:30",
+      "type": "afternoon_phrase",
+      "phrase": "Ich bin gleich dran.",
+      "translation": "Зараз моя черга / Я зараз буду."
     }
   ],
   "used_phrases": [
@@ -1346,7 +1352,8 @@
     "Könnte ich das bitte haben?",
     "Das kommt darauf an.",
     "Ich bin ganz Ohr",
-    "Lass mal stecken!"
+    "Lass mal stecken!",
+    "Ich bin gleich dran."
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

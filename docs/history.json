@@ -31,7 +31,7 @@
     "ді Бєкері",
     "der Zettel"
   ],
-  "last_updated": "2026-11-24T17:29:02.395514",
+  "last_updated": "2026-11-24T19:41:06.877475",
   "history": [
     {
       "date": "2026-10-13",
@@ -1356,6 +1356,12 @@
       "word": "der Zettel (-)",
       "translation": "папірець, записка, квитанція",
       "rubric": "Граматика без нудоти (Grammatik)"
+    },
+    {
+      "date": "2026-11-24 19:41",
+      "type": "afternoon_phrase",
+      "phrase": "Ich halte dich auf dem Laufenden!",
+      "translation": "Я триматиму тебе в курсі!"
     }
   ],
   "used_phrases": [
@@ -1385,7 +1391,8 @@
     "Das kommt darauf an.",
     "Ich bin ganz Ohr",
     "Lass mal stecken!",
-    "Ich bin gleich dran."
+    "Ich bin gleich dran.",
+    "Ich halte dich auf dem Laufenden!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

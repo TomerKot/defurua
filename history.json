@@ -28,9 +28,10 @@
     "wissen",
     "ді Трепенгаусрайнігунг",
     "ді форауццалунг",
-    "ді Бєкері"
+    "ді Бєкері",
+    "der Zettel"
   ],
-  "last_updated": "2026-11-24T04:04:08.158695",
+  "last_updated": "2026-11-24T17:29:02.395514",
   "history": [
     {
       "date": "2026-10-13",
@@ -1348,6 +1349,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Що означає слово 'gerne' у реченні 'Ich reise gerne'?",
       "topic": "Розрізнення слів gern та gerne"
+    },
+    {
+      "date": "2026-11-24 17:29",
+      "type": "morning_word",
+      "word": "der Zettel (-)",
+      "translation": "папірець, записка, квитанція",
+      "rubric": "Граматика без нудоти (Grammatik)"
     }
   ],
   "used_phrases": [

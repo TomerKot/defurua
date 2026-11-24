@@ -31,7 +31,7 @@
     "ді Бєкері",
     "der Zettel"
   ],
-  "last_updated": "2026-11-24T19:41:06.877475",
+  "last_updated": "2026-11-24T21:02:03.642106",
   "history": [
     {
       "date": "2026-10-13",
@@ -1362,6 +1362,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich halte dich auf dem Laufenden!",
       "translation": "Я триматиму тебе в курсі!"
+    },
+    {
+      "date": "2026-11-24 21:02",
+      "type": "mistake",
+      "topic": "«Рахунок» у ресторані: Rechnung чи Zahlkarte?",
+      "correct_phrase": "✅ Die Rechnung, bitte!"
     }
   ],
   "used_phrases": [
@@ -1507,7 +1513,8 @@
     "«Бути одягненим» чи «носити»: tragen vs haben an",
     "«Питати» про щось: fragen чи anfragen",
     "«Слухати» музику чи лекцію: hören vs. zuhören",
-    "«Пити» чи «брати» каву: trinken vs. nehmen"
+    "«Пити» чи «брати» каву: trinken vs. nehmen",
+    "«Рахунок» у ресторані: Rechnung чи Zahlkarte?"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

@@ -30,7 +30,7 @@
     "ді форауццалунг",
     "ді Бєкері"
   ],
-  "last_updated": "2026-11-23T22:29:22.806649",
+  "last_updated": "2026-11-24T01:08:29.450224",
   "history": [
     {
       "date": "2026-10-13",
@@ -1330,6 +1330,12 @@
       "type": "mistake",
       "topic": "«Пити» чи «брати» каву: trinken vs. nehmen",
       "correct_phrase": "✅ Ich nehme einen Kaffee, bitte."
+    },
+    {
+      "date": "2026-11-24 01:08",
+      "type": "dialogue",
+      "location": "У приймальної комісії спортклубу / Im Sportverein",
+      "topic": "Запис на місячну перевірку або зміну тарифу"
     }
   ],
   "used_phrases": [
@@ -1500,6 +1506,7 @@
     "У підвалі будинку / Im Keller",
     "У громадському транспорті (Im Zug / Bus)",
     "У комісійному магазині / Im Sozialkaufhaus",
-    "У ремонтній майстерні взуття / Beim Schuster"
+    "У ремонтній майстерні взуття / Beim Schuster",
+    "У приймальної комісії спортклубу / Im Sportverein"
   ]
 }

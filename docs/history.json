@@ -32,7 +32,7 @@
     "der Zettel",
     "der Antrag"
   ],
-  "last_updated": "2026-11-25T20:24:50.528994",
+  "last_updated": "2026-11-25T22:40:41.181366",
   "history": [
     {
       "date": "2026-10-13",
@@ -1400,6 +1400,12 @@
       "type": "mistake",
       "topic": "«Подобатися» зовні чи «бути до смаку»: gefallen vs schmecken",
       "correct_phrase": "✅ Das Essen schmeckt mir gut."
+    },
+    {
+      "date": "2026-11-25 22:40",
+      "type": "dialogue",
+      "location": "У під'їзді / Im Treppenhaus",
+      "topic": "Знайомство з новими сусідами"
     }
   ],
   "used_phrases": [
@@ -1579,6 +1585,7 @@
     "У громадському транспорті (Im Zug / Bus)",
     "У комісійному магазині / Im Sozialkaufhaus",
     "У ремонтній майстерні взуття / Beim Schuster",
-    "У приймальної комісії спортклубу / Im Sportverein"
+    "У приймальної комісії спортклубу / Im Sportverein",
+    "У під'їзді / Im Treppenhaus"
   ]
 }

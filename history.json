@@ -32,7 +32,7 @@
     "der Zettel",
     "der Antrag"
   ],
-  "last_updated": "2026-11-25T18:49:32.632784",
+  "last_updated": "2026-11-25T20:24:50.528994",
   "history": [
     {
       "date": "2026-10-13",
@@ -1394,6 +1394,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich bin gleich da!",
       "translation": "Я вже йду! / Я зараз буду!"
+    },
+    {
+      "date": "2026-11-25 20:24",
+      "type": "mistake",
+      "topic": "«Подобатися» зовні чи «бути до смаку»: gefallen vs schmecken",
+      "correct_phrase": "✅ Das Essen schmeckt mir gut."
     }
   ],
   "used_phrases": [
@@ -1543,7 +1549,8 @@
     "«Питати» про щось: fragen чи anfragen",
     "«Слухати» музику чи лекцію: hören vs. zuhören",
     "«Пити» чи «брати» каву: trinken vs. nehmen",
-    "«Рахунок» у ресторані: Rechnung чи Zahlkarte?"
+    "«Рахунок» у ресторані: Rechnung чи Zahlkarte?",
+    "«Подобатися» зовні чи «бути до смаку»: gefallen vs schmecken"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

@@ -31,7 +31,7 @@
     "ді Бєкері",
     "der Zettel"
   ],
-  "last_updated": "2026-11-24T21:02:03.642106",
+  "last_updated": "2026-11-25T00:32:26.889945",
   "history": [
     {
       "date": "2026-10-13",
@@ -1368,6 +1368,12 @@
       "type": "mistake",
       "topic": "«Рахунок» у ресторані: Rechnung чи Zahlkarte?",
       "correct_phrase": "✅ Die Rechnung, bitte!"
+    },
+    {
+      "date": "2026-11-25 00:32",
+      "type": "musterbrief",
+      "topic": "Запит на отримання довідки про зареєстроване місце проживання / Meldebescheinigung",
+      "situation": "Використовується для звернення до місцевого відомства з питань громадян (Bürgeramt) з метою отримання довідки про реєстрацію за місцем проживання."
     }
   ],
   "used_phrases": [
@@ -1479,7 +1485,8 @@
     "Запит на розстрочення боргу за послуги газопостачання / Antrag auf Ratenzahlung (Gas)",
     "Запит на отримання довідки про відсутність заборгованості / Unbedenklichkeitsbescheinigung",
     "Запит на отримання довідки про несудимість / Führungszeugnis",
-    "Запит на отримання довідки про доходи для податкової / Einkommensnachweis anfordern"
+    "Запит на отримання довідки про доходи для податкової / Einkommensnachweis anfordern",
+    "Запит на отримання довідки про зареєстроване місце проживання / Meldebescheinigung"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

@@ -32,7 +32,7 @@
     "der Zettel",
     "der Antrag"
   ],
-  "last_updated": "2026-11-25T17:07:38.992933",
+  "last_updated": "2026-11-25T18:49:32.632784",
   "history": [
     {
       "date": "2026-10-13",
@@ -1388,6 +1388,12 @@
       "word": "der Antrag, die Anträge",
       "translation": "заява, клопотання, запит",
       "rubric": "Робота та бюрократія (Bürokratie & Beruf)"
+    },
+    {
+      "date": "2026-11-25 18:49",
+      "type": "afternoon_phrase",
+      "phrase": "Ich bin gleich da!",
+      "translation": "Я вже йду! / Я зараз буду!"
     }
   ],
   "used_phrases": [
@@ -1418,7 +1424,8 @@
     "Ich bin ganz Ohr",
     "Lass mal stecken!",
     "Ich bin gleich dran.",
-    "Ich halte dich auf dem Laufenden!"
+    "Ich halte dich auf dem Laufenden!",
+    "Ich bin gleich da!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

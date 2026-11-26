@@ -33,7 +33,7 @@
     "der Antrag",
     "null Bock haben"
   ],
-  "last_updated": "2026-11-26T18:37:10.087041",
+  "last_updated": "2026-11-26T20:01:55.562734",
   "history": [
     {
       "date": "2026-10-13",
@@ -1432,6 +1432,12 @@
       "type": "afternoon_phrase",
       "phrase": "Einen Moment bitte!",
       "translation": "Секундочку, будь ласка!"
+    },
+    {
+      "date": "2026-11-26 20:01",
+      "type": "mistake",
+      "topic": "«Будувати плани» чи «робити плани»: planen vs. Pläne machen",
+      "correct_phrase": "✅ Ich will Pläne machen für das Wochenende."
     }
   ],
   "used_phrases": [
@@ -1585,7 +1591,8 @@
     "«Слухати» музику чи лекцію: hören vs. zuhören",
     "«Пити» чи «брати» каву: trinken vs. nehmen",
     "«Рахунок» у ресторані: Rechnung чи Zahlkarte?",
-    "«Подобатися» зовні чи «бути до смаку»: gefallen vs schmecken"
+    "«Подобатися» зовні чи «бути до смаку»: gefallen vs schmecken",
+    "«Будувати плани» чи «робити плани»: planen vs. Pläne machen"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

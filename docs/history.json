@@ -33,7 +33,7 @@
     "der Antrag",
     "null Bock haben"
   ],
-  "last_updated": "2026-11-26T20:01:55.562734",
+  "last_updated": "2026-11-26T22:30:30.441584",
   "history": [
     {
       "date": "2026-10-13",
@@ -1438,6 +1438,12 @@
       "type": "mistake",
       "topic": "«Будувати плани» чи «робити плани»: planen vs. Pläne machen",
       "correct_phrase": "✅ Ich will Pläne machen für das Wochenende."
+    },
+    {
+      "date": "2026-11-26 22:30",
+      "type": "dialogue",
+      "location": "У ремонтній майстерні взуття / Beim Schuster",
+      "topic": "Решта взуття в ремонт"
     }
   ],
   "used_phrases": [

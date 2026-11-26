@@ -30,9 +30,10 @@
     "ді форауццалунг",
     "ді Бєкері",
     "der Zettel",
-    "der Antrag"
+    "der Antrag",
+    "null Bock haben"
   ],
-  "last_updated": "2026-11-26T01:56:06.201169",
+  "last_updated": "2026-11-26T16:45:07.381765",
   "history": [
     {
       "date": "2026-10-13",
@@ -1418,6 +1419,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно сказати: «Я беру червону сукню»?",
       "topic": "Прикметникові закінчення після der"
+    },
+    {
+      "date": "2026-11-26 16:45",
+      "type": "morning_word",
+      "word": "null Bock haben",
+      "translation": "не мати жодного бажання, зовсім не хотітися",
+      "rubric": "Розмовна мова та сленг (Umgangssprache)"
     }
   ],
   "used_phrases": [

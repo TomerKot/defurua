@@ -33,7 +33,7 @@
     "der Antrag",
     "null Bock haben"
   ],
-  "last_updated": "2026-11-26T16:45:07.381765",
+  "last_updated": "2026-11-26T18:37:10.087041",
   "history": [
     {
       "date": "2026-10-13",
@@ -1426,6 +1426,12 @@
       "word": "null Bock haben",
       "translation": "не мати жодного бажання, зовсім не хотітися",
       "rubric": "Розмовна мова та сленг (Umgangssprache)"
+    },
+    {
+      "date": "2026-11-26 18:37",
+      "type": "afternoon_phrase",
+      "phrase": "Einen Moment bitte!",
+      "translation": "Секундочку, будь ласка!"
     }
   ],
   "used_phrases": [
@@ -1457,7 +1463,8 @@
     "Lass mal stecken!",
     "Ich bin gleich dran.",
     "Ich halte dich auf dem Laufenden!",
-    "Ich bin gleich da!"
+    "Ich bin gleich da!",
+    "Einen Moment bitte!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

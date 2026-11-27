@@ -34,7 +34,7 @@
     "null Bock haben",
     "ді міте"
   ],
-  "last_updated": "2026-11-27T16:30:52.459866",
+  "last_updated": "2026-11-27T18:26:12.804361",
   "history": [
     {
       "date": "2026-10-13",
@@ -1464,6 +1464,12 @@
       "word": "die Miete, die Mieten",
       "translation": "орендна плата",
       "rubric": "Типові помилки українців (Typische Fehler)"
+    },
+    {
+      "date": "2026-11-27 18:26",
+      "type": "afternoon_phrase",
+      "phrase": "Ich bin gleich wieder da!",
+      "translation": "Я зараз повернуся!"
     }
   ],
   "used_phrases": [
@@ -1496,7 +1502,8 @@
     "Ich bin gleich dran.",
     "Ich halte dich auf dem Laufenden!",
     "Ich bin gleich da!",
-    "Einen Moment bitte!"
+    "Einen Moment bitte!",
+    "Ich bin gleich wieder da!"
   ],
   "used_quizzes": [
     "Керування дієслів у німецькій",

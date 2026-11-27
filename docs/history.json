@@ -34,7 +34,7 @@
     "null Bock haben",
     "ді міте"
   ],
-  "last_updated": "2026-11-27T18:26:12.804361",
+  "last_updated": "2026-11-27T19:50:20.720698",
   "history": [
     {
       "date": "2026-10-13",
@@ -1470,6 +1470,12 @@
       "type": "afternoon_phrase",
       "phrase": "Ich bin gleich wieder da!",
       "translation": "Я зараз повернуся!"
+    },
+    {
+      "date": "2026-11-27 19:50",
+      "type": "mistake",
+      "topic": "«Грати» на музичному інструменті: spielen vs. spielen auf",
+      "correct_phrase": "✅ Ich spiele Klavier."
     }
   ],
   "used_phrases": [
@@ -1627,7 +1633,8 @@
     "«Пити» чи «брати» каву: trinken vs. nehmen",
     "«Рахунок» у ресторані: Rechnung чи Zahlkarte?",
     "«Подобатися» зовні чи «бути до смаку»: gefallen vs schmecken",
-    "«Будувати плани» чи «робити плани»: planen vs. Pläne machen"
+    "«Будувати плани» чи «робити плани»: planen vs. Pläne machen",
+    "«Грати» на музичному інструменті: spielen vs. spielen auf"
   ],
   "used_dialogues": [
     "У пекарні / In der Bäckerei",

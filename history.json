@@ -33,7 +33,7 @@
     "der Antrag",
     "null Bock haben"
   ],
-  "last_updated": "2026-11-26T22:30:30.441584",
+  "last_updated": "2026-11-27T00:29:56.919440",
   "history": [
     {
       "date": "2026-10-13",
@@ -1444,6 +1444,12 @@
       "type": "dialogue",
       "location": "У ремонтній майстерні взуття / Beim Schuster",
       "topic": "Решта взуття в ремонт"
+    },
+    {
+      "date": "2026-11-27 00:29",
+      "type": "musterbrief",
+      "topic": "Запит на розстрочення боргу за оренду квартири / Ratenzahlungsvereinbarung für Mietrückstände",
+      "situation": "Використовується у випадках тимчасової фінансової скрути для узгодження з орендодавцем поетапного погашення заборгованості за житло."
     }
   ],
   "used_phrases": [
@@ -1561,7 +1567,8 @@
     "Запит на отримання довідки про несудимість / Führungszeugnis",
     "Запит на отримання довідки про доходи для податкової / Einkommensnachweis anfordern",
     "Запит на отримання довідки про зареєстроване місце проживання / Meldebescheinigung",
-    "Запит на отримання довідки про відсутність судимості / Führungszeugnis"
+    "Запит на отримання довідки про відсутність судимості / Führungszeugnis",
+    "Запит на розстрочення боргу за оренду квартири / Ratenzahlungsvereinbarung für Mietrückstände"
   ],
   "used_mistakes": [
     "«Знати» людину чи факт: kennen чи wissen?",

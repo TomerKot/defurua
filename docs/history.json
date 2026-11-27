@@ -31,9 +31,10 @@
     "ді Бєкері",
     "der Zettel",
     "der Antrag",
-    "null Bock haben"
+    "null Bock haben",
+    "ді міте"
   ],
-  "last_updated": "2026-11-27T01:55:00.263820",
+  "last_updated": "2026-11-27T16:30:52.459866",
   "history": [
     {
       "date": "2026-10-13",
@@ -1456,6 +1457,13 @@
       "type": "evening_quiz",
       "question": "🇩🇪 Як правильно сказати: «Ця кава гаряча»?",
       "topic": "Прикметники після sein"
+    },
+    {
+      "date": "2026-11-27 16:30",
+      "type": "morning_word",
+      "word": "die Miete, die Mieten",
+      "translation": "орендна плата",
+      "rubric": "Типові помилки українців (Typische Fehler)"
     }
   ],
   "used_phrases": [

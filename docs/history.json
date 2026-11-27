@@ -34,7 +34,7 @@
     "null Bock haben",
     "ді міте"
   ],
-  "last_updated": "2026-11-27T19:50:20.720698",
+  "last_updated": "2026-11-27T22:14:52.305881",
   "history": [
     {
       "date": "2026-10-13",
@@ -1476,6 +1476,12 @@
       "type": "mistake",
       "topic": "«Грати» на музичному інструменті: spielen vs. spielen auf",
       "correct_phrase": "✅ Ich spiele Klavier."
+    },
+    {
+      "date": "2026-11-27 22:14",
+      "type": "dialogue",
+      "location": "У слюсаря або майстерні з виготовлення ключів / Beim Schlüsseldienst",
+      "topic": "Виготовлення дубліката ключа від вхідних дверей"
     }
   ],
   "used_phrases": [
@@ -1664,6 +1670,7 @@
     "У комісійному магазині / Im Sozialkaufhaus",
     "У ремонтній майстерні взуття / Beim Schuster",
     "У приймальної комісії спортклубу / Im Sportverein",
-    "У під'їзді / Im Treppenhaus"
+    "У під'їзді / Im Treppenhaus",
+    "У слюсаря або майстерні з виготовлення ключів / Beim Schlüsseldienst"
   ]
 }
